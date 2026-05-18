@@ -1,21 +1,21 @@
-import Navbar from '@/app/components/common/Navbar';
+import ModernNavbar from '@/app/components/common/ModernNavbar';
 import Footer from '@/app/components/common/Footer';
-import HeroSection from '@/app/components/sections/HeroSection';
-import MetricsSection from '@/app/components/sections/MetricsSection';
+import ModernHeroSection from '@/app/components/sections/ModernHeroSection';
+import ModernServicesSection from '@/app/components/sections/ModernServicesSection';
 import AboutSection from '@/app/components/sections/AboutSection';
 import WhyChooseUsSection from '@/app/components/sections/WhyChooseUsSection';
 
 export const metadata = {
-  title: 'Toshi Consulting - Technology Solutions',
-  description: 'Technology solutions partner committed to helping businesses improve efficiency and innovate with confidence.',
+  title: 'Toshi Consulting - Enterprise Technology Solutions | Blockchain, AI, Cloud & DevOps',
+  description: 'Enterprise cybersecurity, digital transformation & cloud consulting. Scalable IT solutions, DevOps automation & AI-powered technology for growing businesses.',
 };
 
 export default function Home() {
   return (
-    <main className="w-full">
-      <Navbar />
-      <HeroSection />
-      <MetricsSection />
+    <main className="w-full bg-slate-950">
+      <ModernNavbar />
+      <ModernHeroSection />
+      <ModernServicesSection />
       <AboutSection />
       <WhyChooseUsSection />
       <Footer />
