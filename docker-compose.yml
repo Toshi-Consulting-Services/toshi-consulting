@@ -1,0 +1,20 @@
+version: '3.8'
+
+services:
+  toshi:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: toshi-consulting:latest
+    container_name: toshi-consulting
+    restart: unless-stopped
+    ports:
+      - "172.17.0.1:3000:3000"
+    environment:
+      - NODE_ENV=production
+    networks:
+      - default
+
+networks:
+  default:
+    driver: bridge
