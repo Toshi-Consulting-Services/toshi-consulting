@@ -1,93 +1,279 @@
 import Navbar from '@/app/components/common/Navbar';
 import Footer from '@/app/components/common/Footer';
+import FAQAccordion from '@/app/components/sections/FAQAccordion';
+import { Phone, Mail, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://toshiconsulting.com';
+
+export const metadata = {
+  title: 'Contact Toshi Consulting — Get In Touch',
+  description:
+    'Reach out for project inquiries, consultations, or partnerships. We believe in building strong, long-term relationships — and every great one begins with a conversation.',
+  alternates: { canonical: '/contact' },
+};
+
+// Keep these in sync with the FAQs rendered in FAQAccordion so the schema matches the UI.
+const contactFaqs = [
+  {
+    q: 'What is the cancellation period?',
+    a: 'You can cancel any engagement with 30 days notice. Work-in-progress is wrapped up, deliverables handed over, and a transition plan is included at no extra cost.',
+  },
+  {
+    q: 'What does non-exclusive mean?',
+    a: 'You retain the right to work with other partners on parallel initiatives. We never lock you into our services as the only path forward — we earn the next engagement.',
+  },
+  {
+    q: 'Where are your offices located?',
+    a: 'Our primary office is at Plot 7, Twin Tower, Office 6, 4th Floor, IT Park Panchkula, Haryana 134116. We deliver remotely across India, the EU, and North America — with timezone-overlap built into every team.',
+  },
+  {
+    q: 'How fast can you start?',
+    a: 'For most engagements, a discovery session within 5 business days and a working team within 2–3 weeks. Urgent engagements can be accelerated based on availability.',
+  },
+];
+
+const localBusinessSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  '@id': `${SITE_URL}/#localbusiness`,
+  name: 'Toshi Consulting',
+  description:
+    'IT consulting firm in Panchkula offering AI integration, blockchain consulting, QA test automation, and digital media & branding services for Indian businesses.',
+  url: SITE_URL,
+  telephone: '+91-9915718004',
+  email: 'hr@toshiconsulting.com',
+  image: `${SITE_URL}/icon`,
+  logo: `${SITE_URL}/icon`,
+  priceRange: '₹₹',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'Plot 7, Twin Tower, Office 6, 4th Floor, IT Park',
+    addressLocality: 'Panchkula',
+    addressRegion: 'Haryana',
+    postalCode: '134116',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 30.69,
+    longitude: 76.85,
+  },
+  areaServed: [
+    { '@type': 'City', name: 'Panchkula' },
+    { '@type': 'City', name: 'Chandigarh' },
+    { '@type': 'City', name: 'Mohali' },
+    { '@type': 'AdministrativeArea', name: 'Haryana' },
+    { '@type': 'Country', name: 'India' },
+  ],
+  openingHoursSpecification: [
+    {
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+      opens: '09:00',
+      closes: '18:00',
+    },
+  ],
+  sameAs: ['https://share.google/crSjVbZQu4RkGaB8W'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'IT Consulting Services',
+    itemListElement: [
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Integration Services' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Blockchain Consulting' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'QA Testing & Automation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Media Marketing & Branding' } },
+    ],
+  },
+};
+
+const faqPageSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: contactFaqs.map((f) => ({
+    '@type': 'Question',
+    name: f.q,
+    acceptedAnswer: { '@type': 'Answer', text: f.a },
+  })),
+};
+
+const breadcrumbSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: `${SITE_URL}/contact` },
+  ],
+};
 
 export default function ContactPage() {
   return (
     <>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqPageSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }} />
       <Navbar />
-      <main className="pt-32">
-        <section className="py-20 bg-white">
-          <div className="max-w-7xl mx-auto px-6">
-            <h1 className="text-5xl font-bold text-gray-900 mb-6 text-center">Contact Us</h1>
-            <p className="text-xl text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-              Get in touch with us for any inquiries or to discuss your project requirements
+      <main className="flex-1">
+        {/* Hero */}
+        <section className="relative pt-32 pb-16 hero-bg overflow-hidden">
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
+          <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6">
+            <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
+              <MessageSquare size={13} className="text-teal-600" /> Contact Us
+            </div>
+            <h1 className="mt-5 text-5xl md:text-6xl font-black tracking-tight text-slate-900">
+              Get in <span className="brand-gradient-text">Touch</span>
+            </h1>
+            <p className="mt-4 text-slate-600 text-lg max-w-2xl mx-auto">
+              Reach out for project inquiries, consultations, or partnerships.
+              We believe in building strong, long-term relationships — and every great one begins with a conversation.
             </p>
+          </div>
+        </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {/* Contact Info */}
-              <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+        {/* Form + details */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
+            {/* Form card */}
+            <div className="bg-white rounded-3xl border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] p-8 sm:p-10">
+              <h2 className="text-2xl font-black text-slate-900">Send us a message</h2>
+              <p className="text-sm text-slate-600 mt-1">We typically reply within 1 business day.</p>
+              <form className="mt-6 space-y-5">
+                <div className="grid sm:grid-cols-2 gap-4">
+                  <label className="block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Name</span>
+                    <input
+                      type="text"
+                      placeholder="Your full name"
+                      className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
+                    />
+                  </label>
+                  <label className="block">
+                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Phone</span>
+                    <input
+                      type="tel"
+                      placeholder="+91"
+                      className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
+                    />
+                  </label>
+                </div>
+                <label className="block">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Email</span>
+                  <input
+                    type="email"
+                    placeholder="you@email.com"
+                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
+                  />
+                </label>
+                <label className="block">
+                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Message</span>
+                  <textarea
+                    rows={5}
+                    placeholder="Tell us about your project or inquiry..."
+                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition resize-none"
+                  />
+                  <span className="text-[11px] text-slate-500 mt-1 inline-block">Remaining 8 (out of 8) characters.</span>
+                </label>
+                <button
+                  type="submit"
+                  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(20,184,166,0.9)] hover:-translate-y-0.5 transition"
+                >
+                  <Send size={18} /> Send Message
+                </button>
+              </form>
+            </div>
 
-                <div className="space-y-6">
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-600 mb-2">📞 Phone</h3>
-                    <p className="text-gray-700">+91-9915718004</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-600 mb-2">✉️ Email</h3>
-                    <p className="text-gray-700">hr@toshiconsulting.com</p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-600 mb-2">📍 Address</h3>
-                    <p className="text-gray-700">
-                      Plot 7, Twin Tower, Office 6<br/>
-                      IT Park Panchkula<br/>
-                      Haryana 134116, India
-                    </p>
-                  </div>
-
-                  <div>
-                    <h3 className="text-lg font-semibold text-blue-600 mb-2">⏰ Business Hours</h3>
-                    <p className="text-gray-700">Monday–Saturday, 9:00 AM–6:00 PM</p>
-                  </div>
+            {/* Contact details */}
+            <div className="space-y-6">
+              <div className="bg-white rounded-3xl border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] p-8 sm:p-10">
+                <h2 className="text-2xl font-black text-slate-900">Contact Details</h2>
+                <div className="mt-6 grid gap-5">
+                  {[
+                    { icon: Phone, label: 'Call us', value: '+91-9915718004', href: 'tel:+919915718004' },
+                    { icon: Mail, label: 'Email us', value: 'hr@toshiconsulting.com', href: 'mailto:hr@toshiconsulting.com' },
+                    { icon: MapPin, label: 'Visit us', value: 'Plot 7, Twin Tower, Office 6, 4th Floor, IT Park Panchkula, Haryana 134116, India' },
+                    { icon: Clock, label: 'Business hours', value: 'Monday – Saturday · 9:00 AM – 6:00 PM' },
+                  ].map((c) => {
+                    const Icon = c.icon;
+                    const body = (
+                      <>
+                        <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.7)] shrink-0">
+                          <Icon size={18} />
+                        </span>
+                        <span className="flex-1 leading-snug">
+                          <span className="block text-[11px] font-bold uppercase tracking-wider text-teal-700">{c.label}</span>
+                          <span className="block text-slate-800 font-semibold mt-0.5">{c.value}</span>
+                        </span>
+                      </>
+                    );
+                    return c.href ? (
+                      <a key={c.label} href={c.href} className="flex items-start gap-3 hover:bg-teal-50/60 -mx-2 p-2 rounded-xl transition">
+                        {body}
+                      </a>
+                    ) : (
+                      <div key={c.label} className="flex items-start gap-3 -mx-2 p-2">
+                        {body}
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
 
-              {/* Contact Form */}
+              {/* FAQs */}
               <div>
-                <form className="space-y-6">
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Name
-                    </label>
-                    <input
-                      type="text"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
-                      placeholder="Your name"
-                    />
-                  </div>
+                <div className="flex items-center gap-2 mb-4 px-1">
+                  <h2 className="text-2xl font-black text-slate-900">FAQs</h2>
+                  <span className="grid place-items-center w-6 h-6 rounded-full bg-teal-100 text-teal-700 text-xs font-bold">?</span>
+                </div>
+                <FAQAccordion />
+              </div>
+            </div>
+          </div>
+        </section>
 
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Email
-                    </label>
-                    <input
-                      type="email"
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
-                      placeholder="Your email"
-                    />
+        {/* Map */}
+        <section className="pb-20">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+            <div className="text-center mb-6">
+              <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+                <MapPin size={13} /> Find us
+              </div>
+              <h3 className="mt-3 text-2xl font-black text-slate-900">
+                IT Park Panchkula, Haryana
+              </h3>
+            </div>
+            <div className="relative rounded-3xl overflow-hidden border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] aspect-[21/9] bg-teal-50">
+              <iframe
+                title="Toshi Consulting on Google Maps"
+                src="https://maps.google.com/maps?q=IT%20Park%20Panchkula&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                style={{ border: 0 }}
+              />
+              {/* "We're here" overlay pin card */}
+              <div className="pointer-events-none absolute top-6 left-6 max-w-xs bg-white rounded-2xl shadow-[0_20px_50px_-15px_rgba(15,23,42,0.3)] border border-teal-100 p-5">
+                <div className="flex items-start gap-3">
+                  <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.7)] shrink-0">
+                    <MapPin size={18} />
+                  </span>
+                  <div className="leading-tight">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-teal-700">
+                      We're here
+                    </div>
+                    <div className="text-sm font-bold text-slate-900 mt-0.5">
+                      Plot 7, Twin Tower, Office 6
+                    </div>
+                    <div className="text-xs text-slate-600 mt-0.5">
+                      4th Floor, IT Park Panchkula<br />Haryana 134116, India
+                    </div>
+                    <div className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                      Open today · 9 AM – 6 PM
+                    </div>
                   </div>
-
-                  <div>
-                    <label className="block text-sm font-semibold text-gray-700 mb-2">
-                      Message
-                    </label>
-                    <textarea
-                      rows={5}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:outline-none focus:border-blue-600"
-                      placeholder="Your message"
-                    />
-                  </div>
-
-                  <button
-                    type="submit"
-                    className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition font-semibold"
-                  >
-                    Send Message
-                  </button>
-                </form>
+                </div>
               </div>
             </div>
           </div>

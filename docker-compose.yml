@@ -5,6 +5,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+      args:
+        # Staging URL — change to https://toshiconsulting.com on prod deploy
+        - NEXT_PUBLIC_SITE_URL=https://tcsdev.sentinal-ai.in
     image: toshi-consulting:latest
     container_name: toshi-consulting
     restart: unless-stopped
@@ -12,6 +15,7 @@ services:
       - "172.17.0.1:3000:3000"
     environment:
       - NODE_ENV=production
+      - NEXT_PUBLIC_SITE_URL=https://tcsdev.sentinal-ai.in
     networks:
       - default
 

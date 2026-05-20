@@ -1,47 +1,77 @@
+import { Search, Target, ShieldCheck, Zap, Users, Sparkles } from 'lucide-react';
+import Reveal from '@/app/components/common/Reveal';
+
+const reasons = [
+  {
+    icon: Search,
+    title: 'Business Discovery Sessions',
+    desc: 'We start by understanding your unique business challenges and goals — never by selling a template.',
+    tone: 'from-teal-500 to-cyan-500',
+  },
+  {
+    icon: Target,
+    title: 'Tailored Solutions',
+    desc: 'Custom-built solutions designed for your business — no off-the-shelf compromises.',
+    tone: 'from-cyan-500 to-sky-500',
+  },
+  {
+    icon: ShieldCheck,
+    title: 'Security-First Delivery',
+    desc: 'Robust, secure, and scalable applications backed by enterprise-grade hardening.',
+    tone: 'from-emerald-500 to-teal-500',
+  },
+  {
+    icon: Zap,
+    title: 'Acceleration Through Automation',
+    desc: 'Faster deployments, fewer regressions, and predictable releases — by default.',
+    tone: 'from-teal-600 to-cyan-600',
+  },
+  {
+    icon: Users,
+    title: 'A Real Partnership',
+    desc: 'We measure success in your KPIs — not ticket counts. Long-term relationships, not handoffs.',
+    tone: 'from-emerald-500 to-cyan-500',
+  },
+  {
+    icon: Sparkles,
+    title: 'Innovate With Confidence',
+    desc: 'Modern stacks, AI-assisted delivery, and a team that ships every week — not every quarter.',
+    tone: 'from-cyan-500 to-teal-500',
+  },
+];
+
 export default function WhyChooseUsSection() {
-  const reasons = [
-    {
-      title: 'Business Discovery Sessions',
-      description: 'We start by understanding your unique business challenges and goals'
-    },
-    {
-      title: 'Tailored Solutions',
-      description: 'Custom-built solutions designed specifically for your business needs'
-    },
-    {
-      title: 'Security-Focused Delivery',
-      description: 'Robust, secure, and scalable applications with enterprise-grade security'
-    },
-  ];
-
   return (
-    <section className="py-20 bg-white">
-      <div className="max-w-7xl mx-auto px-6">
-        <h2 className="text-4xl font-bold text-gray-900 mb-4 text-center">
-          Why Choose Us
-        </h2>
+    <section className="relative py-24 bg-gradient-to-b from-white to-teal-50/60 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <div className="text-center max-w-2xl mx-auto mb-14">
+          <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> Why Choose Us
+          </div>
+          <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+            We don't just build —{' '}
+            <span className="font-display brand-gradient-text">we partner.</span>
+          </h2>
+          <p className="mt-4 text-slate-600 text-lg">
+            Six reasons companies stay with Toshi for years, not months.
+          </p>
+        </div>
 
-        <p className="text-lg text-gray-600 text-center mb-12 max-w-2xl mx-auto">
-          We don't just build solutions—we partner with you to drive real business value
-        </p>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {reasons.map((reason, index) => (
-            <div
-              key={index}
-              className="border-2 border-blue-200 p-8 rounded-lg hover:border-blue-600 hover:shadow-lg transition"
-            >
-              <div className="text-3xl mb-4 text-blue-600">
-                {index === 0 ? '🔍' : index === 1 ? '🎯' : '🔒'}
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                {reason.title}
-              </h3>
-              <p className="text-gray-600">
-                {reason.description}
-              </p>
-            </div>
-          ))}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          {reasons.map((r, i) => {
+            const Icon = r.icon;
+            return (
+              <Reveal key={r.title} delay={i * 80}>
+                <div className="group relative h-full bg-white rounded-2xl p-7 border border-teal-100 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] hover:-translate-y-1 transition">
+                  <div className={`inline-grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br ${r.tone} text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.6)] group-hover:scale-110 transition`}>
+                    <Icon size={22} />
+                  </div>
+                  <h3 className="mt-4 text-lg font-bold text-slate-900">{r.title}</h3>
+                  <p className="mt-2 text-sm text-slate-600 leading-relaxed">{r.desc}</p>
+                </div>
+              </Reveal>
+            );
+          })}
         </div>
       </div>
     </section>
