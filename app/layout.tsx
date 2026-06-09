@@ -20,7 +20,11 @@ const instrumentSerif = Instrument_Serif({
 });
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://toshiconsulting.com";
-const IS_PRODUCTION_DOMAIN = SITE_URL.includes("toshiconsulting.com");
+// Index/track ONLY on the exact canonical host. A staging subdomain like
+// new.toshiconsulting.com must NOT count as production — a substring match
+// would wrongly let it be indexed + load GA (duplicate-content SEO harm).
+const PRODUCTION_HOSTS = ["toshiconsulting.com", "www.toshiconsulting.com"];
+const IS_PRODUCTION_DOMAIN = PRODUCTION_HOSTS.includes(new URL(SITE_URL).hostname);
 
 // Search engine + analytics verification codes — set via .env.local (or docker-compose env).
 // Get these from:
