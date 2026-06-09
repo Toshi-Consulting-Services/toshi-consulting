@@ -1,7 +1,8 @@
 import Navbar from '@/app/components/common/Navbar';
 import Footer from '@/app/components/common/Footer';
 import FAQAccordion from '@/app/components/sections/FAQAccordion';
-import { Phone, Mail, MapPin, Clock, Send, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, Clock, MessageSquare } from 'lucide-react';
+import ContactForm from './ContactForm';
 
 const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://toshiconsulting.com';
 
@@ -138,49 +139,7 @@ export default function ContactPage() {
             <div className="bg-white rounded-3xl border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] p-8 sm:p-10">
               <h2 className="text-2xl font-black text-slate-900">Send us a message</h2>
               <p className="text-sm text-slate-600 mt-1">We typically reply within 1 business day.</p>
-              <form className="mt-6 space-y-5">
-                <div className="grid sm:grid-cols-2 gap-4">
-                  <label className="block">
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Name</span>
-                    <input
-                      type="text"
-                      placeholder="Your full name"
-                      className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
-                    />
-                  </label>
-                  <label className="block">
-                    <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Phone</span>
-                    <input
-                      type="tel"
-                      placeholder="+91"
-                      className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
-                    />
-                  </label>
-                </div>
-                <label className="block">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Email</span>
-                  <input
-                    type="email"
-                    placeholder="you@email.com"
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition"
-                  />
-                </label>
-                <label className="block">
-                  <span className="text-xs font-bold uppercase tracking-wider text-slate-600">Message</span>
-                  <textarea
-                    rows={5}
-                    placeholder="Tell us about your project or inquiry..."
-                    className="mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition resize-none"
-                  />
-                  <span className="text-[11px] text-slate-500 mt-1 inline-block">Remaining 8 (out of 8) characters.</span>
-                </label>
-                <button
-                  type="submit"
-                  className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(20,184,166,0.9)] hover:-translate-y-0.5 transition"
-                >
-                  <Send size={18} /> Send Message
-                </button>
-              </form>
+              <ContactForm />
             </div>
 
             {/* Contact details */}
