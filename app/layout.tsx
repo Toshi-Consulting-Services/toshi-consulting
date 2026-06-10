@@ -67,6 +67,7 @@ const organizationSchema = {
   "@context": "https://schema.org",
   "@type": "Organization",
   name: "Toshi Consulting",
+  legalName: "Toshi Consulting Services Private Limited",
   url: SITE_URL,
   logo: `${SITE_URL}/icon`,
   description:
@@ -82,7 +83,7 @@ const organizationSchema = {
   contactPoint: {
     "@type": "ContactPoint",
     telephone: "+91-9915718004",
-    email: "hr@toshiconsulting.com",
+    email: "info@toshiconsulting.com",
     contactType: "customer service",
     availableLanguage: ["English", "Hindi"],
   },

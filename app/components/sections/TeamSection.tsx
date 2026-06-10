@@ -76,7 +76,7 @@ export default function TeamSection() {
                       <LinkedinGlyph />
                     </a>
                     <a
-                      href="mailto:hr@toshiconsulting.com"
+                      href="mailto:info@toshiconsulting.com"
                       aria-label="Email"
                       className="grid place-items-center w-9 h-9 rounded-lg bg-teal-50 text-teal-700 hover:bg-gradient-to-br hover:from-teal-500 hover:to-cyan-500 hover:text-white transition"
                     >

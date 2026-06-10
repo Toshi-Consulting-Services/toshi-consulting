@@ -78,11 +78,11 @@ export default function Footer() {
               </span>
               +91-9915718004
             </a>
-            <a href="mailto:hr@toshiconsulting.com" className="flex items-center gap-2.5 text-slate-700 hover:text-teal-700 transition">
+            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2.5 text-slate-700 hover:text-teal-700 transition">
               <span className="grid place-items-center w-8 h-8 rounded-lg bg-teal-100 text-teal-700">
                 <Mail size={14} />
               </span>
-              hr@toshiconsulting.com
+              info@toshiconsulting.com
             </a>
           </div>
 
@@ -155,7 +155,7 @@ export default function Footer() {
               </span>
               <span>
                 <span className="font-semibold text-slate-900">Hours</span><br />
-                Mon–Sat · 9:00 AM – 6:00 PM
+                Mon–Fri · 10:00 AM – 6:00 PM
               </span>
             </div>
           </div>
@@ -165,11 +165,11 @@ export default function Footer() {
       {/* Bottom */}
       <div className="border-t border-teal-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
-          <p>&copy; {new Date().getFullYear()} Toshi Consulting. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Toshi Consulting Services Private Limited. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/contact" className="hover:text-teal-700 transition">Privacy</Link>
-            <Link href="/contact" className="hover:text-teal-700 transition">Terms</Link>
-            <Link href="/contact" className="hover:text-teal-700 transition">Sitemap</Link>
+            <Link href="/privacy" className="hover:text-teal-700 transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-teal-700 transition">Terms</Link>
+            <a href="/sitemap.xml" className="hover:text-teal-700 transition">Sitemap</a>
           </div>
         </div>
       </div>

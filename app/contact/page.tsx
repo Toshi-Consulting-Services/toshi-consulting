@@ -38,11 +38,12 @@ const localBusinessSchema = {
   '@type': 'ProfessionalService',
   '@id': `${SITE_URL}/#localbusiness`,
   name: 'Toshi Consulting',
+  legalName: 'Toshi Consulting Services Private Limited',
   description:
     'IT consulting firm in Panchkula offering AI integration, blockchain consulting, QA test automation, and digital media & branding services for Indian businesses.',
   url: SITE_URL,
   telephone: '+91-9915718004',
-  email: 'hr@toshiconsulting.com',
+  email: 'info@toshiconsulting.com',
   image: `${SITE_URL}/icon`,
   logo: `${SITE_URL}/icon`,
   priceRange: '₹₹',
@@ -69,8 +70,8 @@ const localBusinessSchema = {
   openingHoursSpecification: [
     {
       '@type': 'OpeningHoursSpecification',
-      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
-      opens: '09:00',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'],
+      opens: '10:00',
       closes: '18:00',
     },
   ],
@@ -149,9 +150,9 @@ export default function ContactPage() {
                 <div className="mt-6 grid gap-5">
                   {[
                     { icon: Phone, label: 'Call us', value: '+91-9915718004', href: 'tel:+919915718004' },
-                    { icon: Mail, label: 'Email us', value: 'hr@toshiconsulting.com', href: 'mailto:hr@toshiconsulting.com' },
+                    { icon: Mail, label: 'Email us', value: 'info@toshiconsulting.com', href: 'mailto:info@toshiconsulting.com' },
                     { icon: MapPin, label: 'Visit us', value: 'Plot 7, Twin Tower, Office 6, 4th Floor, IT Park Panchkula, Haryana 134116, India' },
-                    { icon: Clock, label: 'Business hours', value: 'Monday – Saturday · 9:00 AM – 6:00 PM' },
+                    { icon: Clock, label: 'Business hours', value: 'Monday – Friday · 10:00 AM – 6:00 PM' },
                   ].map((c) => {
                     const Icon = c.icon;
                     const body = (
@@ -229,7 +230,7 @@ export default function ContactPage() {
                     </div>
                     <div className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
                       <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
-                      Open today · 9 AM – 6 PM
+                      Open today · 10 AM – 6 PM
                     </div>
                   </div>
                 </div>

@@ -75,7 +75,7 @@ export async function POST(req: Request) {
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
-      { ok: false, error: 'Could not send right now — please email hr@toshiconsulting.com directly.' },
+      { ok: false, error: 'Could not send right now — please email info@toshiconsulting.com directly.' },
       { status: 502 },
     );
   }

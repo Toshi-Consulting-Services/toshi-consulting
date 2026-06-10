@@ -1,6 +1,7 @@
 'use client';
 
 import { useState, type FormEvent, type ChangeEvent } from 'react';
+import Link from 'next/link';
 import { Send } from 'lucide-react';
 
 const inputClass =
@@ -124,6 +125,14 @@ export default function ContactForm() {
       />
 
       {status === 'error' && <p className="text-sm font-semibold text-red-600">{error}</p>}
+
+      <p className="text-xs text-slate-500 leading-relaxed">
+        By submitting this form, you agree to our{' '}
+        <Link href="/privacy" className="font-semibold text-teal-700 hover:underline">Privacy Policy</Link>
+        {' '}and{' '}
+        <Link href="/terms" className="font-semibold text-teal-700 hover:underline">Terms</Link>
+        , and consent to us contacting you about your enquiry.
+      </p>
 
       <button
         type="submit"

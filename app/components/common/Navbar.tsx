@@ -38,8 +38,8 @@ export default function Navbar() {
             <a href="tel:+919915718004" className="flex items-center gap-2 hover:text-teal-100 transition">
               <Phone size={13} /> +91-9915718004
             </a>
-            <a href="mailto:hr@toshiconsulting.com" className="flex items-center gap-2 hover:text-teal-100 transition">
-              <Mail size={13} /> hr@toshiconsulting.com
+            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2 hover:text-teal-100 transition">
+              <Mail size={13} /> info@toshiconsulting.com
             </a>
             <span className="hidden lg:flex items-center gap-2">
               <MapPin size={13} /> IT Park Panchkula, Haryana
@@ -50,7 +50,7 @@ export default function Navbar() {
           </div>
           <div className="flex items-center gap-3">
             <span className="hidden sm:flex items-center gap-1.5 text-teal-50">
-              <Clock size={12} /> Mon–Sat · 9:00–18:00
+              <Clock size={12} /> Mon–Fri · 10:00–18:00
             </span>
             <Link
               href="/contact"
