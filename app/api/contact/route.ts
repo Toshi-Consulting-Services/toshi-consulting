@@ -1,7 +1,10 @@
 import { NextResponse } from 'next/server';
 
-// n8n webhook (holds the Resend key + sends the email). Not a secret — just an endpoint.
+// Primary: send directly via Resend if RESEND_API_KEY is set (server-side secret, hPanel env).
+// Fallback: the n8n webhook — used until the env var is live, so the form never breaks.
+const RESEND_API_KEY = process.env.RESEND_API_KEY;
 const WEBHOOK_URL = 'https://vmi3279661.contaboserver.net/webhook/contact-toshi';
+const LEAD_TO = 'kchauhan@toshiconsulting.com';
 
 export const dynamic = 'force-dynamic';
 
@@ -37,13 +40,38 @@ export async function POST(req: Request) {
   }
 
   try {
-    const res = await fetch(WEBHOOK_URL, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, email, phone, message }),
-      signal: AbortSignal.timeout(15000),
-    });
-    if (!res.ok) throw new Error('upstream ' + res.status);
+    if (RESEND_API_KEY) {
+      // Direct via Resend — no n8n hop.
+      const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+      const html =
+        '<h2>New enquiry from the Toshi Consulting website</h2>' +
+        `<p><strong>Name:</strong> ${esc(name)}</p>` +
+        `<p><strong>Email:</strong> ${esc(email)}</p>` +
+        `<p><strong>Phone:</strong> ${esc(phone) || '-'}</p>` +
+        `<p><strong>Message:</strong></p><p>${esc(message).replace(/\n/g, '<br>')}</p>`;
+      const res = await fetch('https://api.resend.com/emails', {
+        method: 'POST',
+        headers: { Authorization: `Bearer ${RESEND_API_KEY}`, 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          from: 'Toshi Website <onboarding@resend.dev>',
+          to: [LEAD_TO],
+          reply_to: email,
+          subject: `New enquiry: ${name || 'website visitor'}`,
+          html,
+        }),
+        signal: AbortSignal.timeout(15000),
+      });
+      if (!res.ok) throw new Error('resend ' + res.status);
+    } else {
+      // Fallback: n8n webhook (holds its own Resend key).
+      const res = await fetch(WEBHOOK_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, phone, message }),
+        signal: AbortSignal.timeout(15000),
+      });
+      if (!res.ok) throw new Error('upstream ' + res.status);
+    }
     return NextResponse.json({ ok: true });
   } catch {
     return NextResponse.json(
