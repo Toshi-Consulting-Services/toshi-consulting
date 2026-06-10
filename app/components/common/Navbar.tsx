@@ -3,13 +3,14 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
-import { Menu, X, Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { Menu, X, Phone, Mail, MapPin, Clock, ArrowRight, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
+import { services } from '@/app/data/services';
 
 const navItems = [
   { name: 'Home', href: '/' },
   { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services' },
+  { name: 'Services', href: '/services', dropdown: true },
   { name: 'Blog', href: '/blog' },
   { name: 'Contact', href: '/contact' },
 ];
@@ -87,14 +88,66 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-1">
             {navItems.map((item) => {
               const active = isActive(item.href);
+
+              if (item.dropdown) {
+                return (
+                  <div key={item.name} className="relative group">
+                    <Link
+                      href={item.href}
+                      className={`relative inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-semibold transition ${
+                        active ? 'text-teal-700' : 'text-slate-700 hover:text-teal-700'
+                      }`}
+                    >
+                      {item.name}
+                      <ChevronDown size={14} className="transition group-hover:rotate-180" />
+                      {active && (
+                        <span className="absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] w-6 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
+                      )}
+                    </Link>
+
+                    {/* Dropdown panel — pt-3 bridges the hover gap */}
+                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200">
+                      <div className="w-80 bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(15,118,110,0.35)] p-2">
+                        {services.map((s) => {
+                          const Icon = s.icon;
+                          return (
+                            <Link
+                              key={s.slug}
+                              href={`/services/${s.slug}`}
+                              className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item"
+                            >
+                              <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}>
+                                <Icon size={16} />
+                              </span>
+                              <span className="min-w-0">
+                                <span className="block text-sm font-bold text-slate-800 group-hover/item:text-teal-700 transition">
+                                  {s.title}
+                                </span>
+                                <span className="block text-xs text-slate-500 leading-snug">
+                                  {s.short}
+                                </span>
+                              </span>
+                            </Link>
+                          );
+                        })}
+                        <Link
+                          href="/services"
+                          className="mt-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-teal-700 bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50"
+                        >
+                          View all services <ArrowRight size={14} />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                );
+              }
+
               return (
                 <Link
                   key={item.name}
                   href={item.href}
                   className={`relative px-4 py-2 rounded-full text-sm font-semibold transition ${
-                    active
-                      ? 'text-teal-700'
-                      : 'text-slate-700 hover:text-teal-700'
+                    active ? 'text-teal-700' : 'text-slate-700 hover:text-teal-700'
                   }`}
                 >
                   {item.name}
@@ -129,21 +182,36 @@ export default function Navbar() {
 
         {/* Mobile sheet */}
         {open && (
-          <div className="lg:hidden border-t border-teal-100 bg-white">
+          <div className="lg:hidden border-t border-teal-100 bg-white max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-3 flex flex-col gap-1">
               {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.href}
-                  onClick={() => setOpen(false)}
-                  className={`block px-4 py-3 rounded-lg text-sm font-semibold transition ${
-                    isActive(item.href)
-                      ? 'bg-teal-50 text-teal-700'
-                      : 'text-slate-700 hover:bg-teal-50 hover:text-teal-700'
-                  }`}
-                >
-                  {item.name}
-                </Link>
+                <div key={item.name}>
+                  <Link
+                    href={item.href}
+                    onClick={() => setOpen(false)}
+                    className={`block px-4 py-3 rounded-lg text-sm font-semibold transition ${
+                      isActive(item.href)
+                        ? 'bg-teal-50 text-teal-700'
+                        : 'text-slate-700 hover:bg-teal-50 hover:text-teal-700'
+                    }`}
+                  >
+                    {item.name}
+                  </Link>
+                  {item.dropdown && (
+                    <div className="mt-1 ml-3 flex flex-col gap-0.5 border-l border-teal-100 pl-3">
+                      {services.map((s) => (
+                        <Link
+                          key={s.slug}
+                          href={`/services/${s.slug}`}
+                          onClick={() => setOpen(false)}
+                          className="block px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-teal-50 hover:text-teal-700 transition"
+                        >
+                          {s.title}
+                        </Link>
+                      ))}
+                    </div>
+                  )}
+                </div>
               ))}
               <Link
                 href="/contact"

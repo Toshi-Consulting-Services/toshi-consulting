@@ -1,48 +1,10 @@
 import Link from 'next/link';
-import { Brain, Link2, Bug, Megaphone, ArrowUpRight, Sparkles } from 'lucide-react';
+import { ArrowUpRight, Sparkles } from 'lucide-react';
 import Reveal from '@/app/components/common/Reveal';
-
-export const services = [
-  {
-    slug: 'ai-integration',
-    title: 'AI Integration',
-    description:
-      'Seamlessly integrate AI capabilities into your existing applications to enhance functionality, improve efficiency, and drive innovation across your workflows.',
-    icon: Brain,
-    tone: 'from-teal-500 to-cyan-500',
-    soft: 'bg-teal-50',
-  },
-  {
-    slug: 'blockchain-consulting',
-    title: 'Blockchain Consulting',
-    description:
-      'Unlock the potential of your business with tailored blockchain solutions that drive automation, enhance transparency, and optimize decentralised operations.',
-    icon: Link2,
-    tone: 'from-cyan-500 to-sky-500',
-    soft: 'bg-cyan-50',
-  },
-  {
-    slug: 'qa-testing-and-automations',
-    title: 'QA Testing & Automations',
-    description:
-      'Empower your team with expert-led trainings in Python, Java, and Cloud technologies — equipping them with the skills needed to succeed in the digital age.',
-    icon: Bug,
-    tone: 'from-emerald-500 to-teal-500',
-    soft: 'bg-emerald-50',
-  },
-  {
-    slug: 'digital-media-marketing-and-branding',
-    title: 'Digital Media Marketing & Branding',
-    description:
-      'Build a powerful online presence with strategies that connect, engage, and convert. From social-media campaigns to complete brand-identity design, we help businesses stand out in the digital world and grow with confidence.',
-    icon: Megaphone,
-    tone: 'from-teal-600 to-emerald-600',
-    soft: 'bg-teal-50',
-  },
-];
+import { featuredServices } from '@/app/data/services';
 
 export default function ServicesSection() {
-  const [featured, ...rest] = services;
+  const [featured, ...rest] = featuredServices;
   const FeaturedIcon = featured.icon;
 
   return (
@@ -73,7 +35,7 @@ export default function ServicesSection() {
           {/* Featured large card */}
           <Reveal className="lg:col-span-2 lg:row-span-2">
             <Link
-              href={`/services#${featured.slug}`}
+              href={`/services/${featured.slug}`}
               className="group relative block h-full bg-white rounded-3xl p-8 border border-teal-100 shadow-[0_15px_45px_-25px_rgba(15,118,110,0.45)] hover:shadow-[0_25px_55px_-22px_rgba(15,118,110,0.55)] hover:-translate-y-1 transition overflow-hidden"
             >
               <div className={`absolute -top-24 -right-24 w-72 h-72 ${featured.soft} rounded-full blur-3xl opacity-70`} />
@@ -136,7 +98,7 @@ export default function ServicesSection() {
             return (
               <Reveal key={s.slug} delay={(i + 1) * 90}>
                 <Link
-                  href={`/services#${s.slug}`}
+                  href={`/services/${s.slug}`}
                   className="group relative block bg-white rounded-3xl p-6 border border-teal-100 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.55)] hover:-translate-y-1 transition overflow-hidden h-full"
                 >
                   <div className={`absolute -top-12 -right-12 w-32 h-32 ${s.soft} rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition`} />
@@ -163,6 +125,17 @@ export default function ServicesSection() {
             );
           })}
         </div>
+
+        {/* Link to the full catalogue */}
+        <Reveal className="mt-10 text-center">
+          <Link
+            href="/services"
+            className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 px-6 py-3 rounded-full text-sm font-bold hover:bg-teal-50 hover:-translate-y-0.5 shadow-sm transition"
+          >
+            View all services
+            <ArrowUpRight size={16} />
+          </Link>
+        </Reveal>
       </div>
     </section>
   );

@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { Phone, Mail, MapPin, Clock, ArrowRight } from 'lucide-react';
+import { services } from '@/app/data/services';
 
 type SocialName = 'facebook' | 'linkedin' | 'whatsapp';
 
@@ -40,15 +41,8 @@ const quickLinks = [
   { name: 'Contact', href: '/contact' },
 ];
 
-const servicesLinks = [
-  { name: 'AI Integration', href: '/services#ai-integration' },
-  { name: 'Blockchain Consulting', href: '/services#blockchain-consulting' },
-  { name: 'QA Testing & Automations', href: '/services#qa-testing-and-automations' },
-  { name: 'DevOps & CI/CD', href: '/services#qa-testing-and-automations' },
-  { name: 'Cybersecurity Lab', href: '/services#ai-integration' },
-  { name: 'Cloud Deployment & Support', href: '/services#ai-integration' },
-  { name: 'Digital Media Marketing & Branding', href: '/services#digital-media-marketing-and-branding' },
-];
+// Derived from the single services source so footer + dropdown never drift.
+const servicesLinks = services.map((s) => ({ name: s.title, href: `/services/${s.slug}` }));
 
 export default function Footer() {
   return (
