@@ -17,12 +17,12 @@ export default function CTABand() {
                 Free 30-min consultation
               </div>
               <h2 className="mt-4 text-3xl md:text-4xl lg:text-5xl font-black leading-tight tracking-tight">
-                Ready to <span className="text-cyan-100">secure your IT-service</span>?
+                Ready to <span className="text-cyan-100">automate the busywork</span>?
               </h2>
               <p className="mt-4 text-teal-50/90 text-base md:text-lg max-w-xl">
-                Tell us where you want to be in 6 months — we'll map the
-                technology, security, and delivery to get you there. No
-                templates, no pressure.
+                Tell us where you want to be in 6 months — we'll map the AI,
+                automation, and development to get you there. No templates,
+                no pressure.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row md:flex-col gap-3 md:items-end">

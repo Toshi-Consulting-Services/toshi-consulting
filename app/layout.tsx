@@ -46,9 +46,9 @@ export const metadata: Metadata = {
     : { index: false, follow: false },
   alternates: { canonical: SITE_URL },
   openGraph: {
-    title: "Toshi Consulting — Secure Your IT-Service",
+    title: "Toshi Consulting — AI Integration, Automation & App Development",
     description:
-      "A reliable and consistent IT solutions partner. AI, Blockchain, QA Automation, and Digital Media — delivered with confidence.",
+      "We build AI integrations, intelligent automation, and high-performance web & mobile apps — modern software that automates your work and scales with confidence.",
     type: "website",
     url: SITE_URL,
   },

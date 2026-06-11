@@ -11,9 +11,9 @@ import TestimonialsSection from '@/app/components/sections/TestimonialsSection';
 import CTABand from '@/app/components/sections/CTABand';
 
 export const metadata = {
-  title: 'Toshi Consulting — Secure Your IT-Service | AI, Blockchain, QA, Digital Media',
+  title: 'AI Integration, Automation & Web Apps | Toshi Consulting',
   description:
-    'A reliable and consistent IT solutions partner. AI Integration, Blockchain Consulting, QA Automation & Digital Media — backed by 10+ years of delivery excellence.',
+    'Toshi Consulting builds AI integrations, intelligent automation, and high-performance web & mobile apps — software that automates your work and scales fast.',
 };
 
 export default function HomePage() {

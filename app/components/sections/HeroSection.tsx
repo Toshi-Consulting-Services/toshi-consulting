@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, ArrowRight, ShieldCheck, Headphones, Award, Sparkles } from 'lucide-react';
+import { Phone, ArrowRight, Sparkles, Bot, Zap, Code2 } from 'lucide-react';
 
 function ShieldRadar() {
   // Three orbit radii (% of container) and the speed of each
@@ -85,14 +85,14 @@ function ShieldRadar() {
         </div>
       </div>
 
-      {/* Floating "Secured" badge */}
+      {/* Floating capability badge */}
       <div className="absolute right-[2%] top-[14%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(15,118,110,0.3)] border border-teal-100 px-3 py-2 flex items-center gap-2 animate-float rotate-3" style={{ animationDelay: '1.2s' }}>
         <div className="grid place-items-center w-8 h-8 rounded-lg bg-teal-50 text-teal-600">
-          <ShieldCheck size={16} />
+          <Bot size={16} />
         </div>
         <div className="text-[11px] font-bold text-slate-900 leading-tight">
-          ISO-grade
-          <div className="text-teal-600 text-[10px] font-semibold">Security First</div>
+          AI-Native
+          <div className="text-teal-600 text-[10px] font-semibold">Automation-first</div>
         </div>
       </div>
     </div>
@@ -118,19 +118,19 @@ export default function HeroSection() {
         <div className="order-2 max-w-xl animate-fade-up lg:pl-4">
           <div className="inline-flex items-center gap-2 bg-white/80 backdrop-blur border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
             <Sparkles size={14} className="text-teal-600" />
-            We are reliable & consistent IT solution team
+            Modern software, built to automate
           </div>
 
-          <h1 className="mt-6 text-5xl md:text-6xl font-black leading-[1.05] tracking-tight text-slate-900">
-            Secure Your
+          <h1 className="mt-6 text-4xl md:text-5xl font-black leading-[1.1] tracking-tight text-slate-900">
+            AI Integration, Automation &
             <br />
-            <span className="font-display brand-gradient-text whitespace-nowrap text-[1.05em]">IT-Service</span>
+            <span className="font-display brand-gradient-text text-[1.05em]">Web & App Development</span>
           </h1>
 
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-lg">
-            We are a technology-solutions partner committed to helping
-            businesses improve efficiency and innovate with confidence —
-            across AI, Blockchain, QA Automation, and Digital Media.
+            We build production-grade AI integrations, intelligent automations,
+            and high-performance web & mobile apps — modern software that handles
+            the busywork, so your team ships faster and scales with confidence.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-3">
@@ -152,9 +152,9 @@ export default function HeroSection() {
           {/* Trust pills */}
           <div className="mt-8 flex flex-wrap gap-2">
             {[
-              { icon: <Headphones size={14} />, label: '24/7 Support' },
-              { icon: <ShieldCheck size={14} />, label: 'Security First' },
-              { icon: <Award size={14} />, label: 'Trusted Partner' },
+              { icon: <Sparkles size={14} />, label: 'AI Integration' },
+              { icon: <Zap size={14} />, label: 'Automation' },
+              { icon: <Code2 size={14} />, label: 'Web & App Dev' },
             ].map((p) => (
               <span
                 key={p.label}
