@@ -6,10 +6,10 @@ import { ArrowRight, Sparkles, Zap, Code2, BrainCircuit, Cloud, ShieldCheck, Wor
 function CapabilityOrbit() {
   // Curved connector paths (viewBox 0..100) from the centre AI CORE to each card.
   const links = [
-    'M50 50 C 47 44 44 39 40 34', // -> Cloud Infra (top-left)
-    'M50 50 C 54 44 58 38 62 30', // -> Deploy terminal (top-right)
-    'M50 50 C 47 56 44 61 40 66', // -> Threat Monitor (bottom-left)
-    'M50 50 C 54 56 58 62 62 70', // -> Automations (bottom-right)
+    'M50 50 C 47 44 44 37 40 31', // -> Cloud Infra (high, top-left)
+    'M50 50 C 54 47 58 43 61 39', // -> Deploy terminal (mid, top-right)
+    'M50 50 C 47 56 44 61 41 64', // -> Threat Monitor (mid, lower-left)
+    'M50 50 C 54 58 58 66 61 73', // -> Automations (low, bottom-right)
   ];
 
   return (
@@ -30,7 +30,7 @@ function CapabilityOrbit() {
       </svg>
 
       {/* Centre — AI CORE */}
-      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[31%]">
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[26%]">
         <div className="relative aspect-square rounded-[1.6rem] border border-teal-200/70 bg-white/40 backdrop-blur p-2.5 animate-float">
           <div className="absolute inset-0 -z-10 rounded-[1.6rem] bg-gradient-to-br from-teal-400 to-cyan-400 blur-2xl opacity-40" />
           <div className="w-full h-full rounded-2xl bg-gradient-to-br from-teal-500 via-teal-500 to-cyan-500 shadow-[0_18px_45px_-12px_rgba(20,184,166,0.6)] grid place-items-center text-white">
@@ -42,8 +42,8 @@ function CapabilityOrbit() {
         </div>
       </div>
 
-      {/* Cloud Infra — top-left */}
-      <div className="absolute top-[7%] left-[3%] w-[44%] animate-float" style={{ animationDelay: '0.4s' }}>
+      {/* Cloud Infra — high, top-left */}
+      <div className="absolute top-[2%] left-0 w-[42%] animate-float" style={{ animationDelay: '0.4s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
@@ -58,8 +58,8 @@ function CapabilityOrbit() {
         </div>
       </div>
 
-      {/* Deploy terminal — top-right (Web & App Development) */}
-      <div className="absolute top-[3%] right-[3%] w-[46%] animate-float" style={{ animationDelay: '1s' }}>
+      {/* Deploy terminal — mid, top-right (Web & App Development) */}
+      <div className="absolute top-[11%] right-0 w-[44%] animate-float" style={{ animationDelay: '1s' }}>
         <div className="rounded-2xl bg-slate-900 border-2 border-black shadow-[0_20px_50px_-16px_rgba(15,23,42,0.5)] p-3 sm:p-4 font-mono">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-rose-400" />
@@ -74,8 +74,8 @@ function CapabilityOrbit() {
         </div>
       </div>
 
-      {/* Threat Monitor — bottom-left (Cybersecurity) */}
-      <div className="absolute bottom-[9%] left-[3%] w-[44%] animate-float" style={{ animationDelay: '0.7s' }}>
+      {/* Threat Monitor — mid, lower-left (Cybersecurity) */}
+      <div className="absolute bottom-[15%] left-[1%] w-[42%] animate-float" style={{ animationDelay: '0.7s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
@@ -89,8 +89,8 @@ function CapabilityOrbit() {
         </div>
       </div>
 
-      {/* Automations — bottom-right */}
-      <div className="absolute bottom-[5%] right-[3%] w-[44%] animate-float" style={{ animationDelay: '1.3s' }}>
+      {/* Automations — low, bottom-right */}
+      <div className="absolute bottom-[1%] right-[3%] w-[42%] animate-float" style={{ animationDelay: '1.3s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
@@ -132,7 +132,12 @@ export default function HeroSection() {
           <h1 className="mt-6 text-4xl md:text-5xl font-black leading-[1.1] tracking-tight text-slate-900">
             AI Integration, Automation &
             <br />
-            <span className="font-display brand-gradient-text text-[1.05em]">Web & App Development</span>
+            <span
+              className="brand-gradient-text italic font-black text-[1.05em]"
+              style={{ WebkitTextStroke: '1px #000' }}
+            >
+              Web & App Development
+            </span>
           </h1>
 
           <p className="mt-6 text-lg text-slate-600 leading-relaxed max-w-lg">
