@@ -83,11 +83,11 @@ export default function ServicesPage() {
                 <Reveal key={s.slug} delay={(i % 3) * 80}>
                   <Link
                     href={`/services/${s.slug}`}
-                    className="group relative flex flex-col h-full bg-white rounded-3xl p-7 border border-blue-100 shadow-[0_12px_35px_-22px_rgba(0,71,212,0.45)] hover:shadow-[0_24px_50px_-22px_rgba(0,71,212,0.55)] hover:-translate-y-1 transition overflow-hidden"
+                    className="group relative flex flex-col h-full bg-white rounded-3xl p-7 border border-blue-100 shadow-[0_12px_35px_-22px_rgba(0,114,153,0.45)] hover:shadow-[0_24px_50px_-22px_rgba(0,114,153,0.55)] hover:-translate-y-1 transition overflow-hidden"
                   >
                     <div className={`absolute -top-12 -right-12 w-32 h-32 ${s.soft} rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition`} />
                     <div className="relative flex-1">
-                      <div className={`inline-grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br ${s.tone} text-white shadow-[0_15px_30px_-12px_rgba(0,101,248,0.6)] group-hover:scale-110 transition`}>
+                      <div className={`inline-grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br ${s.tone} text-white shadow-[0_15px_30px_-12px_rgba(0,152,204,0.6)] group-hover:scale-110 transition`}>
                         <Icon size={24} />
                       </div>
                       <h2 className="mt-5 text-xl font-black text-slate-900 leading-tight">

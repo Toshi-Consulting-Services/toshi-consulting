@@ -51,7 +51,7 @@ export default function TestimonialsSection() {
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
             <Reveal key={t.name} delay={i * 120}>
-              <article className="group h-full flex flex-col bg-white rounded-3xl p-8 border border-blue-100 shadow-[0_15px_45px_-25px_rgba(0,71,212,0.4)] hover:-translate-y-1 hover:shadow-[0_25px_55px_-25px_rgba(0,71,212,0.55)] transition">
+              <article className="group h-full flex flex-col bg-white rounded-3xl p-8 border border-blue-100 shadow-[0_15px_45px_-25px_rgba(0,114,153,0.4)] hover:-translate-y-1 hover:shadow-[0_25px_55px_-25px_rgba(0,114,153,0.55)] transition">
                 {/* Quote glyph */}
                 <svg
                   viewBox="0 0 24 24"
@@ -73,7 +73,7 @@ export default function TestimonialsSection() {
                 </p>
 
                 <div className="mt-7 pt-5 border-t border-blue-100 flex items-center gap-3">
-                  <span className={`grid place-items-center w-11 h-11 rounded-full bg-gradient-to-br ${t.tone} text-white font-black text-sm shadow-[0_10px_22px_-10px_rgba(0,101,248,0.7)]`}>
+                  <span className={`grid place-items-center w-11 h-11 rounded-full bg-gradient-to-br ${t.tone} text-white font-black text-sm shadow-[0_10px_22px_-10px_rgba(0,152,204,0.7)]`}>
                     {t.initials}
                   </span>
                   <div className="leading-tight">

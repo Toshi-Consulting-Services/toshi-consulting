@@ -175,7 +175,7 @@ export default async function BlogPost({
         {/* Featured image */}
         <section className="relative pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <div className={`relative h-72 md:h-96 rounded-3xl bg-gradient-to-br ${post.tone} overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,71,212,0.55)]`}>
+            <div className={`relative h-72 md:h-96 rounded-3xl bg-gradient-to-br ${post.tone} overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,114,153,0.55)]`}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
               <div className="absolute inset-0 opacity-15 bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:44px_44px]" />
               <div className="absolute -right-16 -bottom-16 w-80 h-80 rounded-full border border-white/25" />
@@ -210,7 +210,7 @@ export default async function BlogPost({
                 </h2>
                 <div className="grid gap-3">
                   {post.faqs.map((f) => (
-                    <details key={f.q} className="group bg-blue-50/60 border border-blue-100 rounded-xl p-5 open:bg-white open:shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)] transition">
+                    <details key={f.q} className="group bg-blue-50/60 border border-blue-100 rounded-xl p-5 open:bg-white open:shadow-[0_15px_45px_-25px_rgba(0,114,153,0.35)] transition">
                       <summary className="cursor-pointer font-bold text-slate-900 flex items-start gap-3 list-none">
                         <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-black shrink-0 group-open:rotate-45 transition">+</span>
                         <span className="flex-1">{f.q}</span>
@@ -223,7 +223,7 @@ export default async function BlogPost({
             )}
 
             {/* CTA */}
-            <div className="mt-12 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 text-white p-8 shadow-[0_25px_60px_-25px_rgba(0,71,212,0.55)] flex flex-col md:flex-row items-start md:items-center gap-6 justify-between overflow-hidden relative">
+            <div className="mt-12 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 text-white p-8 shadow-[0_25px_60px_-25px_rgba(0,114,153,0.55)] flex flex-col md:flex-row items-start md:items-center gap-6 justify-between overflow-hidden relative">
               <div className="absolute -bottom-20 -left-12 w-64 h-64 rounded-full border-2 border-white/15" />
               <div className="relative">
                 <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
@@ -256,7 +256,7 @@ export default async function BlogPost({
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="group bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.55)] transition flex flex-col"
+                  className="group bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,114,153,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(0,114,153,0.55)] transition flex flex-col"
                 >
                   <div className={`relative h-44 bg-gradient-to-br ${r.tone} grid place-items-center overflow-hidden`}>
                     <div className="absolute inset-0 opacity-15 bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:32px_32px]" />

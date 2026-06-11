@@ -11,7 +11,7 @@ export default async function BlogSidebar({ activeCategorySlug }: { activeCatego
 
   return (
     <aside className="space-y-6 lg:sticky lg:top-32 self-start">
-      <div className="bg-white rounded-2xl border border-blue-100 p-6 shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)]">
+      <div className="bg-white rounded-2xl border border-blue-100 p-6 shadow-[0_15px_45px_-25px_rgba(0,114,153,0.35)]">
         <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
           <CalendarDays size={16} className="text-blue-600" />
           Blogs by Month-Year
@@ -40,7 +40,7 @@ export default async function BlogSidebar({ activeCategorySlug }: { activeCatego
           ))}
         </ul>
       </div>
-      <div className="bg-white rounded-2xl border border-blue-100 p-6 shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)]">
+      <div className="bg-white rounded-2xl border border-blue-100 p-6 shadow-[0_15px_45px_-25px_rgba(0,114,153,0.35)]">
         <h3 className="text-sm font-bold text-slate-900 uppercase tracking-wider flex items-center gap-2">
           <Tag size={16} className="text-blue-600" />
           Blogs by Category

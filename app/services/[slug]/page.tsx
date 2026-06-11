@@ -76,7 +76,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <span className="text-slate-700 font-semibold">{service.title}</span>
             </nav>
 
-            <div className={`mt-6 inline-grid place-items-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.tone} text-white shadow-[0_18px_35px_-12px_rgba(0,101,248,0.65)]`}>
+            <div className={`mt-6 inline-grid place-items-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.tone} text-white shadow-[0_18px_35px_-12px_rgba(0,152,204,0.65)]`}>
               <Icon size={30} />
             </div>
             <h1 className="mt-5 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
@@ -87,7 +87,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </p>
             <Link
               href="/contact"
-              className="mt-7 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition"
+              className="mt-7 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-[0_15px_35px_-12px_rgba(0,152,204,0.9)] hover:-translate-y-0.5 transition"
             >
               Discuss your project <ArrowRight size={16} />
             </Link>

@@ -18,7 +18,7 @@ export default function AboutSection() {
           <div className="absolute -inset-6 bg-gradient-to-br from-blue-100/60 to-cyan-100/40 rounded-3xl -z-10 blur-2xl" />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-[0_20px_50px_-20px_rgba(0,101,248,0.6)] p-6 text-white flex flex-col justify-end">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-[0_20px_50px_-20px_rgba(0,152,204,0.6)] p-6 text-white flex flex-col justify-end">
                 <div className="text-4xl font-black leading-none">10+</div>
                 <div className="text-xs font-semibold mt-1 uppercase tracking-wider text-blue-50">
                   Years of Delivery
@@ -37,7 +37,7 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="space-y-4 pt-12">
-              <div className="aspect-square rounded-2xl bg-white border border-blue-100 p-6 flex flex-col justify-between shadow-[0_15px_40px_-20px_rgba(0,71,212,0.35)]">
+              <div className="aspect-square rounded-2xl bg-white border border-blue-100 p-6 flex flex-col justify-between shadow-[0_15px_40px_-20px_rgba(0,114,153,0.35)]">
                 <div className="text-xs font-bold text-blue-700 uppercase tracking-wider">
                   Our Mission
                 </div>
@@ -46,7 +46,7 @@ export default function AboutSection() {
                   ensuring seamless operations and customer satisfaction.
                 </div>
               </div>
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-white flex flex-col justify-end shadow-[0_20px_50px_-20px_rgba(0,71,212,0.6)]">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-white flex flex-col justify-end shadow-[0_20px_50px_-20px_rgba(0,114,153,0.6)]">
                 <div className="text-xs font-bold text-blue-50 uppercase tracking-wider mb-2">
                   Our Vision
                 </div>
@@ -88,7 +88,7 @@ export default function AboutSection() {
 
           <Link
             href="/about"
-            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition"
+            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,152,204,0.9)] hover:-translate-y-0.5 transition"
           >
             Learn more about us
             <ArrowRight size={18} />

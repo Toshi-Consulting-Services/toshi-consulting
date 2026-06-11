@@ -137,7 +137,7 @@ export default function ContactPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
             {/* Form card */}
-            <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] p-8 sm:p-10">
+            <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,114,153,0.45)] p-8 sm:p-10">
               <h2 className="text-2xl font-black text-slate-900">Send us a message</h2>
               <p className="text-sm text-slate-600 mt-1">We typically reply within 1 business day.</p>
               <ContactForm />
@@ -145,7 +145,7 @@ export default function ContactPage() {
 
             {/* Contact details */}
             <div className="space-y-6">
-              <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] p-8 sm:p-10">
+              <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,114,153,0.45)] p-8 sm:p-10">
                 <h2 className="text-2xl font-black text-slate-900">Contact Details</h2>
                 <div className="mt-6 grid gap-5">
                   {[
@@ -157,7 +157,7 @@ export default function ContactPage() {
                     const Icon = c.icon;
                     const body = (
                       <>
-                        <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,101,248,0.7)] shrink-0">
+                        <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,152,204,0.7)] shrink-0">
                           <Icon size={18} />
                         </span>
                         <span className="flex-1 leading-snug">
@@ -202,7 +202,7 @@ export default function ContactPage() {
                 IT Park Panchkula, Haryana
               </h3>
             </div>
-            <div className="relative rounded-3xl overflow-hidden border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] aspect-[21/9] bg-blue-50">
+            <div className="relative rounded-3xl overflow-hidden border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,114,153,0.45)] aspect-[21/9] bg-blue-50">
               <iframe
                 title="Toshi Consulting on Google Maps"
                 src="https://maps.google.com/maps?q=IT%20Park%20Panchkula&t=&z=14&ie=UTF8&iwloc=&output=embed"
@@ -215,7 +215,7 @@ export default function ContactPage() {
               {/* "We're here" overlay pin card */}
               <div className="pointer-events-none absolute top-6 left-6 max-w-xs bg-white rounded-2xl shadow-[0_20px_50px_-15px_rgba(15,23,42,0.3)] border border-blue-100 p-5">
                 <div className="flex items-start gap-3">
-                  <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,101,248,0.7)] shrink-0">
+                  <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,152,204,0.7)] shrink-0">
                     <MapPin size={18} />
                   </span>
                   <div className="leading-tight">

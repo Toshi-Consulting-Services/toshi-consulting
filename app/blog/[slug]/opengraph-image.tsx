@@ -7,18 +7,18 @@ export const alt = 'Toshi Consulting blog post';
 
 // Gradient backgrounds (ColorHunt palette) keyed by post tone family. Falls back to default.
 const toneToHex: Record<string, [string, string]> = {
-  'from-violet-600 to-cyan-500': ['#4300ff', '#00caff'],
-  'from-blue-500 to-cyan-500':   ['#0065f8', '#00caff'],
-  'from-cyan-500 to-blue-500':   ['#00caff', '#0065f8'],
-  'from-cyan-500 to-sky-500':    ['#00caff', '#1f7bff'],
-  'from-sky-500 to-cyan-600':    ['#1f7bff', '#0090c4'],
-  'from-blue-500 to-blue-500':   ['#4300ff', '#0065f8'],
+  'from-violet-600 to-cyan-500': ['#0098cc', '#00caff'],
+  'from-blue-500 to-cyan-500':   ['#0098cc', '#00caff'],
+  'from-cyan-500 to-blue-500':   ['#00caff', '#0098cc'],
+  'from-cyan-500 to-sky-500':    ['#00caff', '#00b4e6'],
+  'from-sky-500 to-cyan-600':    ['#00b4e6', '#0090c4'],
+  'from-blue-500 to-blue-500':   ['#0098cc', '#0098cc'],
 };
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await getPost(slug);
-  const [c1, c2] = toneToHex[post?.tone ?? ''] ?? ['#0065f8', '#00caff'];
+  const [c1, c2] = toneToHex[post?.tone ?? ''] ?? ['#0098cc', '#00caff'];
   const title = post?.title ?? 'Toshi Consulting';
   const category = post?.category ?? 'Insights';
 

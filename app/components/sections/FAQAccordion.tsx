@@ -25,7 +25,7 @@ const faqs = [
 export default function FAQAccordion() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <div className="bg-white rounded-2xl border border-blue-100 shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)] p-2">
+    <div className="bg-white rounded-2xl border border-blue-100 shadow-[0_15px_45px_-25px_rgba(0,114,153,0.35)] p-2">
       {faqs.map((f, i) => {
         const isOpen = open === i;
         return (

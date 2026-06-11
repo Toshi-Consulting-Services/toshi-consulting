@@ -98,8 +98,8 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
 
             <div className="mt-8 grid md:grid-cols-[200px_1fr] gap-8 items-center">
               <div className={`relative w-40 h-40 mx-auto md:mx-0 ${author.side} rounded-3xl grid place-items-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,101,248,0.18),transparent_60%)]" />
-                <div className={`relative grid place-items-center w-28 h-28 rounded-full bg-gradient-to-br ${author.tone} text-white font-black text-4xl shadow-[0_20px_45px_-15px_rgba(0,71,212,0.55)] ring-4 ring-white`}>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,152,204,0.18),transparent_60%)]" />
+                <div className={`relative grid place-items-center w-28 h-28 rounded-full bg-gradient-to-br ${author.tone} text-white font-black text-4xl shadow-[0_20px_45px_-15px_rgba(0,114,153,0.55)] ring-4 ring-white`}>
                   {author.initials}
                 </div>
               </div>

@@ -62,8 +62,8 @@ export default function WhyChooseUsSection() {
             const Icon = r.icon;
             return (
               <Reveal key={r.title} delay={i * 80}>
-                <div className="group relative h-full bg-white rounded-2xl p-7 border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.5)] hover:-translate-y-1 transition">
-                  <div className={`inline-grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br ${r.tone} text-white shadow-[0_12px_25px_-10px_rgba(0,101,248,0.6)] group-hover:scale-110 transition`}>
+                <div className="group relative h-full bg-white rounded-2xl p-7 border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,114,153,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(0,114,153,0.5)] hover:-translate-y-1 transition">
+                  <div className={`inline-grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br ${r.tone} text-white shadow-[0_12px_25px_-10px_rgba(0,152,204,0.6)] group-hover:scale-110 transition`}>
                     <Icon size={22} />
                   </div>
                   <h3 className="mt-4 text-lg font-bold text-slate-900">{r.title}</h3>

@@ -137,7 +137,7 @@ export default function ContactForm() {
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition disabled:opacity-60 disabled:hover:translate-y-0"
+        className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(0,152,204,0.9)] hover:-translate-y-0.5 transition disabled:opacity-60 disabled:hover:translate-y-0"
       >
         <Send size={18} /> {status === 'sending' ? 'Sending…' : 'Send Message'}
       </button>
