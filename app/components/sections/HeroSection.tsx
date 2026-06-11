@@ -132,10 +132,7 @@ export default function HeroSection() {
           <h1 className="mt-6 text-4xl md:text-5xl font-black leading-[1.1] tracking-tight text-slate-900">
             AI Integration, Automation &
             <br />
-            <span
-              className="font-display brand-gradient-text text-[1.05em]"
-              style={{ WebkitTextStroke: '1px #000' }}
-            >
+            <span className="font-black brand-gradient-text text-[1.05em]">
               Web & App Development
             </span>
           </h1>
