@@ -100,11 +100,9 @@ const websiteSchema = {
   "@type": "WebSite",
   name: "Toshi Consulting",
   url: SITE_URL,
-  potentialAction: {
-    "@type": "SearchAction",
-    target: `${SITE_URL}/blog?q={search_term_string}`,
-    "query-input": "required name=search_term_string",
-  },
+  // No SearchAction: the site has no on-site search endpoint, so advertising
+  // one (target /blog?q=…) would be a false capability. Re-add when a real
+  // search route exists (recommended once the blog passes ~25 posts).
 };
 
 export default function RootLayout({

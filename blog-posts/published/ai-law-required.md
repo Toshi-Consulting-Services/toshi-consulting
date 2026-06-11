@@ -17,18 +17,18 @@ faqs:
 - q: "What are the key considerations for a new AI law in India?"
   a: "A new AI law should consider issues such as data protection, algorithmic transparency, and accountability, as well as provide incentives for AI innovation and adoption. Our team has expertise in AI integration, and we believe that a new AI law should be crafted with input from industry experts and stakeholders."
 - q: "How can Indian businesses prepare for a new AI law?"
-  a: "Indian businesses can prepare for a new AI law by staying informed about developments, investing in AI education and training, and engaging with policymakers and industry experts. We offer [AI integration services](/services#ai-integration) to help businesses prepare for the changing AI landscape."
+  a: "Indian businesses can prepare for a new AI law by staying informed about developments, investing in AI education and training, and engaging with policymakers and industry experts. We offer [AI integration services](/services/ai-integration) to help businesses prepare for the changing AI landscape."
 ---
 
 ## Introduction to AI Law
 The AI world is very different from the IT Act era, and a new law is required to regulate AI, as stated by Ashwini Vaishnaw, the Minister of Electronics and Information Technology. This statement highlights the need for a new framework to govern the development and deployment of AI in India. We've seen the impact of AI on various industries, from healthcare to finance, and we believe that a new AI law is essential to ensure that AI is developed and used responsibly.
 
-The current IT Act is insufficient to regulate AI, as it was enacted in an era when AI was not as prevalent as it is today. The IT Act does not address the unique challenges and opportunities of AI, such as data protection, algorithmic transparency, and accountability. A new AI law is needed to provide clarity and certainty for Indian businesses, allowing them to invest in AI with confidence. Our team has experience in [Blockchain consulting](/services#blockchain-consulting), and we believe that blockchain technology can play a crucial role in ensuring the integrity and transparency of AI systems.
+The current IT Act is insufficient to regulate AI, as it was enacted in an era when AI was not as prevalent as it is today. The IT Act does not address the unique challenges and opportunities of AI, such as data protection, algorithmic transparency, and accountability. A new AI law is needed to provide clarity and certainty for Indian businesses, allowing them to invest in AI with confidence. Our team has experience in [Blockchain consulting](/services/blockchain-consulting), and we believe that blockchain technology can play a crucial role in ensuring the integrity and transparency of AI systems.
 
 ## The Need for a New AI Law
 The need for a new AI law is driven by the rapid growth of AI in India. AI is being used in various industries, from healthcare to finance, and its impact is expected to be significant. However, the current regulatory framework is not equipped to handle the challenges and opportunities of AI. A new AI law is needed to provide a framework for the development and deployment of AI, ensuring that it is used responsibly and for the benefit of society.
 
-The new AI law should consider issues such as data protection, algorithmic transparency, and accountability. It should also provide incentives for AI innovation and adoption, such as tax breaks and funding for AI research. Our team has expertise in [Digital Media Marketing & Branding](/services#digital-media-marketing-branding), and we believe that a new AI law can help Indian businesses to promote their AI-based products and services effectively.
+The new AI law should consider issues such as data protection, algorithmic transparency, and accountability. It should also provide incentives for AI innovation and adoption, such as tax breaks and funding for AI research. Our team has expertise in [Digital Media Marketing & Branding](/services/digital-media-marketing-and-branding), and we believe that a new AI law can help Indian businesses to promote their AI-based products and services effectively.
 
 ## Key Considerations for a New AI Law
 A new AI law should consider several key issues, including:
@@ -40,7 +40,7 @@ A new AI law should consider several key issues, including:
 > **Key insight:** A new AI law should be crafted with input from industry experts and stakeholders, ensuring that it is effective and practical. We've seen the importance of stakeholder engagement in our work with Indian businesses, and we believe that it is essential for the development of a new AI law.
 
 ## The Impact of a New AI Law on Indian Businesses
-A new AI law will have a significant impact on Indian businesses, providing clarity and certainty for investment in AI. It will also ensure that AI is developed and used responsibly, minimizing the risks associated with AI. Our team has experience in [QA Testing & Automations](/services#qa-testing-automations), and we believe that a new AI law can help Indian businesses to ensure the quality and reliability of their AI-based products and services.
+A new AI law will have a significant impact on Indian businesses, providing clarity and certainty for investment in AI. It will also ensure that AI is developed and used responsibly, minimizing the risks associated with AI. Our team has experience in [QA Testing & Automations](/services/qa-testing-automations), and we believe that a new AI law can help Indian businesses to ensure the quality and reliability of their AI-based products and services.
 
 Indian businesses can prepare for a new AI law by staying informed about developments, investing in AI education and training, and engaging with policymakers and industry experts. We offer [Talk to us](/contact) to help businesses prepare for the changing AI landscape.
 
@@ -50,7 +50,7 @@ Blockchain technology can play a crucial role in ensuring the integrity and tran
 > **Watch out:** The lack of a clear regulatory framework for AI can lead to confusion and uncertainty for Indian businesses. We've seen this firsthand in our work with Indian businesses, and we believe that a new AI law is essential to provide clarity and certainty.
 
 ## How we help
-We help Indian businesses to navigate the complexities of AI and prepare for a new AI law. Our services include [AI integration](/services#ai-integration), [Blockchain consulting](/services#blockchain-consulting), [QA Testing & Automations](/services#qa-testing-automations), and [Digital Media Marketing & Branding](/services#digital-media-marketing-branding). We also offer [Talk to us](/contact) to help businesses prepare for the changing AI landscape.
+We help Indian businesses to navigate the complexities of AI and prepare for a new AI law. Our services include [AI integration](/services/ai-integration), [Blockchain consulting](/services/blockchain-consulting), [QA Testing & Automations](/services/qa-testing-automations), and [Digital Media Marketing & Branding](/services/digital-media-marketing-and-branding). We also offer [Talk to us](/contact) to help businesses prepare for the changing AI landscape.
 
 ## The Bottom Line
 The need for a new AI law in India is clear, and it is essential that Indian businesses prepare for this change. A new AI law will provide clarity and certainty for investment in AI, ensuring that AI is developed and used responsibly. We believe that a new AI law will have a significant impact on Indian businesses, and we are committed to helping them navigate the complexities of AI.
