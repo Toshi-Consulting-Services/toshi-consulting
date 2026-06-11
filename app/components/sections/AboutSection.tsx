@@ -15,17 +15,17 @@ export default function AboutSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-14 items-center">
         {/* Left: collage */}
         <Reveal className="relative">
-          <div className="absolute -inset-6 bg-gradient-to-br from-teal-100/60 to-cyan-100/40 rounded-3xl -z-10 blur-2xl" />
+          <div className="absolute -inset-6 bg-gradient-to-br from-blue-100/60 to-cyan-100/40 rounded-3xl -z-10 blur-2xl" />
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.6)] p-6 text-white flex flex-col justify-end">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 shadow-[0_20px_50px_-20px_rgba(0,101,248,0.6)] p-6 text-white flex flex-col justify-end">
                 <div className="text-4xl font-black leading-none">10+</div>
-                <div className="text-xs font-semibold mt-1 uppercase tracking-wider text-teal-50">
+                <div className="text-xs font-semibold mt-1 uppercase tracking-wider text-blue-50">
                   Years of Delivery
                 </div>
               </div>
-              <div className="aspect-square rounded-2xl bg-teal-50 border border-teal-100 p-6 flex flex-col justify-between">
-                <div className="grid place-items-center w-12 h-12 rounded-xl bg-white shadow text-teal-600">
+              <div className="aspect-square rounded-2xl bg-blue-50 border border-blue-100 p-6 flex flex-col justify-between">
+                <div className="grid place-items-center w-12 h-12 rounded-xl bg-white shadow text-blue-600">
                   <CheckCircle2 size={24} />
                 </div>
                 <div>
@@ -37,8 +37,8 @@ export default function AboutSection() {
               </div>
             </div>
             <div className="space-y-4 pt-12">
-              <div className="aspect-square rounded-2xl bg-white border border-teal-100 p-6 flex flex-col justify-between shadow-[0_15px_40px_-20px_rgba(15,118,110,0.35)]">
-                <div className="text-xs font-bold text-teal-700 uppercase tracking-wider">
+              <div className="aspect-square rounded-2xl bg-white border border-blue-100 p-6 flex flex-col justify-between shadow-[0_15px_40px_-20px_rgba(0,71,212,0.35)]">
+                <div className="text-xs font-bold text-blue-700 uppercase tracking-wider">
                   Our Mission
                 </div>
                 <div className="text-sm text-slate-700 leading-relaxed">
@@ -46,8 +46,8 @@ export default function AboutSection() {
                   ensuring seamless operations and customer satisfaction.
                 </div>
               </div>
-              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 p-6 text-white flex flex-col justify-end shadow-[0_20px_50px_-20px_rgba(15,118,110,0.6)]">
-                <div className="text-xs font-bold text-emerald-50 uppercase tracking-wider mb-2">
+              <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-blue-500 to-blue-600 p-6 text-white flex flex-col justify-end shadow-[0_20px_50px_-20px_rgba(0,71,212,0.6)]">
+                <div className="text-xs font-bold text-blue-50 uppercase tracking-wider mb-2">
                   Our Vision
                 </div>
                 <div className="text-sm leading-relaxed">
@@ -61,8 +61,8 @@ export default function AboutSection() {
 
         {/* Right: copy */}
         <Reveal delay={150}>
-          <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> About Us
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> About Us
           </div>
           <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
             A technology partner you can{' '}
@@ -78,7 +78,7 @@ export default function AboutSection() {
           <ul className="mt-7 grid sm:grid-cols-2 gap-3">
             {pillars.map((p) => (
               <li key={p} className="flex items-start gap-2.5 text-slate-700">
-                <span className="grid place-items-center w-5 h-5 rounded-full bg-teal-100 text-teal-700 mt-0.5">
+                <span className="grid place-items-center w-5 h-5 rounded-full bg-blue-100 text-blue-700 mt-0.5">
                   <CheckCircle2 size={14} />
                 </span>
                 <span className="text-sm font-medium">{p}</span>
@@ -88,7 +88,7 @@ export default function AboutSection() {
 
           <Link
             href="/about"
-            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(20,184,166,0.9)] hover:-translate-y-0.5 transition"
+            className="mt-9 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition"
           >
             Learn more about us
             <ArrowRight size={18} />

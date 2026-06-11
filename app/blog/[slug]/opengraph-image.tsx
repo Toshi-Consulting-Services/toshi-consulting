@@ -5,21 +5,20 @@ export const size = { width: 1200, height: 630 };
 export const contentType = 'image/png';
 export const alt = 'Toshi Consulting blog post';
 
-// Solid teal gradient backgrounds keyed by post tone family. Falls back to default.
+// Gradient backgrounds (ColorHunt palette) keyed by post tone family. Falls back to default.
 const toneToHex: Record<string, [string, string]> = {
-  'from-teal-600 to-cyan-600':       ['#0d9488', '#0891b2'],
-  'from-teal-500 to-cyan-500':       ['#14b8a6', '#06b6d4'],
-  'from-emerald-500 to-teal-500':    ['#10b981', '#14b8a6'],
-  'from-cyan-500 to-sky-500':        ['#06b6d4', '#0ea5e9'],
-  'from-teal-500 to-emerald-500':    ['#14b8a6', '#10b981'],
-  'from-cyan-500 to-teal-500':       ['#06b6d4', '#14b8a6'],
-  'from-emerald-500 to-cyan-500':    ['#10b981', '#06b6d4'],
+  'from-violet-600 to-cyan-500': ['#4300ff', '#00caff'],
+  'from-blue-500 to-cyan-500':   ['#0065f8', '#00caff'],
+  'from-cyan-500 to-blue-500':   ['#00caff', '#0065f8'],
+  'from-cyan-500 to-sky-500':    ['#00caff', '#1f7bff'],
+  'from-sky-500 to-cyan-600':    ['#1f7bff', '#0090c4'],
+  'from-blue-500 to-blue-500':   ['#4300ff', '#0065f8'],
 };
 
 export default async function Image({ params }: { params: Promise<{ slug: string }> }) {
   const { slug } = await params;
   const post = await getPost(slug);
-  const [c1, c2] = toneToHex[post?.tone ?? ''] ?? ['#14b8a6', '#06b6d4'];
+  const [c1, c2] = toneToHex[post?.tone ?? ''] ?? ['#0065f8', '#00caff'];
   const title = post?.title ?? 'Toshi Consulting';
   const category = post?.category ?? 'Insights';
 

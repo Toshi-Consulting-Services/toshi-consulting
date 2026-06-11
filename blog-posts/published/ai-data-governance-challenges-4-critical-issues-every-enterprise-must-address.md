@@ -8,7 +8,7 @@ date: 2026-06-02
 author: Toshi Consulting
 targetKeyword: "AI data governance"
 iconName: brain
-tone: from-teal-500 to-cyan-500
+tone: from-blue-500 to-cyan-500
 faqs:
 - q: "What is AI data governance?"
   a: "AI data governance is the set of policies, controls, and accountability that decide how data is collected, prepared, secured, and used across the AI lifecycle. It covers data quality and lineage, privacy and consent, model transparency, and access control, so the outputs of a model can be trusted and defended."

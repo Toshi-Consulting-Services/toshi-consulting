@@ -31,11 +31,11 @@ const steps = [
 export default function ProcessSection() {
   return (
     <section className="relative py-24 bg-white overflow-hidden">
-      <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(15,118,110,1)_1px,transparent_1px),linear-gradient(90deg,rgba(15,118,110,1)_1px,transparent_1px)] bg-[size:56px_56px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.06] bg-[linear-gradient(rgba(0,71,212,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,71,212,1)_1px,transparent_1px)] bg-[size:56px_56px]" />
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal className="text-center max-w-2xl mx-auto mb-16">
-          <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
-            <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> How we work
+          <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+            <span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> How we work
           </div>
           <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
             A simple, repeatable{' '}
@@ -48,18 +48,18 @@ export default function ProcessSection() {
 
         <div className="relative grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Connecting dashed line behind cards (desktop only) */}
-          <div className="hidden lg:block pointer-events-none absolute left-0 right-0 top-14 mx-12 border-t-2 border-dashed border-teal-200" />
+          <div className="hidden lg:block pointer-events-none absolute left-0 right-0 top-14 mx-12 border-t-2 border-dashed border-blue-200" />
 
           {steps.map((s, i) => {
             const Icon = s.icon;
             return (
               <Reveal key={s.n} delay={i * 100}>
-                <div className="relative bg-white rounded-2xl border border-teal-100 p-7 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
+                <div className="relative bg-white rounded-2xl border border-blue-100 p-7 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.5)] transition">
                   <div className="flex items-start justify-between">
-                    <span className="relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]">
+                    <span className="relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_15px_30px_-12px_rgba(0,101,248,0.6)]">
                       <Icon size={22} />
                     </span>
-                    <span className="font-display text-4xl text-teal-200">{s.n}</span>
+                    <span className="font-display text-4xl text-blue-200">{s.n}</span>
                   </div>
                   <h3 className="mt-5 text-xl font-bold text-slate-900">{s.title}</h3>
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>

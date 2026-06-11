@@ -126,27 +126,27 @@ export default async function BlogPost({
       <main className="flex-1">
         {/* Hero */}
         <section className="relative pt-32 pb-12 hero-bg overflow-hidden">
-          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-blue-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
 
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-teal-700 transition">Home</Link>
+              <Link href="/" className="hover:text-blue-700 transition">Home</Link>
               <ChevronRight size={12} />
-              <Link href="/blog" className="hover:text-teal-700 transition">Blog</Link>
+              <Link href="/blog" className="hover:text-blue-700 transition">Blog</Link>
               <ChevronRight size={12} />
-              <Link href={`/blog/category/${catSlug}`} className="hover:text-teal-700 transition">{post.category}</Link>
+              <Link href={`/blog/category/${catSlug}`} className="hover:text-blue-700 transition">{post.category}</Link>
             </nav>
 
-            <Link href="/blog" className="mt-5 inline-flex items-center gap-1.5 text-teal-700 font-semibold hover:text-teal-800 transition text-sm">
+            <Link href="/blog" className="mt-5 inline-flex items-center gap-1.5 text-blue-700 font-semibold hover:text-blue-800 transition text-sm">
               <ArrowLeft size={14} /> Back to all blogs
             </Link>
 
             <div className="mt-5 flex flex-wrap items-center gap-2">
               <Link
                 href={`/blog/category/${catSlug}`}
-                className="inline-flex items-center gap-1.5 bg-white text-teal-700 border border-teal-200 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider hover:bg-teal-50 transition"
+                className="inline-flex items-center gap-1.5 bg-white text-blue-700 border border-blue-200 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider hover:bg-blue-50 transition"
               >
                 <Tag size={12} /> {post.category}
               </Link>
@@ -158,7 +158,7 @@ export default async function BlogPost({
               </span>
               <Link
                 href={`/authors/${author.slug}`}
-                className="inline-flex items-center gap-1 bg-white/80 backdrop-blur text-slate-600 hover:text-teal-700 hover:bg-white rounded-full px-3 py-1 text-[11px] font-semibold transition"
+                className="inline-flex items-center gap-1 bg-white/80 backdrop-blur text-slate-600 hover:text-blue-700 hover:bg-white rounded-full px-3 py-1 text-[11px] font-semibold transition"
               >
                 <User size={12} /> {author.name}
               </Link>
@@ -175,7 +175,7 @@ export default async function BlogPost({
         {/* Featured image */}
         <section className="relative pb-12">
           <div className="max-w-4xl mx-auto px-4 sm:px-6">
-            <div className={`relative h-72 md:h-96 rounded-3xl bg-gradient-to-br ${post.tone} overflow-hidden shadow-[0_30px_60px_-30px_rgba(15,118,110,0.55)]`}>
+            <div className={`relative h-72 md:h-96 rounded-3xl bg-gradient-to-br ${post.tone} overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,71,212,0.55)]`}>
               <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(255,255,255,0.25),transparent_55%)]" />
               <div className="absolute inset-0 opacity-15 bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:44px_44px]" />
               <div className="absolute -right-16 -bottom-16 w-80 h-80 rounded-full border border-white/25" />
@@ -210,9 +210,9 @@ export default async function BlogPost({
                 </h2>
                 <div className="grid gap-3">
                   {post.faqs.map((f) => (
-                    <details key={f.q} className="group bg-teal-50/60 border border-teal-100 rounded-xl p-5 open:bg-white open:shadow-[0_15px_45px_-25px_rgba(15,118,110,0.35)] transition">
+                    <details key={f.q} className="group bg-blue-50/60 border border-blue-100 rounded-xl p-5 open:bg-white open:shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)] transition">
                       <summary className="cursor-pointer font-bold text-slate-900 flex items-start gap-3 list-none">
-                        <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-to-br from-teal-500 to-cyan-500 text-white text-xs font-black shrink-0 group-open:rotate-45 transition">+</span>
+                        <span className="grid place-items-center w-7 h-7 rounded-lg bg-gradient-to-br from-blue-500 to-cyan-500 text-white text-xs font-black shrink-0 group-open:rotate-45 transition">+</span>
                         <span className="flex-1">{f.q}</span>
                       </summary>
                       <p className="mt-3 ml-10 text-sm text-slate-700 leading-relaxed">{f.a}</p>
@@ -223,20 +223,20 @@ export default async function BlogPost({
             )}
 
             {/* CTA */}
-            <div className="mt-12 rounded-2xl bg-gradient-to-br from-teal-600 to-cyan-600 text-white p-8 shadow-[0_25px_60px_-25px_rgba(15,118,110,0.55)] flex flex-col md:flex-row items-start md:items-center gap-6 justify-between overflow-hidden relative">
+            <div className="mt-12 rounded-2xl bg-gradient-to-br from-violet-600 to-cyan-500 text-white p-8 shadow-[0_25px_60px_-25px_rgba(0,71,212,0.55)] flex flex-col md:flex-row items-start md:items-center gap-6 justify-between overflow-hidden relative">
               <div className="absolute -bottom-20 -left-12 w-64 h-64 rounded-full border-2 border-white/15" />
               <div className="relative">
                 <div className="inline-flex items-center gap-2 bg-white/15 border border-white/30 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider">
                   <ShieldCheck size={12} /> Talk to an expert
                 </div>
                 <h3 className="text-2xl font-black mt-3">Need professional help?</h3>
-                <p className="text-teal-50 mt-1 text-sm md:text-base">
+                <p className="text-blue-50 mt-1 text-sm md:text-base">
                   We specialise in tailored solutions for your exact stack and risk profile.
                 </p>
               </div>
               <Link
                 href="/contact"
-                className="relative inline-flex items-center gap-2 bg-white text-teal-700 px-6 py-3 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition"
+                className="relative inline-flex items-center gap-2 bg-white text-blue-700 px-6 py-3 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,0,0,0.25)] hover:-translate-y-0.5 transition"
               >
                 Get a Consultation
                 <ArrowUpRight size={16} />
@@ -256,7 +256,7 @@ export default async function BlogPost({
                 <Link
                   key={r.slug}
                   href={`/blog/${r.slug}`}
-                  className="group bg-white rounded-2xl overflow-hidden border border-teal-100 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.55)] transition flex flex-col"
+                  className="group bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.55)] transition flex flex-col"
                 >
                   <div className={`relative h-44 bg-gradient-to-br ${r.tone} grid place-items-center overflow-hidden`}>
                     <div className="absolute inset-0 opacity-15 bg-[linear-gradient(rgba(255,255,255,1)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,1)_1px,transparent_1px)] bg-[size:32px_32px]" />
@@ -264,16 +264,16 @@ export default async function BlogPost({
                     <div className="relative grid place-items-center w-16 h-16 rounded-2xl bg-white/20 backdrop-blur-sm border border-white/30 text-white">
                       <BlogTopicIcon name={r.iconName} size={32} />
                     </div>
-                    <div className="absolute top-3 left-3 bg-white/95 text-teal-700 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
+                    <div className="absolute top-3 left-3 bg-white/95 text-blue-700 rounded-full px-3 py-1 text-[10px] font-bold uppercase tracking-wider">
                       {r.category}
                     </div>
                   </div>
                   <div className="p-5 flex-1 flex flex-col">
-                    <h4 className="font-bold text-slate-900 group-hover:text-teal-700 transition leading-snug">
+                    <h4 className="font-bold text-slate-900 group-hover:text-blue-700 transition leading-snug">
                       {r.title}
                     </h4>
                     <p className="mt-2 text-xs text-slate-600 line-clamp-2">{r.excerpt}</p>
-                    <div className="mt-3 inline-flex items-center gap-1 text-teal-700 text-xs font-bold">
+                    <div className="mt-3 inline-flex items-center gap-1 text-blue-700 text-xs font-bold">
                       Read more <ArrowUpRight size={12} />
                     </div>
                   </div>

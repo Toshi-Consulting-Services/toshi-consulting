@@ -65,7 +65,7 @@ const monogramSVGs: Record<string, React.ReactNode> = {
 
 export default function TrustedBySection() {
   return (
-    <section className="relative py-12 bg-white border-y border-teal-50">
+    <section className="relative py-12 bg-white border-y border-blue-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <Reveal className="text-center">
           <p className="text-[11px] font-bold uppercase tracking-[0.25em] text-slate-500">
@@ -77,7 +77,7 @@ export default function TrustedBySection() {
             {logos.map((l) => (
               <div
                 key={l.name}
-                className="flex items-center justify-center text-slate-400 hover:text-teal-700 font-extrabold text-base md:text-lg tracking-tight transition grayscale hover:grayscale-0"
+                className="flex items-center justify-center text-slate-400 hover:text-blue-700 font-extrabold text-base md:text-lg tracking-tight transition grayscale hover:grayscale-0"
                 aria-label={l.name}
                 title={l.name}
               >

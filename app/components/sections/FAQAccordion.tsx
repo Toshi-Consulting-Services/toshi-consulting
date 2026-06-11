@@ -25,16 +25,16 @@ const faqs = [
 export default function FAQAccordion() {
   const [open, setOpen] = useState<number | null>(0);
   return (
-    <div className="bg-white rounded-2xl border border-teal-100 shadow-[0_15px_45px_-25px_rgba(15,118,110,0.35)] p-2">
+    <div className="bg-white rounded-2xl border border-blue-100 shadow-[0_15px_45px_-25px_rgba(0,71,212,0.35)] p-2">
       {faqs.map((f, i) => {
         const isOpen = open === i;
         return (
-          <div key={f.q} className={`border-b border-teal-50 last:border-b-0`}>
+          <div key={f.q} className={`border-b border-blue-50 last:border-b-0`}>
             <button
               onClick={() => setOpen(isOpen ? null : i)}
-              className="w-full flex items-start gap-4 p-5 text-left hover:bg-teal-50/40 rounded-xl transition"
+              className="w-full flex items-start gap-4 p-5 text-left hover:bg-blue-50/40 rounded-xl transition"
             >
-              <span className={`grid place-items-center w-8 h-8 rounded-lg shrink-0 transition ${isOpen ? 'bg-gradient-to-br from-teal-500 to-cyan-500 text-white' : 'bg-teal-50 text-teal-700'}`}>
+              <span className={`grid place-items-center w-8 h-8 rounded-lg shrink-0 transition ${isOpen ? 'bg-gradient-to-br from-blue-500 to-cyan-500 text-white' : 'bg-blue-50 text-blue-700'}`}>
                 {isOpen ? <Minus size={16} /> : <Plus size={16} />}
               </span>
               <span className="flex-1">

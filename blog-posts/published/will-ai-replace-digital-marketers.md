@@ -8,7 +8,7 @@ date: 2026-05-13
 author: Toshi Consulting
 targetKeyword: "will AI replace digital marketers"
 iconName: megaphone
-tone: from-emerald-500 to-cyan-500
+tone: from-blue-500 to-cyan-500
 faqs:
 - q: "Will AI replace digital marketers?"
   a: "No. AI automates parts of the work — drafting, research, reporting, and optimisation — but it does not replace strategy, brand judgement, or genuine creativity. The realistic outcome is that marketers who use AI well will outpace those who do not, rather than AI removing the role itself."
