@@ -89,10 +89,18 @@ html, body {
   100% { transform: translateX(100%); }
 }
 
+@keyframes dash-flow {
+  to { stroke-dashoffset: -12; }
+}
+
 .animate-radar { animation: radar-pulse 3s ease-out infinite; }
 .animate-float { animation: float-y 4s ease-in-out infinite; }
 .animate-fade-up { animation: fade-up 0.7s ease-out both; }
 .animate-orbit { animation: orbit linear infinite; }
+
+/* Hero "AI core" connectors — flowing dotted lines from each card into the core */
+.hero-dash { stroke-dasharray: 0.5 4; animation: dash-flow 0.8s linear infinite; }
+@media (prefers-reduced-motion: reduce) { .hero-dash { animation: none; } }
 
 .brand-gradient-text {
   background: linear-gradient(135deg, #0f766e 0%, #06b6d4 60%, #14b8a6 100%);

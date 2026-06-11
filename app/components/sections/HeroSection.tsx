@@ -1,98 +1,106 @@
 'use client';
 
 import Link from 'next/link';
-import { Phone, ArrowRight, Sparkles, Bot, Zap, Code2 } from 'lucide-react';
+import { ArrowRight, Sparkles, Zap, Code2, BrainCircuit, Cloud, ShieldCheck, Workflow } from 'lucide-react';
 
-function ShieldRadar() {
-  // Three orbit radii (% of container) and the speed of each
-  const orbits = [
-    { radius: 36, duration: 14, dots: 1, delay: 0 },
-    { radius: 26, duration: 9,  dots: 2, delay: -3 },
-    { radius: 18, duration: 6,  dots: 3, delay: -2 },
+function CapabilityOrbit() {
+  // Curved connector paths (viewBox 0..100) from the centre AI CORE to each card.
+  const links = [
+    'M50 50 C 44 42 38 35 32 30', // -> Cloud Infra (top-left)
+    'M50 50 C 58 42 65 33 72 26', // -> Deploy terminal (top-right)
+    'M50 50 C 44 58 37 67 30 73', // -> Threat Monitor (bottom-left)
+    'M50 50 C 58 58 66 68 73 75', // -> Automations (bottom-right)
   ];
 
   return (
-    <div className="relative w-full max-w-[460px] aspect-square mx-auto select-none">
-      {/* Concentric pulse rings */}
-      <div className="absolute inset-0 grid place-items-center">
-        {[0, 0.6, 1.2, 1.8].map((delay, i) => (
-          <span
+    <div className="relative w-full max-w-[540px] aspect-square mx-auto select-none">
+      {/* Dashed connector lines flowing into the core */}
+      <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100" fill="none" aria-hidden="true">
+        {links.map((d, i) => (
+          <path
             key={i}
-            className="absolute rounded-full border-2 border-teal-400/40 animate-radar"
-            style={{
-              width: '78%',
-              height: '78%',
-              animationDelay: `${delay}s`,
-            }}
+            d={d}
+            stroke="#14b8a6"
+            strokeWidth={0.7}
+            strokeLinecap="round"
+            className="hero-dash"
+            style={{ animationDelay: `${i * 0.2}s`, opacity: 0.55 }}
           />
         ))}
-        {/* Static rings */}
-        {[28, 44, 60, 76].map((size) => (
-          <span
-            key={size}
-            className="absolute rounded-full border border-teal-300/40"
-            style={{ width: `${size}%`, height: `${size}%` }}
-          />
-        ))}
-        {/* Orbiting data dots — visualise data flowing into the shield */}
-        {orbits.map((orbit, oi) =>
-          Array.from({ length: orbit.dots }).map((_, di) => {
-            const offset = di * (orbit.duration / orbit.dots);
-            return (
-              <span
-                key={`${oi}-${di}`}
-                className="absolute left-1/2 top-1/2 animate-orbit"
-                style={{
-                  // @ts-expect-error custom CSS var
-                  '--orbit-r': `${orbit.radius}%`,
-                  animationDuration: `${orbit.duration}s`,
-                  animationDelay: `${orbit.delay - offset}s`,
-                }}
-              >
-                <span className="block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-teal-400 to-cyan-500 shadow-[0_0_14px_rgba(20,184,166,0.95)]" />
-              </span>
-            );
-          })
-        )}
-      </div>
+      </svg>
 
-      {/* Shield */}
-      <div className="absolute inset-0 grid place-items-center">
-        <div className="relative w-[34%] h-[34%] grid place-items-center animate-float">
-          <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 blur-2xl opacity-50" />
-          <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-teal-500 via-teal-500 to-cyan-500 shadow-[0_20px_50px_-12px_rgba(20,184,166,0.6)] grid place-items-center">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-[60%] h-[60%] text-white">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8.5 3.2v6.3c0 5.4-3.8 9.3-8.5 10.5-4.7-1.2-8.5-5.1-8.5-10.5V5.2L12 2z" />
-              <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 12.4l2.6 2.6L15.8 10" />
-            </svg>
+      {/* Centre — AI CORE */}
+      <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[31%]">
+        <div className="relative aspect-square rounded-[1.6rem] border border-teal-200/70 bg-white/40 backdrop-blur p-2.5 animate-float">
+          <div className="absolute inset-0 -z-10 rounded-[1.6rem] bg-gradient-to-br from-teal-400 to-cyan-400 blur-2xl opacity-40" />
+          <div className="w-full h-full rounded-2xl bg-gradient-to-br from-teal-500 via-teal-500 to-cyan-500 shadow-[0_18px_45px_-12px_rgba(20,184,166,0.6)] grid place-items-center text-white">
+            <div className="flex flex-col items-center gap-1">
+              <BrainCircuit className="w-7 h-7 sm:w-8 sm:h-8" strokeWidth={1.6} />
+              <span className="text-[9px] sm:text-[11px] font-bold tracking-[0.18em]">AI CORE</span>
+            </div>
           </div>
         </div>
       </div>
 
-      {/* Floating Customer Care card */}
-      <div className="absolute left-[2%] bottom-[18%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(15,118,110,0.3)] border border-teal-100 px-4 py-3 flex items-center gap-3 animate-float -rotate-2" style={{ animationDelay: '0.6s' }}>
-        <div className="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white">
-          <Phone size={18} />
-        </div>
-        <div className="leading-tight">
-          <div className="text-[10px] uppercase tracking-wider text-slate-500 font-semibold">
-            Toshi Customer Care
+      {/* Cloud Infra — top-left */}
+      <div className="absolute top-[4%] left-0 w-[46%] animate-float" style={{ animationDelay: '0.4s' }}>
+        <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
+          <div className="flex items-center gap-2.5">
+            <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
+              <Cloud size={18} />
+            </div>
+            <span className="font-bold text-slate-900 text-sm sm:text-base">Cloud Infra</span>
           </div>
-          <div className="text-sm font-bold text-slate-900">+91-9915718004</div>
-          <div className="text-[10px] text-teal-600 font-semibold flex items-center gap-1">
-            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> Available 24/7
+          <div className="mt-2.5 h-1.5 rounded-full bg-teal-100 overflow-hidden">
+            <div className="h-full w-[88%] rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
+          </div>
+          <div className="mt-2 text-[10px] sm:text-[11px] text-slate-500 font-medium">99.99% uptime · auto-scale</div>
+        </div>
+      </div>
+
+      {/* Deploy terminal — top-right (Web & App Development) */}
+      <div className="absolute top-0 right-0 w-[48%] animate-float" style={{ animationDelay: '1s' }}>
+        <div className="rounded-2xl bg-slate-900 shadow-[0_20px_50px_-16px_rgba(15,23,42,0.5)] p-3 sm:p-4 font-mono">
+          <div className="flex items-center gap-1.5">
+            <span className="w-2 h-2 rounded-full bg-rose-400" />
+            <span className="w-2 h-2 rounded-full bg-amber-400" />
+            <span className="w-2 h-2 rounded-full bg-emerald-400" />
+          </div>
+          <div className="mt-2.5 space-y-1 text-[10px] sm:text-[11px] leading-relaxed">
+            <div className="text-slate-300"><span className="text-cyan-400">$</span> deploy --prod</div>
+            <div className="text-emerald-400">✓ build passed</div>
+            <div className="text-emerald-400">✓ shipped 1.2s</div>
           </div>
         </div>
       </div>
 
-      {/* Floating capability badge */}
-      <div className="absolute right-[2%] top-[14%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(15,118,110,0.3)] border border-teal-100 px-3 py-2 flex items-center gap-2 animate-float rotate-3" style={{ animationDelay: '1.2s' }}>
-        <div className="grid place-items-center w-8 h-8 rounded-lg bg-teal-50 text-teal-600">
-          <Bot size={16} />
+      {/* Threat Monitor — bottom-left (Cybersecurity) */}
+      <div className="absolute bottom-[6%] left-0 w-[46%] animate-float" style={{ animationDelay: '0.7s' }}>
+        <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
+          <div className="flex items-center gap-2.5">
+            <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
+              <ShieldCheck size={18} />
+            </div>
+            <span className="font-bold text-slate-900 text-sm sm:text-base">Threat Monitor</span>
+          </div>
+          <div className="mt-2 text-[10px] sm:text-[11px] font-semibold text-emerald-600 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" /> All systems secure
+          </div>
         </div>
-        <div className="text-[11px] font-bold text-slate-900 leading-tight">
-          AI-Native
-          <div className="text-teal-600 text-[10px] font-semibold">Automation-first</div>
+      </div>
+
+      {/* Automations — bottom-right */}
+      <div className="absolute bottom-0 right-0 w-[46%] animate-float" style={{ animationDelay: '1.3s' }}>
+        <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
+          <div className="flex items-center gap-2.5">
+            <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
+              <Workflow size={18} />
+            </div>
+            <span className="font-bold text-slate-900 text-sm sm:text-base">Automations</span>
+          </div>
+          <div className="mt-2 text-[10px] sm:text-[11px] font-semibold text-teal-600 flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-teal-500 animate-pulse" /> 1.2k tasks/day
+          </div>
         </div>
       </div>
     </div>
@@ -109,9 +117,9 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute inset-0 opacity-[0.07] bg-[linear-gradient(rgba(15,118,110,1)_1px,transparent_1px),linear-gradient(90deg,rgba(15,118,110,1)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
-        {/* Left: shield illustration (matches original layout) */}
+        {/* Left: AI-core capability orbit */}
         <div className="order-1 relative">
-          <ShieldRadar />
+          <CapabilityOrbit />
         </div>
 
         {/* Right: copy */}
