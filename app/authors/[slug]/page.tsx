@@ -85,32 +85,32 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
       <main className="flex-1">
         {/* Hero */}
         <section className="relative pt-32 pb-12 hero-bg overflow-hidden">
-          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-blue-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
             <nav className="flex items-center gap-1.5 text-xs text-slate-500 font-semibold" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-blue-700 transition">Home</Link>
+              <Link href="/" className="hover:text-teal-700 transition">Home</Link>
               <ChevronRight size={12} />
-              <Link href="/blog" className="hover:text-blue-700 transition">Blog</Link>
+              <Link href="/blog" className="hover:text-teal-700 transition">Blog</Link>
               <ChevronRight size={12} />
-              <span className="text-blue-700">{author.name}</span>
+              <span className="text-teal-700">{author.name}</span>
             </nav>
 
             <div className="mt-8 grid md:grid-cols-[200px_1fr] gap-8 items-center">
               <div className={`relative w-40 h-40 mx-auto md:mx-0 ${author.side} rounded-3xl grid place-items-center overflow-hidden`}>
-                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(0,101,248,0.18),transparent_60%)]" />
-                <div className={`relative grid place-items-center w-28 h-28 rounded-full bg-gradient-to-br ${author.tone} text-white font-black text-4xl shadow-[0_20px_45px_-15px_rgba(0,71,212,0.55)] ring-4 ring-white`}>
+                <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_30%,rgba(20,184,166,0.18),transparent_60%)]" />
+                <div className={`relative grid place-items-center w-28 h-28 rounded-full bg-gradient-to-br ${author.tone} text-white font-black text-4xl shadow-[0_20px_45px_-15px_rgba(15,118,110,0.55)] ring-4 ring-white`}>
                   {author.initials}
                 </div>
               </div>
               <div>
-                <div className="text-xs font-bold text-blue-700 uppercase tracking-wider">{author.role}</div>
+                <div className="text-xs font-bold text-teal-700 uppercase tracking-wider">{author.role}</div>
                 <h1 className="mt-1 text-4xl md:text-5xl font-black tracking-tight text-slate-900">{author.name}</h1>
                 <p className="mt-3 text-slate-600 text-lg leading-relaxed">{author.bio}</p>
 
                 <div className="mt-5 flex flex-wrap gap-2">
                   {author.expertise.map((tag) => (
-                    <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-blue-700 bg-white border border-blue-200 rounded-full px-3 py-1">
+                    <span key={tag} className="text-[11px] font-bold uppercase tracking-wider text-teal-700 bg-white border border-teal-200 rounded-full px-3 py-1">
                       {tag}
                     </span>
                   ))}
@@ -118,12 +118,12 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
 
                 <div className="mt-5 flex gap-2">
                   {author.linkedin && (
-                    <a href={author.linkedin} aria-label="LinkedIn" className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-blue-200 text-blue-700 hover:bg-gradient-to-br hover:from-blue-500 hover:to-cyan-500 hover:text-white transition">
+                    <a href={author.linkedin} aria-label="LinkedIn" className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-teal-200 text-teal-700 hover:bg-gradient-to-br hover:from-teal-500 hover:to-cyan-500 hover:text-white transition">
                       <LinkedinGlyph />
                     </a>
                   )}
                   {author.email && (
-                    <a href={`mailto:${author.email}`} aria-label="Email" className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-blue-200 text-blue-700 hover:bg-gradient-to-br hover:from-blue-500 hover:to-cyan-500 hover:text-white transition">
+                    <a href={`mailto:${author.email}`} aria-label="Email" className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-teal-200 text-teal-700 hover:bg-gradient-to-br hover:from-teal-500 hover:to-cyan-500 hover:text-white transition">
                       <Mail size={16} />
                     </a>
                   )}
@@ -131,7 +131,7 @@ export default async function AuthorPage({ params }: { params: Promise<{ slug: s
               </div>
             </div>
 
-            <Link href="/blog" className="mt-8 inline-flex items-center gap-1.5 text-blue-700 font-semibold hover:text-blue-800 transition text-sm">
+            <Link href="/blog" className="mt-8 inline-flex items-center gap-1.5 text-teal-700 font-semibold hover:text-teal-800 transition text-sm">
               <ArrowLeft size={14} /> Back to all blogs
             </Link>
           </div>

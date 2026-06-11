@@ -117,11 +117,11 @@ export default function ContactPage() {
       <main className="flex-1">
         {/* Hero */}
         <section className="relative pt-32 pb-16 hero-bg overflow-hidden">
-          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-blue-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
           <div className="relative max-w-4xl mx-auto text-center px-4 sm:px-6">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-200 text-blue-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
-              <MessageSquare size={13} className="text-blue-600" /> Contact Us
+            <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
+              <MessageSquare size={13} className="text-teal-600" /> Contact Us
             </div>
             <h1 className="mt-5 text-5xl md:text-6xl font-black tracking-tight text-slate-900">
               Get in <span className="brand-gradient-text">Touch</span>
@@ -137,7 +137,7 @@ export default function ContactPage() {
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
             {/* Form card */}
-            <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] p-8 sm:p-10">
+            <div className="bg-white rounded-3xl border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] p-8 sm:p-10">
               <h2 className="text-2xl font-black text-slate-900">Send us a message</h2>
               <p className="text-sm text-slate-600 mt-1">We typically reply within 1 business day.</p>
               <ContactForm />
@@ -145,7 +145,7 @@ export default function ContactPage() {
 
             {/* Contact details */}
             <div className="space-y-6">
-              <div className="bg-white rounded-3xl border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] p-8 sm:p-10">
+              <div className="bg-white rounded-3xl border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] p-8 sm:p-10">
                 <h2 className="text-2xl font-black text-slate-900">Contact Details</h2>
                 <div className="mt-6 grid gap-5">
                   {[
@@ -157,17 +157,17 @@ export default function ContactPage() {
                     const Icon = c.icon;
                     const body = (
                       <>
-                        <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,101,248,0.7)] shrink-0">
+                        <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.7)] shrink-0">
                           <Icon size={18} />
                         </span>
                         <span className="flex-1 leading-snug">
-                          <span className="block text-[11px] font-bold uppercase tracking-wider text-blue-700">{c.label}</span>
+                          <span className="block text-[11px] font-bold uppercase tracking-wider text-teal-700">{c.label}</span>
                           <span className="block text-slate-800 font-semibold mt-0.5">{c.value}</span>
                         </span>
                       </>
                     );
                     return c.href ? (
-                      <a key={c.label} href={c.href} className="flex items-start gap-3 hover:bg-blue-50/60 -mx-2 p-2 rounded-xl transition">
+                      <a key={c.label} href={c.href} className="flex items-start gap-3 hover:bg-teal-50/60 -mx-2 p-2 rounded-xl transition">
                         {body}
                       </a>
                     ) : (
@@ -183,7 +183,7 @@ export default function ContactPage() {
               <div>
                 <div className="flex items-center gap-2 mb-4 px-1">
                   <h2 className="text-2xl font-black text-slate-900">FAQs</h2>
-                  <span className="grid place-items-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 text-xs font-bold">?</span>
+                  <span className="grid place-items-center w-6 h-6 rounded-full bg-teal-100 text-teal-700 text-xs font-bold">?</span>
                 </div>
                 <FAQAccordion />
               </div>
@@ -195,14 +195,14 @@ export default function ContactPage() {
         <section className="pb-20">
           <div className="max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center mb-6">
-              <div className="inline-flex items-center gap-2 bg-blue-50 border border-blue-200 text-blue-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+              <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
                 <MapPin size={13} /> Find us
               </div>
               <h3 className="mt-3 text-2xl font-black text-slate-900">
                 IT Park Panchkula, Haryana
               </h3>
             </div>
-            <div className="relative rounded-3xl overflow-hidden border border-blue-100 shadow-[0_25px_60px_-30px_rgba(0,71,212,0.45)] aspect-[21/9] bg-blue-50">
+            <div className="relative rounded-3xl overflow-hidden border border-teal-100 shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] aspect-[21/9] bg-teal-50">
               <iframe
                 title="Toshi Consulting on Google Maps"
                 src="https://maps.google.com/maps?q=IT%20Park%20Panchkula&t=&z=14&ie=UTF8&iwloc=&output=embed"
@@ -213,13 +213,13 @@ export default function ContactPage() {
                 style={{ border: 0 }}
               />
               {/* "We're here" overlay pin card */}
-              <div className="pointer-events-none absolute top-6 left-6 max-w-xs bg-white rounded-2xl shadow-[0_20px_50px_-15px_rgba(15,23,42,0.3)] border border-blue-100 p-5">
+              <div className="pointer-events-none absolute top-6 left-6 max-w-xs bg-white rounded-2xl shadow-[0_20px_50px_-15px_rgba(15,23,42,0.3)] border border-teal-100 p-5">
                 <div className="flex items-start gap-3">
-                  <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(0,101,248,0.7)] shrink-0">
+                  <span className="grid place-items-center w-11 h-11 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.7)] shrink-0">
                     <MapPin size={18} />
                   </span>
                   <div className="leading-tight">
-                    <div className="text-[11px] font-bold uppercase tracking-wider text-blue-700">
+                    <div className="text-[11px] font-bold uppercase tracking-wider text-teal-700">
                       We're here
                     </div>
                     <div className="text-sm font-bold text-slate-900 mt-0.5">
@@ -228,8 +228,8 @@ export default function ContactPage() {
                     <div className="text-xs text-slate-600 mt-0.5">
                       4th Floor, IT Park Panchkula<br />Haryana 134116, India
                     </div>
-                    <div className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-blue-600">
-                      <span className="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse" />
+                    <div className="mt-2 flex items-center gap-1 text-[11px] font-semibold text-emerald-600">
+                      <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
                       Open today · 10 AM – 6 PM
                     </div>
                   </div>

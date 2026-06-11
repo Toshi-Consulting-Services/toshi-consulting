@@ -33,13 +33,13 @@ export default function Navbar() {
   return (
     <header className="fixed top-0 left-0 right-0 z-50">
       {/* Top utility bar */}
-      <div className="bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-600 text-white text-[13px]">
+      <div className="bg-gradient-to-r from-teal-600 via-teal-500 to-cyan-600 text-white text-[13px]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-9 flex items-center justify-between gap-4">
           <div className="hidden md:flex items-center gap-6 min-w-0">
-            <a href="tel:+919915718004" className="flex items-center gap-2 hover:text-blue-100 transition">
+            <a href="tel:+919915718004" className="flex items-center gap-2 hover:text-teal-100 transition">
               <Phone size={13} /> +91-9915718004
             </a>
-            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2 hover:text-blue-100 transition">
+            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2 hover:text-teal-100 transition">
               <Mail size={13} /> info@toshiconsulting.com
             </a>
             <span className="hidden lg:flex items-center gap-2">
@@ -50,7 +50,7 @@ export default function Navbar() {
             <Phone size={12} /> +91-9915718004
           </div>
           <div className="flex items-center gap-3">
-            <span className="hidden sm:flex items-center gap-1.5 text-blue-50">
+            <span className="hidden sm:flex items-center gap-1.5 text-teal-50">
               <Clock size={12} /> Mon–Fri · 10:00–18:00
             </span>
             <Link
@@ -67,9 +67,9 @@ export default function Navbar() {
       <nav
         className={`transition-all duration-300 ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(0,71,212,0.18)]'
+            ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(15,118,110,0.18)]'
             : 'bg-white/80 backdrop-blur'
-        } border-b border-blue-100/60`}
+        } border-b border-teal-100/60`}
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           {/* Logo */}
@@ -95,32 +95,32 @@ export default function Navbar() {
                     <Link
                       href={item.href}
                       className={`relative inline-flex items-center gap-1 px-4 py-2 rounded-full text-sm font-semibold transition ${
-                        active ? 'text-blue-700' : 'text-slate-700 hover:text-blue-700'
+                        active ? 'text-teal-700' : 'text-slate-700 hover:text-teal-700'
                       }`}
                     >
                       {item.name}
                       <ChevronDown size={14} className="transition group-hover:rotate-180" />
                       {active && (
-                        <span className="absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] w-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
+                        <span className="absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] w-6 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
                       )}
                     </Link>
 
                     {/* Dropdown panel — pt-3 bridges the hover gap */}
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200">
-                      <div className="w-80 bg-white rounded-2xl border border-blue-100 shadow-[0_25px_60px_-20px_rgba(0,71,212,0.35)] p-2">
+                      <div className="w-80 bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(15,118,110,0.35)] p-2">
                         {services.map((s) => {
                           const Icon = s.icon;
                           return (
                             <Link
                               key={s.slug}
                               href={`/services/${s.slug}`}
-                              className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-blue-50 transition group/item"
+                              className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item"
                             >
                               <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}>
                                 <Icon size={16} />
                               </span>
                               <span className="min-w-0">
-                                <span className="block text-sm font-bold text-slate-800 group-hover/item:text-blue-700 transition">
+                                <span className="block text-sm font-bold text-slate-800 group-hover/item:text-teal-700 transition">
                                   {s.title}
                                 </span>
                                 <span className="block text-xs text-slate-500 leading-snug">
@@ -132,7 +132,7 @@ export default function Navbar() {
                         })}
                         <Link
                           href="/services"
-                          className="mt-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-blue-700 bg-blue-50/60 hover:bg-blue-100 transition border-t border-blue-50"
+                          className="mt-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-teal-700 bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50"
                         >
                           View all services <ArrowRight size={14} />
                         </Link>
@@ -147,12 +147,12 @@ export default function Navbar() {
                   key={item.name}
                   href={item.href}
                   className={`relative px-4 py-2 rounded-full text-sm font-semibold transition ${
-                    active ? 'text-blue-700' : 'text-slate-700 hover:text-blue-700'
+                    active ? 'text-teal-700' : 'text-slate-700 hover:text-teal-700'
                   }`}
                 >
                   {item.name}
                   {active && (
-                    <span className="absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] w-6 rounded-full bg-gradient-to-r from-blue-500 to-cyan-500" />
+                    <span className="absolute left-1/2 -translate-x-1/2 bottom-0.5 h-[3px] w-6 rounded-full bg-gradient-to-r from-teal-500 to-cyan-500" />
                   )}
                 </Link>
               );
@@ -163,7 +163,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(0,101,248,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(0,202,255,0.9)] hover:-translate-y-0.5 transition"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(20,184,166,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(6,182,212,0.9)] hover:-translate-y-0.5 transition"
             >
               Get Quote
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition" />
@@ -174,7 +174,7 @@ export default function Navbar() {
           <button
             onClick={() => setOpen((v) => !v)}
             aria-label="Toggle menu"
-            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-blue-700 hover:bg-blue-50 transition"
+            className="lg:hidden inline-flex items-center justify-center w-10 h-10 rounded-lg text-teal-700 hover:bg-teal-50 transition"
           >
             {open ? <X size={22} /> : <Menu size={22} />}
           </button>
@@ -182,7 +182,7 @@ export default function Navbar() {
 
         {/* Mobile sheet */}
         {open && (
-          <div className="lg:hidden border-t border-blue-100 bg-white max-h-[80vh] overflow-y-auto">
+          <div className="lg:hidden border-t border-teal-100 bg-white max-h-[80vh] overflow-y-auto">
             <div className="px-4 py-3 flex flex-col gap-1">
               {navItems.map((item) => (
                 <div key={item.name}>
@@ -191,20 +191,20 @@ export default function Navbar() {
                     onClick={() => setOpen(false)}
                     className={`block px-4 py-3 rounded-lg text-sm font-semibold transition ${
                       isActive(item.href)
-                        ? 'bg-blue-50 text-blue-700'
-                        : 'text-slate-700 hover:bg-blue-50 hover:text-blue-700'
+                        ? 'bg-teal-50 text-teal-700'
+                        : 'text-slate-700 hover:bg-teal-50 hover:text-teal-700'
                     }`}
                   >
                     {item.name}
                   </Link>
                   {item.dropdown && (
-                    <div className="mt-1 ml-3 flex flex-col gap-0.5 border-l border-blue-100 pl-3">
+                    <div className="mt-1 ml-3 flex flex-col gap-0.5 border-l border-teal-100 pl-3">
                       {services.map((s) => (
                         <Link
                           key={s.slug}
                           href={`/services/${s.slug}`}
                           onClick={() => setOpen(false)}
-                          className="block px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-blue-50 hover:text-blue-700 transition"
+                          className="block px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-teal-50 hover:text-teal-700 transition"
                         >
                           {s.title}
                         </Link>
@@ -216,7 +216,7 @@ export default function Navbar() {
               <Link
                 href="/contact"
                 onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-5 py-3 rounded-full text-sm font-bold"
+                className="mt-2 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-3 rounded-full text-sm font-bold"
               >
                 Get Quote <ArrowRight size={16} />
               </Link>

@@ -42,8 +42,8 @@ export const services: Service[] = [
     meta:
       'Integrate production-grade AI — LLMs, NLP, and automation — into your existing applications with governance, testing, and measurable results.',
     icon: Brain,
-    tone: 'from-blue-500 to-cyan-500',
-    soft: 'bg-blue-50',
+    tone: 'from-teal-500 to-cyan-500',
+    soft: 'bg-teal-50',
     featured: true,
   },
   {
@@ -92,8 +92,8 @@ export const services: Service[] = [
     meta:
       'QA testing and automation — functional, regression, performance, and security testing wired into CI/CD with Playwright, Selenium, Cypress, and JMeter.',
     icon: Bug,
-    tone: 'from-blue-500 to-blue-500',
-    soft: 'bg-blue-50',
+    tone: 'from-emerald-500 to-teal-500',
+    soft: 'bg-emerald-50',
     featured: true,
   },
   {
@@ -141,8 +141,8 @@ export const services: Service[] = [
     meta:
       'Cybersecurity Lab — enterprise-grade security audits, vulnerability management, hardening, and threat-monitoring readiness with prioritised remediation.',
     icon: ShieldCheck,
-    tone: 'from-blue-600 to-blue-600',
-    soft: 'bg-blue-50',
+    tone: 'from-teal-600 to-emerald-600',
+    soft: 'bg-teal-50',
   },
   {
     slug: 'cloud-deployment-support',
@@ -189,8 +189,8 @@ export const services: Service[] = [
     meta:
       'Digital media marketing and branding — SEO, AEO/GEO, paid media, content, and brand identity that make your business visible, valuable, and memorable.',
     icon: Megaphone,
-    tone: 'from-blue-500 to-cyan-500',
-    soft: 'bg-blue-50',
+    tone: 'from-emerald-500 to-cyan-500',
+    soft: 'bg-emerald-50',
     featured: true,
   },
 ];

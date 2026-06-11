@@ -8,7 +8,7 @@ date: 2026-06-10
 author: Toshi Consulting
 targetKeyword: "AI Law"
 iconName: brain
-tone: from-blue-500 to-cyan-500
+tone: from-teal-500 to-cyan-500
 faqs:
 - q: "What is the current state of AI regulation in India?"
   a: "The current IT Act is insufficient to regulate AI, and a new law is needed to address the unique challenges and opportunities of AI, as stated by Ashwini Vaishnaw. We've seen this firsthand in our work with Indian businesses, where the lack of clear guidelines has led to confusion and uncertainty."

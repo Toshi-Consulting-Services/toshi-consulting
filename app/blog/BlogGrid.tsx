@@ -7,7 +7,7 @@ import { formatDate, type BlogPost } from './lib';
 export default function BlogGrid({ posts, featureFirst = true }: { posts: BlogPost[]; featureFirst?: boolean }) {
   if (posts.length === 0) {
     return (
-      <div className="bg-white rounded-2xl border border-blue-100 p-12 text-center text-slate-600">
+      <div className="bg-white rounded-2xl border border-teal-100 p-12 text-center text-slate-600">
         No posts in this view yet.
       </div>
     );
@@ -20,7 +20,7 @@ export default function BlogGrid({ posts, featureFirst = true }: { posts: BlogPo
           <Reveal key={p.slug} delay={i * 60} className={isFeature ? 'sm:col-span-2' : ''}>
             <Link
               href={`/blog/${p.slug}`}
-              className="group block bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.55)] hover:-translate-y-1 transition h-full"
+              className="group block bg-white rounded-2xl overflow-hidden border border-teal-100 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.55)] hover:-translate-y-1 transition h-full"
             >
               <div className={`relative ${isFeature ? 'h-72' : 'h-48'} bg-gradient-to-br ${p.tone} overflow-hidden`}>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.25),transparent_55%)]" />
@@ -34,7 +34,7 @@ export default function BlogGrid({ posts, featureFirst = true }: { posts: BlogPo
                   </div>
                 </div>
 
-                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur text-blue-700 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider shadow-sm">
+                <div className="absolute top-4 left-4 inline-flex items-center gap-1.5 bg-white/95 backdrop-blur text-teal-700 rounded-full px-3 py-1 text-[11px] font-bold uppercase tracking-wider shadow-sm">
                   {p.category}
                 </div>
                 <div className="absolute bottom-4 right-4 bg-white/95 backdrop-blur text-slate-700 rounded-full px-3 py-1 text-[11px] font-semibold shadow-sm flex items-center gap-1">
@@ -44,16 +44,16 @@ export default function BlogGrid({ posts, featureFirst = true }: { posts: BlogPo
               <div className="p-6 flex flex-col">
                 <div className="flex items-center gap-3 text-[11px] text-slate-500 font-semibold">
                   <span className="flex items-center gap-1"><User size={11} /> {p.author}</span>
-                  <span className="text-blue-300">•</span>
+                  <span className="text-teal-300">•</span>
                   <span className="flex items-center gap-1"><Clock size={11} /> {p.readMinutes} min read</span>
                 </div>
-                <h3 className="mt-3 text-lg md:text-xl font-bold text-slate-900 leading-snug group-hover:text-blue-700 transition">
+                <h3 className="mt-3 text-lg md:text-xl font-bold text-slate-900 leading-snug group-hover:text-teal-700 transition">
                   {p.title}
                 </h3>
                 <p className="mt-2 text-sm text-slate-600 leading-relaxed line-clamp-3">
                   {p.excerpt}
                 </p>
-                <div className="mt-4 inline-flex items-center gap-1.5 text-blue-700 font-bold text-sm">
+                <div className="mt-4 inline-flex items-center gap-1.5 text-teal-700 font-bold text-sm">
                   Read More
                   <ArrowUpRight size={14} className="group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition" />
                 </div>

@@ -35,11 +35,11 @@ export default async function CategoryPage({ params }: { params: Promise<{ slug:
       <Navbar />
       <main className="flex-1">
         <section className="relative pt-32 pb-16 hero-bg overflow-hidden">
-          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-blue-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
           <div className="relative max-w-5xl mx-auto text-center px-4 sm:px-6">
-            <div className="inline-flex items-center gap-2 bg-white border border-blue-200 text-blue-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
-              <span className="w-1.5 h-1.5 rounded-full bg-blue-500" /> Category
+            <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
+              <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> Category
             </div>
             <h1 className="mt-5 text-5xl md:text-6xl font-black tracking-tight text-slate-900">
               <span className="font-display brand-gradient-text">{cat.name}</span> Insights

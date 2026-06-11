@@ -46,7 +46,7 @@ const servicesLinks = services.map((s) => ({ name: s.title, href: `/services/${s
 
 export default function Footer() {
   return (
-    <footer className="relative bg-gradient-to-b from-white to-blue-50 border-t border-blue-100">
+    <footer className="relative bg-gradient-to-b from-white to-teal-50 border-t border-teal-100">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 py-16 grid lg:grid-cols-4 gap-10">
         {/* Brand */}
         <div className="lg:col-span-1">
@@ -66,14 +66,14 @@ export default function Footer() {
           </p>
 
           <div className="mt-5 space-y-2.5 text-sm">
-            <a href="tel:+919915718004" className="flex items-center gap-2.5 text-slate-700 hover:text-blue-700 transition">
-              <span className="grid place-items-center w-8 h-8 rounded-lg bg-blue-100 text-blue-700">
+            <a href="tel:+919915718004" className="flex items-center gap-2.5 text-slate-700 hover:text-teal-700 transition">
+              <span className="grid place-items-center w-8 h-8 rounded-lg bg-teal-100 text-teal-700">
                 <Phone size={14} />
               </span>
               +91-9915718004
             </a>
-            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2.5 text-slate-700 hover:text-blue-700 transition">
-              <span className="grid place-items-center w-8 h-8 rounded-lg bg-blue-100 text-blue-700">
+            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-2.5 text-slate-700 hover:text-teal-700 transition">
+              <span className="grid place-items-center w-8 h-8 rounded-lg bg-teal-100 text-teal-700">
                 <Mail size={14} />
               </span>
               info@toshiconsulting.com
@@ -90,7 +90,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-blue-200 text-blue-700 hover:bg-gradient-to-br hover:from-blue-500 hover:to-cyan-500 hover:text-white hover:border-transparent shadow-sm hover:-translate-y-0.5 transition"
+                  className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-teal-200 text-teal-700 hover:bg-gradient-to-br hover:from-teal-500 hover:to-cyan-500 hover:text-white hover:border-transparent shadow-sm hover:-translate-y-0.5 transition"
                 >
                   <SocialIcon name={name} />
                 </a>
@@ -105,8 +105,8 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {quickLinks.map((l) => (
               <li key={l.name}>
-                <Link href={l.href} className="group inline-flex items-center gap-1 text-slate-600 hover:text-blue-700 transition">
-                  <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition text-blue-600" />
+                <Link href={l.href} className="group inline-flex items-center gap-1 text-slate-600 hover:text-teal-700 transition">
+                  <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition text-teal-600" />
                   {l.name}
                 </Link>
               </li>
@@ -120,8 +120,8 @@ export default function Footer() {
           <ul className="space-y-2.5 text-sm">
             {servicesLinks.map((l) => (
               <li key={l.name}>
-                <Link href={l.href} className="group inline-flex items-center gap-1 text-slate-600 hover:text-blue-700 transition">
-                  <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition text-blue-600" />
+                <Link href={l.href} className="group inline-flex items-center gap-1 text-slate-600 hover:text-teal-700 transition">
+                  <ArrowRight size={12} className="opacity-0 -translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition text-teal-600" />
                   {l.name}
                 </Link>
               </li>
@@ -134,7 +134,7 @@ export default function Footer() {
           <h4 className="text-sm font-bold text-slate-900 uppercase tracking-wider mb-4">Visit Us</h4>
           <div className="space-y-3 text-sm">
             <div className="flex items-start gap-2.5 text-slate-700">
-              <span className="grid place-items-center w-8 h-8 rounded-lg bg-blue-100 text-blue-700 shrink-0">
+              <span className="grid place-items-center w-8 h-8 rounded-lg bg-teal-100 text-teal-700 shrink-0">
                 <MapPin size={14} />
               </span>
               <span className="leading-relaxed">
@@ -144,7 +144,7 @@ export default function Footer() {
               </span>
             </div>
             <div className="flex items-start gap-2.5 text-slate-700">
-              <span className="grid place-items-center w-8 h-8 rounded-lg bg-blue-100 text-blue-700 shrink-0">
+              <span className="grid place-items-center w-8 h-8 rounded-lg bg-teal-100 text-teal-700 shrink-0">
                 <Clock size={14} />
               </span>
               <span>
@@ -157,13 +157,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom */}
-      <div className="border-t border-blue-100">
+      <div className="border-t border-teal-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-5 flex flex-col sm:flex-row items-center justify-between gap-3 text-xs text-slate-600">
           <p>&copy; {new Date().getFullYear()} Toshi Consulting Services Private Limited. All rights reserved.</p>
           <div className="flex items-center gap-4">
-            <Link href="/privacy" className="hover:text-blue-700 transition">Privacy</Link>
-            <Link href="/terms" className="hover:text-blue-700 transition">Terms</Link>
-            <a href="/sitemap.xml" className="hover:text-blue-700 transition">Sitemap</a>
+            <Link href="/privacy" className="hover:text-teal-700 transition">Privacy</Link>
+            <Link href="/terms" className="hover:text-teal-700 transition">Terms</Link>
+            <a href="/sitemap.xml" className="hover:text-teal-700 transition">Sitemap</a>
           </div>
         </div>
       </div>

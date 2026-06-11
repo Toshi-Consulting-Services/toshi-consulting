@@ -1,29 +1,26 @@
 @import "tailwindcss";
 
 :root {
-  --background: #f5f8ff;
-  --background-soft: #eef3ff;
+  --background: #f0fdfa;
+  --background-soft: #ecfdf5;
   --surface: #ffffff;
   --foreground: #0f172a;
   --muted: #475569;
   --muted-soft: #64748b;
-  --border: #dbe4ff;
-  --border-strong: #c2d2ff;
+  --border: #ccfbf1;
+  --border-strong: #99f6e4;
 
-  /* Brand palette — ColorHunt 4300FF / 0065F8 / 00CAFF / 00FFDE (cool, electric) */
-  --brand: #0065f8;          /* azure — primary accent */
-  --brand-dark: #0047d4;     /* darker azure — hover, links (AA on white) */
-  --brand-darker: #002a8f;
-  --brand-light: #6aa3ff;
-  --brand-soft: #e3ecff;
-  --brand-cyan: #00caff;     /* bright cyan */
-  --brand-violet: #4300ff;   /* electric violet — boldest accent / gradient start */
-  --brand-aqua: #00ffde;     /* aqua — gradient glow end only */
+  --brand: #14b8a6;
+  --brand-dark: #0f766e;
+  --brand-darker: #115e59;
+  --brand-light: #5eead4;
+  --brand-soft: #ccfbf1;
+  --brand-cyan: #06b6d4;
 
-  --accent-gradient: linear-gradient(135deg, #4300ff 0%, #0065f8 50%, #00caff 100%);
-  --hero-gradient: radial-gradient(120% 80% at 50% 0%, #e3ecff 0%, #eef3ff 45%, #f5f8ff 100%);
-  --shadow-soft: 0 10px 30px -12px rgba(0, 101, 248, 0.18);
-  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(0, 101, 248, 0.08);
+  --accent-gradient: linear-gradient(135deg, #14b8a6 0%, #06b6d4 100%);
+  --hero-gradient: radial-gradient(120% 80% at 50% 0%, #ccfbf1 0%, #ecfdf5 45%, #f0fdfa 100%);
+  --shadow-soft: 0 10px 30px -12px rgba(15, 118, 110, 0.18);
+  --shadow-card: 0 1px 2px rgba(15, 23, 42, 0.04), 0 4px 12px -2px rgba(15, 118, 110, 0.08);
 }
 
 @theme inline {
@@ -35,34 +32,10 @@
   --color-brand-light: var(--brand-light);
   --color-brand-soft: var(--brand-soft);
   --color-brand-cyan: var(--brand-cyan);
-  --color-brand-violet: var(--brand-violet);
   --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --font-display: var(--font-display);
-
-  /* Re-tint anchors: migrated utility classes (teal-/emerald- -> blue-, plus
-     existing cyan-/violet-) resolve to the ColorHunt palette so the whole site
-     renders the new brand colours from these tokens. To revert, restore the
-     git tag pre-color-retint-2026-06-11. */
-  --color-blue-50:  #eef3ff;
-  --color-blue-100: #dbe4ff;
-  --color-blue-200: #c2d2ff;
-  --color-blue-300: #93b4ff;
-  --color-blue-400: #4d8bff;
-  --color-blue-500: #1f7bff;
-  --color-blue-600: #0065f8;
-  --color-blue-700: #0047d4;
-  --color-blue-800: #00329c;
-  --color-blue-900: #00246e;
-  --color-cyan-300: #7df0ff;
-  --color-cyan-400: #00caff;
-  --color-cyan-500: #00b0e6;
-  --color-cyan-600: #0090c4;
-  --color-violet-400: #7a4dff;
-  --color-violet-500: #5a1bff;
-  --color-violet-600: #4300ff;
-  --color-violet-700: #3500cc;
 }
 
 .font-display {
@@ -81,7 +54,7 @@ html, body {
 }
 
 ::selection {
-  background: var(--brand-soft);
+  background: var(--brand-light);
   color: var(--brand-darker);
 }
 
@@ -122,7 +95,7 @@ html, body {
 .animate-orbit { animation: orbit linear infinite; }
 
 .brand-gradient-text {
-  background: linear-gradient(135deg, #4300ff 0%, #0065f8 55%, #00caff 100%);
+  background: linear-gradient(135deg, #0f766e 0%, #06b6d4 60%, #14b8a6 100%);
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
@@ -134,7 +107,7 @@ html, body {
   background: rgba(255, 255, 255, 0.7);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
-  border: 1px solid rgba(0, 101, 248, 0.15);
+  border: 1px solid rgba(20, 184, 166, 0.15);
 }
 
 .hero-bg {
@@ -142,7 +115,7 @@ html, body {
 }
 
 .section-mint {
-  background: linear-gradient(180deg, #ffffff 0%, #f5f8ff 100%);
+  background: linear-gradient(180deg, #ffffff 0%, #f0fdfa 100%);
 }
 
 /* Markdown article styling */
@@ -170,14 +143,14 @@ html, body {
   margin-top: 1.5rem;
 }
 .prose-toshi a {
-  color: #0047d4;
+  color: #0f766e;
   text-decoration: underline;
-  text-decoration-color: #93b4ff;
+  text-decoration-color: #5eead4;
   text-decoration-thickness: 2px;
   text-underline-offset: 3px;
   font-weight: 600;
 }
-.prose-toshi a:hover { color: #00329c; }
+.prose-toshi a:hover { color: #115e59; }
 .prose-toshi strong { color: #0f172a; font-weight: 700; }
 .prose-toshi em { color: #334155; }
 .prose-toshi ul, .prose-toshi ol { padding-left: 1.5rem; }
@@ -185,17 +158,17 @@ html, body {
 .prose-toshi ol { list-style: decimal; }
 .prose-toshi li { margin-top: 0.45em; }
 .prose-toshi blockquote {
-  border-left: 4px solid #0065f8;
-  background: #eef3ff;
+  border-left: 4px solid #14b8a6;
+  background: #f0fdfa;
   padding: 1.1rem 1.5rem;
   border-radius: 0 0.75rem 0.75rem 0;
   font-style: italic;
-  color: #1e3a8a;
+  color: #115e59;
 }
 .prose-toshi blockquote p { margin: 0; }
 .prose-toshi code {
-  background: #e3ecff;
-  color: #0047d4;
+  background: #ccfbf1;
+  color: #115e59;
   padding: 0.15em 0.4em;
   border-radius: 4px;
   font-size: 0.92em;
@@ -217,10 +190,10 @@ html, body {
 }
 .prose-toshi hr {
   border: 0;
-  border-top: 1px solid #dbe4ff;
+  border-top: 1px solid #ccfbf1;
   margin: 2.5rem 0;
 }
 .prose-toshi img {
   border-radius: 1rem;
-  box-shadow: 0 25px 50px -20px rgba(0, 101, 248, 0.30);
+  box-shadow: 0 25px 50px -20px rgba(15,118,110,0.35);
 }

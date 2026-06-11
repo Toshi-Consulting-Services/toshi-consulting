@@ -62,7 +62,7 @@ async function parsePost(filename: string): Promise<BlogPost> {
     author: data.author ?? 'Toshi Consulting',
     targetKeyword: data.targetKeyword ?? '',
     iconName: (data.iconName ?? 'shield') as BlogIcon,
-    tone: data.tone ?? 'from-blue-500 to-cyan-500',
+    tone: data.tone ?? 'from-teal-500 to-cyan-500',
     draft: data.draft === true,
     faqs: Array.isArray(data.faqs) ? data.faqs : [],
     body: content,

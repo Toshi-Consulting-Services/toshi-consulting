@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Send } from 'lucide-react';
 
 const inputClass =
-  'mt-1.5 w-full px-4 py-3 rounded-xl bg-blue-50/40 border border-blue-100 focus:outline-none focus:border-blue-500 focus:bg-white focus:ring-2 focus:ring-blue-200 transition';
+  'mt-1.5 w-full px-4 py-3 rounded-xl bg-teal-50/40 border border-teal-100 focus:outline-none focus:border-teal-500 focus:bg-white focus:ring-2 focus:ring-teal-200 transition';
 
 type Status = 'idle' | 'sending' | 'sent' | 'error';
 
@@ -45,8 +45,8 @@ export default function ContactForm() {
 
   if (status === 'sent') {
     return (
-      <div className="mt-6 rounded-2xl border border-blue-200 bg-blue-50/60 p-8 text-center">
-        <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-blue-500 to-cyan-500 text-white">
+      <div className="mt-6 rounded-2xl border border-teal-200 bg-teal-50/60 p-8 text-center">
+        <div className="mx-auto grid h-12 w-12 place-items-center rounded-full bg-gradient-to-br from-teal-500 to-cyan-500 text-white">
           <Send size={20} />
         </div>
         <h3 className="mt-4 text-lg font-black text-slate-900">Message sent — thank you!</h3>
@@ -56,7 +56,7 @@ export default function ContactForm() {
         <button
           type="button"
           onClick={() => setStatus('idle')}
-          className="mt-5 text-sm font-bold text-blue-700 hover:text-blue-800"
+          className="mt-5 text-sm font-bold text-teal-700 hover:text-teal-800"
         >
           Send another message
         </button>
@@ -128,16 +128,16 @@ export default function ContactForm() {
 
       <p className="text-xs text-slate-500 leading-relaxed">
         By submitting this form, you agree to our{' '}
-        <Link href="/privacy" className="font-semibold text-blue-700 hover:underline">Privacy Policy</Link>
+        <Link href="/privacy" className="font-semibold text-teal-700 hover:underline">Privacy Policy</Link>
         {' '}and{' '}
-        <Link href="/terms" className="font-semibold text-blue-700 hover:underline">Terms</Link>
+        <Link href="/terms" className="font-semibold text-teal-700 hover:underline">Terms</Link>
         , and consent to us contacting you about your enquiry.
       </p>
 
       <button
         type="submit"
         disabled={status === 'sending'}
-        className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition disabled:opacity-60 disabled:hover:translate-y-0"
+        className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3.5 rounded-xl font-bold shadow-[0_15px_35px_-12px_rgba(20,184,166,0.9)] hover:-translate-y-0.5 transition disabled:opacity-60 disabled:hover:translate-y-0"
       >
         <Send size={18} /> {status === 'sending' ? 'Sending…' : 'Send Message'}
       </button>

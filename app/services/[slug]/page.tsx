@@ -64,19 +64,19 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
       <main className="flex-1">
         {/* Hero */}
         <section className="relative pt-32 pb-16 hero-bg overflow-hidden">
-          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-blue-200/40 blur-3xl" />
+          <div className="pointer-events-none absolute -top-24 -right-24 w-[460px] h-[460px] rounded-full bg-teal-200/40 blur-3xl" />
           <div className="pointer-events-none absolute -bottom-24 -left-24 w-[420px] h-[420px] rounded-full bg-cyan-200/30 blur-3xl" />
           <div className="relative max-w-4xl mx-auto px-4 sm:px-6">
             {/* Breadcrumb */}
             <nav className="flex items-center gap-1.5 text-sm text-slate-500" aria-label="Breadcrumb">
-              <Link href="/" className="hover:text-blue-700 transition">Home</Link>
+              <Link href="/" className="hover:text-teal-700 transition">Home</Link>
               <ChevronRight size={14} />
-              <Link href="/services" className="hover:text-blue-700 transition">Services</Link>
+              <Link href="/services" className="hover:text-teal-700 transition">Services</Link>
               <ChevronRight size={14} />
               <span className="text-slate-700 font-semibold">{service.title}</span>
             </nav>
 
-            <div className={`mt-6 inline-grid place-items-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.tone} text-white shadow-[0_18px_35px_-12px_rgba(0,101,248,0.65)]`}>
+            <div className={`mt-6 inline-grid place-items-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.tone} text-white shadow-[0_18px_35px_-12px_rgba(20,184,166,0.65)]`}>
               <Icon size={30} />
             </div>
             <h1 className="mt-5 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
@@ -87,7 +87,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </p>
             <Link
               href="/contact"
-              className="mt-7 inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-6 py-3 rounded-full text-sm font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:-translate-y-0.5 transition"
+              className="mt-7 inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-6 py-3 rounded-full text-sm font-bold shadow-[0_15px_35px_-12px_rgba(20,184,166,0.9)] hover:-translate-y-0.5 transition"
             >
               Discuss your project <ArrowRight size={16} />
             </Link>
@@ -102,7 +102,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               <ul className="mt-5 space-y-3">
                 {service.benefits.map((b) => (
                   <li key={b} className="flex items-start gap-3 text-slate-700">
-                    <span className="grid place-items-center w-6 h-6 rounded-full bg-blue-100 text-blue-700 mt-0.5 shrink-0">
+                    <span className="grid place-items-center w-6 h-6 rounded-full bg-teal-100 text-teal-700 mt-0.5 shrink-0">
                       <CheckCircle2 size={15} />
                     </span>
                     <span className="leading-relaxed">{b}</span>
@@ -129,8 +129,8 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
           <div className="max-w-4xl mx-auto px-4 sm:px-6 mt-12">
             <div className="grid sm:grid-cols-3 gap-4">
               {['24/7 Support', 'Security-First Delivery', 'Trusted Partner'].map((t) => (
-                <div key={t} className="flex items-center gap-3 bg-blue-50/60 border border-blue-100 rounded-2xl px-5 py-4">
-                  <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white shrink-0">
+                <div key={t} className="flex items-center gap-3 bg-teal-50/60 border border-teal-100 rounded-2xl px-5 py-4">
+                  <span className="grid place-items-center w-9 h-9 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shrink-0">
                     <CheckCircle2 size={16} />
                   </span>
                   <span className="text-sm font-bold text-slate-800">{t}</span>
@@ -149,7 +149,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
                   <Link
                     key={s.slug}
                     href={`/services/${s.slug}`}
-                    className="inline-flex items-center gap-1.5 bg-white border border-blue-200 text-blue-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-blue-50 transition"
+                    className="inline-flex items-center gap-1.5 bg-white border border-teal-200 text-teal-700 px-4 py-2 rounded-full text-sm font-semibold hover:bg-teal-50 transition"
                   >
                     {s.title}
                   </Link>
