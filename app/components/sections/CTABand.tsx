@@ -5,7 +5,7 @@ export default function CTABand() {
   return (
     <section className="relative py-20 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
-        <div className="relative rounded-3xl bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 text-white p-10 md:p-14 overflow-hidden shadow-[0_30px_70px_-30px_rgba(0,114,153,0.6)]">
+        <div className="relative rounded-3xl bg-gradient-to-br from-blue-600 via-blue-500 to-cyan-600 text-white p-10 md:p-14 overflow-hidden shadow-[0_30px_70px_-30px_rgba(0,71,212,0.6)]">
           {/* Decorative rings */}
           <div className="pointer-events-none absolute -top-32 -right-32 w-96 h-96 rounded-full border-2 border-white/15" />
           <div className="pointer-events-none absolute -top-20 -right-20 w-72 h-72 rounded-full border border-white/15" />

@@ -31,7 +31,7 @@ export default function Pagination({
 
       {pages.map((n) =>
         n === currentPage ? (
-          <span key={n} className="inline-grid place-items-center w-10 h-10 rounded-full bg-gradient-to-br from-violet-600 to-cyan-500 text-white font-bold text-sm shadow-[0_10px_22px_-10px_rgba(0,152,204,0.7)]">
+          <span key={n} className="inline-grid place-items-center w-10 h-10 rounded-full bg-gradient-to-br from-violet-600 to-cyan-500 text-white font-bold text-sm shadow-[0_10px_22px_-10px_rgba(0,101,248,0.7)]">
             {n}
           </span>
         ) : (

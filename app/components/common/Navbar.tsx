@@ -67,7 +67,7 @@ export default function Navbar() {
       <nav
         className={`transition-all duration-300 ${
           scrolled
-            ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(0,114,153,0.18)]'
+            ? 'bg-white/90 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(0,71,212,0.18)]'
             : 'bg-white/80 backdrop-blur'
         } border-b border-blue-100/60`}
       >
@@ -107,7 +107,7 @@ export default function Navbar() {
 
                     {/* Dropdown panel — pt-3 bridges the hover gap */}
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200">
-                      <div className="w-80 bg-white rounded-2xl border border-blue-100 shadow-[0_25px_60px_-20px_rgba(0,114,153,0.35)] p-2">
+                      <div className="w-80 bg-white rounded-2xl border border-blue-100 shadow-[0_25px_60px_-20px_rgba(0,71,212,0.35)] p-2">
                         {services.map((s) => {
                           const Icon = s.icon;
                           return (
@@ -163,7 +163,7 @@ export default function Navbar() {
           <div className="hidden lg:flex items-center gap-3">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(0,152,204,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(0,202,255,0.9)] hover:-translate-y-0.5 transition"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(0,101,248,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(0,202,255,0.9)] hover:-translate-y-0.5 transition"
             >
               Get Quote
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition" />

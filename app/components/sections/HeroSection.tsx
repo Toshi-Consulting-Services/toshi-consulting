@@ -49,7 +49,7 @@ function ShieldRadar() {
                   animationDelay: `${orbit.delay - offset}s`,
                 }}
               >
-                <span className="block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 shadow-[0_0_14px_rgba(0,152,204,0.95)]" />
+                <span className="block w-2.5 h-2.5 rounded-full bg-gradient-to-br from-blue-400 to-cyan-500 shadow-[0_0_14px_rgba(0,101,248,0.95)]" />
               </span>
             );
           })
@@ -60,7 +60,7 @@ function ShieldRadar() {
       <div className="absolute inset-0 grid place-items-center">
         <div className="relative w-[34%] h-[34%] grid place-items-center animate-float">
           <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 blur-2xl opacity-50" />
-          <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-blue-500 via-blue-500 to-cyan-500 shadow-[0_20px_50px_-12px_rgba(0,152,204,0.6)] grid place-items-center">
+          <div className="relative w-full h-full rounded-2xl bg-gradient-to-br from-blue-500 via-blue-500 to-cyan-500 shadow-[0_20px_50px_-12px_rgba(0,101,248,0.6)] grid place-items-center">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} className="w-[60%] h-[60%] text-white">
               <path strokeLinecap="round" strokeLinejoin="round" d="M12 2l8.5 3.2v6.3c0 5.4-3.8 9.3-8.5 10.5-4.7-1.2-8.5-5.1-8.5-10.5V5.2L12 2z" />
               <path strokeLinecap="round" strokeLinejoin="round" d="M8.5 12.4l2.6 2.6L15.8 10" />
@@ -70,7 +70,7 @@ function ShieldRadar() {
       </div>
 
       {/* Floating Customer Care card */}
-      <div className="absolute left-[2%] bottom-[18%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(0,114,153,0.3)] border border-blue-100 px-4 py-3 flex items-center gap-3 animate-float -rotate-2" style={{ animationDelay: '0.6s' }}>
+      <div className="absolute left-[2%] bottom-[18%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(0,71,212,0.3)] border border-blue-100 px-4 py-3 flex items-center gap-3 animate-float -rotate-2" style={{ animationDelay: '0.6s' }}>
         <div className="grid place-items-center w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-cyan-500 text-white">
           <Phone size={18} />
         </div>
@@ -86,7 +86,7 @@ function ShieldRadar() {
       </div>
 
       {/* Floating capability badge */}
-      <div className="absolute right-[2%] top-[14%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(0,114,153,0.3)] border border-blue-100 px-3 py-2 flex items-center gap-2 animate-float rotate-3" style={{ animationDelay: '1.2s' }}>
+      <div className="absolute right-[2%] top-[14%] bg-white rounded-2xl shadow-[0_18px_45px_-14px_rgba(0,71,212,0.3)] border border-blue-100 px-3 py-2 flex items-center gap-2 animate-float rotate-3" style={{ animationDelay: '1.2s' }}>
         <div className="grid place-items-center w-8 h-8 rounded-lg bg-blue-50 text-blue-600">
           <Bot size={16} />
         </div>
@@ -106,7 +106,7 @@ export default function HeroSection() {
       <div className="pointer-events-none absolute -top-20 -right-20 w-[480px] h-[480px] rounded-full bg-gradient-to-br from-blue-200/50 to-cyan-200/30 blur-3xl" />
       <div className="pointer-events-none absolute -bottom-32 -left-24 w-[420px] h-[420px] rounded-full bg-gradient-to-tr from-blue-200/40 to-blue-200/30 blur-3xl" />
       {/* Subtle grid */}
-      <div className="pointer-events-none absolute inset-0 opacity-[0.07] bg-[linear-gradient(rgba(0,114,153,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,114,153,1)_1px,transparent_1px)] bg-[size:48px_48px]" />
+      <div className="pointer-events-none absolute inset-0 opacity-[0.07] bg-[linear-gradient(rgba(0,71,212,1)_1px,transparent_1px),linear-gradient(90deg,rgba(0,71,212,1)_1px,transparent_1px)] bg-[size:48px_48px]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 items-center">
         {/* Left: shield illustration (matches original layout) */}
@@ -136,7 +136,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,152,204,0.9)] hover:shadow-[0_18px_40px_-10px_rgba(0,202,255,0.9)] hover:-translate-y-0.5 transition"
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-violet-600 to-cyan-500 text-white px-7 py-3.5 rounded-full font-bold shadow-[0_15px_35px_-12px_rgba(0,101,248,0.9)] hover:shadow-[0_18px_40px_-10px_rgba(0,202,255,0.9)] hover:-translate-y-0.5 transition"
             >
               Free Consultation
               <ArrowRight size={18} className="group-hover:translate-x-0.5 transition" />

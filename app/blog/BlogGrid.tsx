@@ -20,7 +20,7 @@ export default function BlogGrid({ posts, featureFirst = true }: { posts: BlogPo
           <Reveal key={p.slug} delay={i * 60} className={isFeature ? 'sm:col-span-2' : ''}>
             <Link
               href={`/blog/${p.slug}`}
-              className="group block bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,114,153,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(0,114,153,0.55)] hover:-translate-y-1 transition h-full"
+              className="group block bg-white rounded-2xl overflow-hidden border border-blue-100 shadow-[0_10px_30px_-20px_rgba(0,71,212,0.4)] hover:shadow-[0_22px_44px_-22px_rgba(0,71,212,0.55)] hover:-translate-y-1 transition h-full"
             >
               <div className={`relative ${isFeature ? 'h-72' : 'h-48'} bg-gradient-to-br ${p.tone} overflow-hidden`}>
                 <div className="absolute inset-0 bg-[radial-gradient(circle_at_25%_25%,rgba(255,255,255,0.25),transparent_55%)]" />
