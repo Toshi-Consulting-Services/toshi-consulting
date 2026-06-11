@@ -3,7 +3,6 @@ import Footer from '@/app/components/common/Footer';
 import CTABand from '@/app/components/sections/CTABand';
 import MetricsSection from '@/app/components/sections/MetricsSection';
 import WhyChooseUsSection from '@/app/components/sections/WhyChooseUsSection';
-import TeamSection from '@/app/components/sections/TeamSection';
 import TestimonialsSection from '@/app/components/sections/TestimonialsSection';
 import { Target, Compass, ShieldCheck, Users, Sparkles, Heart } from 'lucide-react';
 
@@ -113,7 +112,6 @@ export default function AboutPage() {
           </div>
         </section>
 
-        <TeamSection />
         <WhyChooseUsSection />
         <TestimonialsSection />
         <CTABand />
