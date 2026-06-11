@@ -6,10 +6,10 @@ import { ArrowRight, Sparkles, Zap, Code2, BrainCircuit, Cloud, ShieldCheck, Wor
 function CapabilityOrbit() {
   // Curved connector paths (viewBox 0..100) from the centre AI CORE to each card.
   const links = [
-    'M50 50 C 44 42 38 35 32 30', // -> Cloud Infra (top-left)
-    'M50 50 C 58 42 65 33 72 26', // -> Deploy terminal (top-right)
-    'M50 50 C 44 58 37 67 30 73', // -> Threat Monitor (bottom-left)
-    'M50 50 C 58 58 66 68 73 75', // -> Automations (bottom-right)
+    'M50 50 C 47 44 44 39 40 34', // -> Cloud Infra (top-left)
+    'M50 50 C 54 44 58 38 62 30', // -> Deploy terminal (top-right)
+    'M50 50 C 47 56 44 61 40 66', // -> Threat Monitor (bottom-left)
+    'M50 50 C 54 56 58 62 62 70', // -> Automations (bottom-right)
   ];
 
   return (
@@ -43,7 +43,7 @@ function CapabilityOrbit() {
       </div>
 
       {/* Cloud Infra — top-left */}
-      <div className="absolute top-[4%] left-0 w-[46%] animate-float" style={{ animationDelay: '0.4s' }}>
+      <div className="absolute top-[7%] left-[3%] w-[44%] animate-float" style={{ animationDelay: '0.4s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
@@ -59,8 +59,8 @@ function CapabilityOrbit() {
       </div>
 
       {/* Deploy terminal — top-right (Web & App Development) */}
-      <div className="absolute top-0 right-0 w-[48%] animate-float" style={{ animationDelay: '1s' }}>
-        <div className="rounded-2xl bg-slate-900 shadow-[0_20px_50px_-16px_rgba(15,23,42,0.5)] p-3 sm:p-4 font-mono">
+      <div className="absolute top-[3%] right-[3%] w-[46%] animate-float" style={{ animationDelay: '1s' }}>
+        <div className="rounded-2xl bg-slate-900 border-2 border-black shadow-[0_20px_50px_-16px_rgba(15,23,42,0.5)] p-3 sm:p-4 font-mono">
           <div className="flex items-center gap-1.5">
             <span className="w-2 h-2 rounded-full bg-rose-400" />
             <span className="w-2 h-2 rounded-full bg-amber-400" />
@@ -75,7 +75,7 @@ function CapabilityOrbit() {
       </div>
 
       {/* Threat Monitor — bottom-left (Cybersecurity) */}
-      <div className="absolute bottom-[6%] left-0 w-[46%] animate-float" style={{ animationDelay: '0.7s' }}>
+      <div className="absolute bottom-[9%] left-[3%] w-[44%] animate-float" style={{ animationDelay: '0.7s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
@@ -90,7 +90,7 @@ function CapabilityOrbit() {
       </div>
 
       {/* Automations — bottom-right */}
-      <div className="absolute bottom-0 right-0 w-[46%] animate-float" style={{ animationDelay: '1.3s' }}>
+      <div className="absolute bottom-[5%] right-[3%] w-[44%] animate-float" style={{ animationDelay: '1.3s' }}>
         <div className="rounded-2xl bg-white shadow-[0_18px_45px_-16px_rgba(15,118,110,0.3)] border border-teal-100 p-3 sm:p-4">
           <div className="flex items-center gap-2.5">
             <div className="grid place-items-center w-9 h-9 rounded-xl bg-teal-50 text-teal-600 shrink-0">
