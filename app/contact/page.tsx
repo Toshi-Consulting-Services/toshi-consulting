@@ -80,10 +80,14 @@ const localBusinessSchema = {
     '@type': 'OfferCatalog',
     name: 'IT Consulting Services',
     itemListElement: [
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Integration Services' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Blockchain Consulting' } },
-      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'QA Testing & Automation' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'AI Integration' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Web & App Development' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cybersecurity Lab' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'DevOps & CI/CD' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'QA Testing & Automations' } },
       { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Digital Media Marketing & Branding' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Blockchain Consulting' } },
+      { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cloud Deployment & Support' } },
     ],
   },
 };

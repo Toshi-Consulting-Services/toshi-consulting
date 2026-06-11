@@ -1,5 +1,5 @@
 import type { LucideIcon } from 'lucide-react';
-import { Brain, Link2, Bug, GitBranch, ShieldCheck, Cloud, Megaphone } from 'lucide-react';
+import { Brain, Code2, ShieldCheck, GitBranch, Bug, Megaphone, Link2, Cloud } from 'lucide-react';
 
 export type Service = {
   slug: string;          // MUST match the live site's old /services/<slug> URLs for SEO continuity
@@ -18,7 +18,9 @@ export type Service = {
 /**
  * Single source of truth for all services. Slugs mirror the existing live
  * toshiconsulting.com/services/<slug> URLs exactly so the migration needs no
- * redirects for these pages (1:1 URL parity preserves rankings).
+ * redirects for these pages (1:1 URL parity preserves rankings). `web-app-development`
+ * is a NEW page (no old equivalent) — it has no migration redirect to worry about.
+ * Array order = display order everywhere (grid, navbar, footer, sitemap, llms.txt).
  */
 export const services: Service[] = [
   {
@@ -47,53 +49,53 @@ export const services: Service[] = [
     featured: true,
   },
   {
-    slug: 'blockchain-consulting',
-    title: 'Blockchain Consulting',
-    short: 'Tailored blockchain architecture and smart contracts.',
+    slug: 'web-app-development',
+    title: 'Web & App Development',
+    short: 'High-performance web and mobile apps, built to scale.',
     description:
-      'Unlock the potential of your business with tailored blockchain solutions that drive automation, enhance transparency, and optimise decentralised operations.',
+      'We design and build fast, reliable web and mobile applications — from marketing sites and internal dashboards to full product platforms — using modern frameworks and a delivery process tuned for performance, SEO, and long-term maintainability.',
     benefits: [
-      'Secure-by-design blockchain architecture and solution planning',
-      'Smart-contract development with best practices and testing',
-      'Transparent, traceable workflows that improve accountability',
-      'Integration support across your existing systems and applications',
+      'Responsive web apps and cross-platform mobile apps from one team',
+      'Performance- and SEO-first builds (Core Web Vitals, SSR/SSG)',
+      'Clean, maintainable codebases your team can own and extend',
+      'Secure APIs and scalable architecture that grow with your users',
     ],
     expectations: [
-      'Discovery workshop and implementation roadmap',
-      'Contract development, audit checklist, and test cycles',
-      'Integration with web apps and backend services',
-      'Deployment, monitoring, and ongoing support',
+      'Product discovery, UX flows, and technical architecture',
+      'Development in React, Next.js, and React Native / modern stacks',
+      'API design, integrations, automated testing, and CI/CD-ready delivery',
+      'Launch, performance tuning, monitoring, and ongoing support',
     ],
     meta:
-      'Tailored blockchain consulting — secure architecture, smart-contract development, and integration that brings transparency and automation to your operations.',
-    icon: Link2,
-    tone: 'from-cyan-500 to-sky-500',
-    soft: 'bg-cyan-50',
+      'Web and app development — fast, SEO-friendly web applications and cross-platform mobile apps built with React, Next.js, and modern stacks, from design to launch.',
+    icon: Code2,
+    tone: 'from-sky-500 to-cyan-500',
+    soft: 'bg-sky-50',
     featured: true,
   },
   {
-    slug: 'qa-testing-automations',
-    title: 'QA Testing & Automations',
-    short: 'Functional, regression, performance & security testing.',
+    slug: 'cybersecurity-lab',
+    title: 'Cybersecurity Lab',
+    short: 'Security audits, hardening, and monitoring readiness.',
     description:
-      'Ship with confidence. We build functional, regression, performance, and security testing into your delivery — and automate it across your CI/CD pipeline for early defect detection and faster releases.',
+      'Protect your business with enterprise-grade security reviews, compliance-oriented audits, and threat-monitoring readiness — built around the risks that actually matter to you.',
     benefits: [
-      'Functional, regression, performance, and security testing',
-      'Early defect detection that lowers development cost',
-      'Automation that accelerates release cycles',
-      'Domain expertise across insurance, fintech, and CRM applications',
+      'Proactive security reviews and actionable improvement plans',
+      'Vulnerability management and security-hardening guidance',
+      'Threat-monitoring recommendations aligned to your needs',
+      'Compliance-oriented approach that reduces risk exposure',
     ],
     expectations: [
-      'Test strategy and coverage planning',
-      'Automation suites with Playwright, Selenium, Cypress, Katalon, and JMeter',
-      'Continuous testing integrated into your CI/CD pipeline',
-      'Python, Java, and Cloud upskilling for your in-house team',
+      'Security audit and threat-modelling workshop',
+      'Hands-on testing, findings, and prioritised remediation',
+      'Operational guidance for monitoring and response readiness',
+      'Roadmap and documentation for continuous improvement',
     ],
     meta:
-      'QA testing and automation — functional, regression, performance, and security testing wired into CI/CD with Playwright, Selenium, Cypress, and JMeter.',
-    icon: Bug,
-    tone: 'from-emerald-500 to-teal-500',
-    soft: 'bg-emerald-50',
+      'Cybersecurity Lab — enterprise-grade security audits, vulnerability management, hardening, and threat-monitoring readiness with prioritised remediation.',
+    icon: ShieldCheck,
+    tone: 'from-teal-600 to-emerald-600',
+    soft: 'bg-teal-50',
     featured: true,
   },
   {
@@ -119,54 +121,31 @@ export const services: Service[] = [
     icon: GitBranch,
     tone: 'from-sky-500 to-cyan-600',
     soft: 'bg-sky-50',
+    featured: true,
   },
   {
-    slug: 'cybersecurity-lab',
-    title: 'Cybersecurity Lab',
-    short: 'Security audits, hardening, and monitoring readiness.',
+    slug: 'qa-testing-automations',
+    title: 'QA Testing & Automations',
+    short: 'Functional, regression, performance & security testing.',
     description:
-      'Protect your business with enterprise-grade security reviews, compliance-oriented audits, and threat-monitoring readiness — built around the risks that actually matter to you.',
+      'Ship with confidence. We build functional, regression, performance, and security testing into your delivery — and automate it across your CI/CD pipeline for early defect detection and faster releases.',
     benefits: [
-      'Proactive security reviews and actionable improvement plans',
-      'Vulnerability management and security-hardening guidance',
-      'Threat-monitoring recommendations aligned to your needs',
-      'Compliance-oriented approach that reduces risk exposure',
+      'Functional, regression, performance, and security testing',
+      'Early defect detection that lowers development cost',
+      'Automation that accelerates release cycles',
+      'Domain expertise across insurance, fintech, and CRM applications',
     ],
     expectations: [
-      'Security audit and threat-modelling workshop',
-      'Hands-on testing, findings, and prioritised remediation',
-      'Operational guidance for monitoring and response readiness',
-      'Roadmap and documentation for continuous improvement',
+      'Test strategy and coverage planning',
+      'Automation suites with Playwright, Selenium, Cypress, Katalon, and JMeter',
+      'Continuous testing integrated into your CI/CD pipeline',
+      'Python, Java, and Cloud upskilling for your in-house team',
     ],
     meta:
-      'Cybersecurity Lab — enterprise-grade security audits, vulnerability management, hardening, and threat-monitoring readiness with prioritised remediation.',
-    icon: ShieldCheck,
-    tone: 'from-teal-600 to-emerald-600',
-    soft: 'bg-teal-50',
-  },
-  {
-    slug: 'cloud-deployment-support',
-    title: 'Cloud Deployment & Support',
-    short: 'Scalable cloud infrastructure with ongoing support.',
-    description:
-      'Scalable cloud infrastructure and ongoing support to keep your applications running smoothly, reliably, and securely as you grow.',
-    benefits: [
-      'Scalable deployments for stable performance and growth',
-      'Optimised infrastructure patterns for reliability',
-      'Deployment guidance, tuning, and ongoing support',
-      'Cloud readiness with clear operational ownership',
-    ],
-    expectations: [
-      'Architecture planning and deployment strategy',
-      'Cloud migration assistance and environment setup',
-      'Performance tuning, monitoring, and reliability improvements',
-      'Ongoing support for updates, maintenance, and optimisation',
-    ],
-    meta:
-      'Cloud deployment and support — scalable architecture, migration, performance tuning, monitoring, and ongoing managed support for your applications.',
-    icon: Cloud,
-    tone: 'from-cyan-500 to-blue-500',
-    soft: 'bg-cyan-50',
+      'QA testing and automation — functional, regression, performance, and security testing wired into CI/CD with Playwright, Selenium, Cypress, and JMeter.',
+    icon: Bug,
+    tone: 'from-emerald-500 to-teal-500',
+    soft: 'bg-emerald-50',
   },
   {
     slug: 'digital-media-marketing-and-branding',
@@ -191,7 +170,54 @@ export const services: Service[] = [
     icon: Megaphone,
     tone: 'from-emerald-500 to-cyan-500',
     soft: 'bg-emerald-50',
-    featured: true,
+  },
+  {
+    slug: 'blockchain-consulting',
+    title: 'Blockchain Consulting',
+    short: 'Tailored blockchain architecture and smart contracts.',
+    description:
+      'Unlock the potential of your business with tailored blockchain solutions that drive automation, enhance transparency, and optimise decentralised operations.',
+    benefits: [
+      'Secure-by-design blockchain architecture and solution planning',
+      'Smart-contract development with best practices and testing',
+      'Transparent, traceable workflows that improve accountability',
+      'Integration support across your existing systems and applications',
+    ],
+    expectations: [
+      'Discovery workshop and implementation roadmap',
+      'Contract development, audit checklist, and test cycles',
+      'Integration with web apps and backend services',
+      'Deployment, monitoring, and ongoing support',
+    ],
+    meta:
+      'Tailored blockchain consulting — secure architecture, smart-contract development, and integration that brings transparency and automation to your operations.',
+    icon: Link2,
+    tone: 'from-cyan-500 to-sky-500',
+    soft: 'bg-cyan-50',
+  },
+  {
+    slug: 'cloud-deployment-support',
+    title: 'Cloud Deployment & Support',
+    short: 'Scalable cloud infrastructure with ongoing support.',
+    description:
+      'Scalable cloud infrastructure and ongoing support to keep your applications running smoothly, reliably, and securely as you grow.',
+    benefits: [
+      'Scalable deployments for stable performance and growth',
+      'Optimised infrastructure patterns for reliability',
+      'Deployment guidance, tuning, and ongoing support',
+      'Cloud readiness with clear operational ownership',
+    ],
+    expectations: [
+      'Architecture planning and deployment strategy',
+      'Cloud migration assistance and environment setup',
+      'Performance tuning, monitoring, and reliability improvements',
+      'Ongoing support for updates, maintenance, and optimisation',
+    ],
+    meta:
+      'Cloud deployment and support — scalable architecture, migration, performance tuning, monitoring, and ongoing managed support for your applications.',
+    icon: Cloud,
+    tone: 'from-cyan-500 to-blue-500',
+    soft: 'bg-cyan-50',
   },
 ];
 
