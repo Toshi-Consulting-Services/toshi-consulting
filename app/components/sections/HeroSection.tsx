@@ -133,7 +133,7 @@ export default function HeroSection() {
             AI Integration, Automation &
             <br />
             <span
-              className="brand-gradient-text italic font-black text-[1.05em]"
+              className="font-display brand-gradient-text text-[1.05em]"
               style={{ WebkitTextStroke: '1px #000' }}
             >
               Web & App Development
