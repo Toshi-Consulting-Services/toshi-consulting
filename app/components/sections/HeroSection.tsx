@@ -59,7 +59,7 @@ function AICore() {
 /* ── Floating visual system (exact Verdant proportions, responsive) ── */
 function HeroVisual() {
   return (
-    <div className="relative w-full max-w-[560px] mx-auto aspect-[577/600]">
+    <div className="relative w-full max-w-[410px] mx-auto aspect-[577/600]">
       {/* connectors — colour-matched, wired into the core */}
       <svg viewBox="0 0 577 600" className="absolute inset-0 w-full h-full overflow-visible z-[1]" fill="none" aria-hidden="true">
         <defs>
@@ -136,7 +136,7 @@ export default function HeroSection() {
   const [open, setOpen] = useState(false);
 
   return (
-    <section className="relative overflow-hidden font-jakarta text-[#0A3D37] flex flex-col min-h-svh" style={{ background: '#E9F8F2' }}>
+    <section className="relative overflow-hidden font-jakarta text-[#0A3D37] flex flex-col min-h-[min(100svh,800px)]" style={{ background: '#E9F8F2' }}>
       {/* layered light sources */}
       <div aria-hidden className="pointer-events-none absolute" style={{ top: -140, right: -120, width: 760, height: 620, background: 'radial-gradient(ellipse at center, rgba(45,212,191,0.38), rgba(45,212,191,0) 62%)' }} />
       <div aria-hidden className="pointer-events-none absolute" style={{ top: 280, left: 80, width: 560, height: 520, background: 'radial-gradient(ellipse at center, rgba(13,148,136,0.22), rgba(13,148,136,0) 60%)' }} />
@@ -144,7 +144,7 @@ export default function HeroSection() {
       {/* dot-grid texture */}
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-70" style={{ backgroundImage: 'radial-gradient(rgba(10,61,55,0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
-      <div className="relative z-10 w-full max-w-[1320px] mx-auto flex flex-col flex-1">
+      <div className="relative z-10 w-full max-w-[1500px] mx-auto flex flex-col flex-1">
         {/* ── Utility bar ── */}
         <div className="hidden md:flex items-center justify-between px-10 py-[9px] text-[13px] font-medium text-[#15433D] bg-[rgba(13,79,71,0.06)] border-b border-[rgba(13,79,71,0.08)]">
           <div className="flex items-center gap-[26px]">
@@ -232,31 +232,31 @@ export default function HeroSection() {
         </div>
 
         {/* ── Hero ── */}
-        <div className="flex-1 grid lg:grid-cols-2 gap-10 lg:gap-[30px] items-center px-6 sm:px-12 pb-12 lg:pb-[72px] pt-2">
+        <div className="flex-1 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center px-5 sm:px-8 lg:px-10 pt-4 pb-24 lg:pb-28">
           {/* visual */}
-          <div className="order-2 lg:order-1 w-full">
+          <div className="order-2 lg:order-1 w-full flex justify-center lg:justify-end">
             <HeroVisual />
           </div>
 
           {/* copy */}
-          <div className="order-1 lg:order-2">
-            <div className="inline-flex items-center gap-[9px] text-[12.5px] font-bold tracking-[0.5px] uppercase text-[#0c7a70] bg-white/80 border border-[rgba(13,148,136,0.22)] rounded-full px-4 py-2 mb-[26px]">
+          <div className="order-1 lg:order-2 w-full max-w-[560px] lg:mr-auto">
+            <div className="inline-flex items-center gap-[9px] text-[11.5px] font-bold tracking-[0.5px] uppercase text-[#0c7a70] bg-white/80 border border-[rgba(13,148,136,0.22)] rounded-full px-3.5 py-1.5 mb-4">
               <span className="text-[#0D9488]">✦</span> Modern software, built to automate
             </div>
-            <h1 className="font-sora text-[40px] sm:text-[52px] xl:text-[58px] leading-[1.08] font-extrabold tracking-[-2px] text-[#0A3D37] mb-6">
+            <h1 className="font-sora text-[27px] sm:text-[33px] lg:text-[37px] xl:text-[41px] leading-[1.1] font-extrabold tracking-[-1px] text-[#0A3D37] mb-4">
               AI Integration, Automation &amp;{' '}
               <span style={{ background: 'linear-gradient(100deg,#06b6d4 0%,#0ea5e9 45%,#1d4ed8 100%)', WebkitBackgroundClip: 'text', backgroundClip: 'text', color: 'transparent' }}>
                 Web &amp; App Development
               </span>
             </h1>
-            <p className="text-[17px] leading-[1.68] text-[#33514C] max-w-[480px] mb-[34px]">
+            <p className="text-[14px] leading-[1.55] text-[#33514C] max-w-[440px] mb-5">
               We build production-grade AI integrations, intelligent automations, and high-performance web &amp; mobile apps — modern software that handles the busywork, so your team ships faster and scales with confidence.
             </p>
-            <div className="flex flex-wrap items-center gap-5 mb-[34px]">
-              <Link href="/contact" className="inline-flex items-center gap-2.5 text-[15.5px] font-bold text-white px-8 py-[17px] rounded-full shadow-[0_14px_30px_rgba(13,148,136,0.36)] hover:brightness-[1.07] transition" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>
+            <div className="flex flex-wrap items-center gap-4 mb-6">
+              <Link href="/contact" className="inline-flex items-center gap-2.5 text-[14px] font-bold text-white px-6 py-3 rounded-full shadow-[0_14px_30px_rgba(13,148,136,0.36)] hover:brightness-[1.07] transition" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>
                 Free Consultation <span>→</span>
               </Link>
-              <Link href="/services" className="inline-flex items-center gap-2 text-[15px] font-bold text-[#0c7a70] hover:text-[#0A3D37] transition">
+              <Link href="/services" className="inline-flex items-center gap-2 text-[14px] font-bold text-[#0c7a70] hover:text-[#0A3D37] transition">
                 Our Services <span>→</span>
               </Link>
             </div>
