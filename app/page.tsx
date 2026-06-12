@@ -1,4 +1,3 @@
-import Navbar from '@/app/components/common/Navbar';
 import Footer from '@/app/components/common/Footer';
 import HeroSection from '@/app/components/sections/HeroSection';
 import MetricsSection from '@/app/components/sections/MetricsSection';
@@ -19,7 +18,6 @@ export const metadata = {
 export default function HomePage() {
   return (
     <>
-      <Navbar />
       <main className="flex-1">
         <HeroSection />
         <MetricsSection />

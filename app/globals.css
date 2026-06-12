@@ -58,6 +58,26 @@ html, body {
   color: var(--brand-darker);
 }
 
+/* ── Verdant (Design 06) typefaces ── */
+.font-sora { font-family: var(--font-sora), 'Sora', sans-serif; }
+.font-jakarta { font-family: var(--font-jakarta), 'Plus Jakarta Sans', sans-serif; }
+.font-jetbrains { font-family: var(--font-jetbrains), 'JetBrains Mono', monospace; }
+
+/* ── Verdant hero animations (exact from the design) ── */
+@keyframes v-floaty   { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+@keyframes v-floaty2  { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-16px); } }
+@keyframes v-nodepulse{ 0%,100% { opacity: 0.55; transform: scale(0.92); } 50% { opacity: 1; transform: scale(1.12); } }
+@keyframes v-dashflow { to { stroke-dashoffset: -44; } }
+.v-floaty        { animation: v-floaty 7s ease-in-out infinite; }
+.v-floaty-slow   { animation: v-floaty 8s ease-in-out infinite; }
+.v-floaty2       { animation: v-floaty2 6.5s ease-in-out infinite; }
+.v-floaty2-slow  { animation: v-floaty2 7.5s ease-in-out infinite; }
+.v-nodepulse     { animation: v-nodepulse 3.6s ease-in-out infinite; }
+.v-dash          { stroke-dasharray: 5 7; animation: v-dashflow 1.6s linear infinite; }
+@media (prefers-reduced-motion: reduce) {
+  .v-floaty, .v-floaty-slow, .v-floaty2, .v-floaty2-slow, .v-nodepulse, .v-dash { animation: none; }
+}
+
 @keyframes radar-pulse {
   0%   { transform: scale(0.6); opacity: 0.55; }
   80%  { opacity: 0; }
