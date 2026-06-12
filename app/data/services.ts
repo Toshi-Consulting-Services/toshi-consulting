@@ -44,7 +44,7 @@ export const services: Service[] = [
     meta:
       'Integrate production-grade AI — LLMs, NLP, and automation — into your existing applications with governance, testing, and measurable results.',
     icon: Brain,
-    tone: 'from-teal-500 to-cyan-500',
+    tone: 'from-violet-500 to-fuchsia-500',
     soft: 'bg-teal-50',
     featured: true,
   },
@@ -69,7 +69,7 @@ export const services: Service[] = [
     meta:
       'Web and app development — fast, SEO-friendly web applications and cross-platform mobile apps built with React, Next.js, and modern stacks, from design to launch.',
     icon: Code2,
-    tone: 'from-sky-500 to-cyan-500',
+    tone: 'from-sky-500 to-blue-600',
     soft: 'bg-sky-50',
     featured: true,
   },
@@ -94,7 +94,7 @@ export const services: Service[] = [
     meta:
       'Cybersecurity Lab — enterprise-grade security audits, vulnerability management, hardening, and threat-monitoring readiness with prioritised remediation.',
     icon: ShieldCheck,
-    tone: 'from-teal-600 to-emerald-600',
+    tone: 'from-emerald-500 to-green-600',
     soft: 'bg-teal-50',
     featured: true,
   },
@@ -119,7 +119,7 @@ export const services: Service[] = [
     meta:
       'DevOps and CI/CD — automated build, test, and deployment pipelines with monitoring and repeatable infrastructure so you release faster and safer.',
     icon: GitBranch,
-    tone: 'from-sky-500 to-cyan-600',
+    tone: 'from-cyan-500 to-teal-600',
     soft: 'bg-sky-50',
     featured: true,
   },
@@ -144,7 +144,7 @@ export const services: Service[] = [
     meta:
       'QA testing and automation — functional, regression, performance, and security testing wired into CI/CD with Playwright, Selenium, Cypress, and JMeter.',
     icon: Bug,
-    tone: 'from-emerald-500 to-teal-500',
+    tone: 'from-amber-500 to-orange-500',
     soft: 'bg-emerald-50',
   },
   {
@@ -168,7 +168,7 @@ export const services: Service[] = [
     meta:
       'Digital media marketing and branding — SEO, AEO/GEO, paid media, content, and brand identity that make your business visible, valuable, and memorable.',
     icon: Megaphone,
-    tone: 'from-emerald-500 to-cyan-500',
+    tone: 'from-rose-500 to-pink-500',
     soft: 'bg-emerald-50',
   },
   {
@@ -192,7 +192,7 @@ export const services: Service[] = [
     meta:
       'Tailored blockchain consulting — secure architecture, smart-contract development, and integration that brings transparency and automation to your operations.',
     icon: Link2,
-    tone: 'from-cyan-500 to-sky-500',
+    tone: 'from-indigo-500 to-blue-600',
     soft: 'bg-cyan-50',
   },
   {
@@ -216,7 +216,7 @@ export const services: Service[] = [
     meta:
       'Cloud deployment and support — scalable architecture, migration, performance tuning, monitoring, and ongoing managed support for your applications.',
     icon: Cloud,
-    tone: 'from-cyan-500 to-blue-500',
+    tone: 'from-sky-400 to-cyan-500',
     soft: 'bg-cyan-50',
   },
 ];

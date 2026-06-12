@@ -20,6 +20,13 @@ const SOCIAL_HANDLES: Record<SocialName, { href: string; label: string }> = {
   },
 };
 
+// Real brand colours per platform (static strings so Tailwind compiles the arbitrary values).
+const SOCIAL_STYLE: Record<SocialName, string> = {
+  facebook: 'text-[#1877F2] hover:bg-[#1877F2]',
+  linkedin: 'text-[#0A66C2] hover:bg-[#0A66C2]',
+  whatsapp: 'text-[#25D366] hover:bg-[#25D366]',
+};
+
 function SocialIcon({ name }: { name: SocialName }) {
   const paths: Record<SocialName, string> = {
     facebook: 'M13.5 9H15V6.5h-1.5c-1.7 0-3 1.3-3 3V11H9v2h1.5v6h2.5v-6h2L15.4 11H13V9.5c0-.3.2-.5.5-.5z',
@@ -90,7 +97,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={label}
-                  className="grid place-items-center w-10 h-10 rounded-xl bg-white border border-teal-200 text-teal-700 hover:bg-gradient-to-br hover:from-teal-500 hover:to-cyan-500 hover:text-white hover:border-transparent shadow-sm hover:-translate-y-0.5 transition"
+                  className={`grid place-items-center w-10 h-10 rounded-xl bg-white border border-slate-200 shadow-sm hover:text-white hover:border-transparent hover:-translate-y-0.5 transition ${SOCIAL_STYLE[name]}`}
                 >
                   <SocialIcon name={name} />
                 </a>

@@ -7,24 +7,32 @@ const steps = [
     icon: Search,
     title: 'Discover',
     desc: 'A grounded conversation about your business, your team, and the outcomes that matter — not the tech stack.',
+    tone: 'from-sky-500 to-blue-600',
+    num: 'text-sky-200',
   },
   {
     n: '02',
     icon: PenTool,
     title: 'Design',
     desc: 'Architecture, journeys, and a delivery roadmap that fits your timeline and risk appetite.',
+    tone: 'from-violet-500 to-fuchsia-500',
+    num: 'text-violet-200',
   },
   {
     n: '03',
     icon: Cpu,
     title: 'Build',
     desc: 'Weekly demos, code you own, automated tests, and secure-by-default infrastructure from day one.',
+    tone: 'from-amber-500 to-orange-500',
+    num: 'text-amber-200',
   },
   {
     n: '04',
     icon: LifeBuoy,
     title: 'Support',
     desc: '24/7 monitoring, on-call rotation, and quarterly health reviews — long after launch.',
+    tone: 'from-emerald-500 to-green-600',
+    num: 'text-emerald-200',
   },
 ];
 
@@ -56,10 +64,10 @@ export default function ProcessSection() {
               <Reveal key={s.n} delay={i * 100} className="h-full">
                 <div className="relative h-full flex flex-col bg-white rounded-2xl border border-teal-100 p-7 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
                   <div className="flex items-start justify-between">
-                    <span className="relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]">
+                    <span className={`relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br ${s.tone} text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]`}>
                       <Icon size={22} />
                     </span>
-                    <span className="font-display text-4xl text-teal-200">{s.n}</span>
+                    <span className={`font-display text-4xl ${s.num}`}>{s.n}</span>
                   </div>
                   <h3 className="mt-5 text-xl font-bold text-slate-900">{s.title}</h3>
                   <p className="mt-2 text-sm text-slate-600 leading-relaxed">{s.desc}</p>

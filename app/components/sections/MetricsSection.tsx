@@ -2,10 +2,10 @@ import { CheckCircle2, TrendingUp, Headphones, Award } from 'lucide-react';
 import AnimatedCounter from '@/app/components/common/AnimatedCounter';
 
 const metrics = [
-  { number: 100, suffix: '%',     label: 'Delivery Commitment',     icon: CheckCircle2, tone: 'from-teal-500 to-emerald-500' },
-  { number: 99,  suffix: '%',     label: 'Project Success Rate',    icon: TrendingUp,   tone: 'from-cyan-500 to-teal-500' },
-  { number: 24,  suffix: '/7',    label: 'Round-the-Clock Support', icon: Headphones,   tone: 'from-teal-600 to-cyan-600' },
-  { number: 15,  suffix: '+',     label: 'Years of Excellence',     icon: Award,        tone: 'from-emerald-500 to-teal-600' },
+  { number: 100, suffix: '%',     label: 'Delivery Commitment',     icon: CheckCircle2, tone: 'from-emerald-500 to-green-600' },
+  { number: 99,  suffix: '%',     label: 'Project Success Rate',    icon: TrendingUp,   tone: 'from-sky-500 to-blue-600' },
+  { number: 24,  suffix: '/7',    label: 'Round-the-Clock Support', icon: Headphones,   tone: 'from-violet-500 to-fuchsia-500' },
+  { number: 15,  suffix: '+',     label: 'Years of Excellence',     icon: Award,        tone: 'from-amber-500 to-orange-500' },
 ];
 
 export default function MetricsSection() {
@@ -21,7 +21,7 @@ export default function MetricsSection() {
                   <Icon size={22} />
                 </div>
                 <div className="leading-tight">
-                  <div className="text-3xl font-black text-slate-900 tracking-tight">
+                  <div className={`text-3xl font-black tracking-tight bg-gradient-to-br ${m.tone} bg-clip-text text-transparent`}>
                     <AnimatedCounter end={m.number} suffix={m.suffix} />
                   </div>
                   <div className="text-xs font-semibold text-slate-600 uppercase tracking-wider mt-0.5">
