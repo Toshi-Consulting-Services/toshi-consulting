@@ -5,7 +5,7 @@ import { services } from '@/app/data/services';
 
 export default function ServicesSection() {
   return (
-    <section className="relative py-24 section-mint overflow-hidden">
+    <section className="relative py-24 overflow-hidden" style={{ background: 'linear-gradient(180deg, #E9F8F2 0%, #ffffff 70%)' }}>
       <div className="pointer-events-none absolute top-20 right-10 w-72 h-72 rounded-full bg-teal-200/30 blur-3xl" />
       <div className="pointer-events-none absolute bottom-10 left-10 w-72 h-72 rounded-full bg-cyan-200/30 blur-3xl" />
 

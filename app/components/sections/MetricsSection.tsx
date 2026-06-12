@@ -10,7 +10,7 @@ const metrics = [
 
 export default function MetricsSection() {
   return (
-    <section className="relative -mt-16 lg:-mt-20 z-20">
+    <section className="relative -mt-16 lg:-mt-20 z-20 pb-6" style={{ background: '#E9F8F2' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6">
         <div className="bg-white rounded-3xl shadow-[0_25px_60px_-30px_rgba(15,118,110,0.45)] border border-teal-100 p-6 sm:p-8 grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
           {metrics.map((m) => {
