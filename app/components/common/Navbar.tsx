@@ -81,7 +81,7 @@ export default function Navbar() {
                             const Icon = s.icon;
                             return (
                               <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item">
-                                <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}><Icon size={16} /></span>
+                                <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}><Icon size={16} weight="duotone" /></span>
                                 <span className="min-w-0">
                                   <span className="block text-sm font-bold text-[#0A3D37] group-hover/item:text-[#0D9488] transition">{s.title}</span>
                                   <span className="block text-xs text-slate-500 leading-snug line-clamp-2">{s.short}</span>

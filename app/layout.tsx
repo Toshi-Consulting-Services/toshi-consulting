@@ -135,7 +135,10 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${instrumentSerif.variable} ${sora.variable} ${jakarta.variable} ${jetbrainsMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]">
+      <body
+        suppressHydrationWarning
+        className="min-h-full flex flex-col bg-[var(--background)] text-[var(--foreground)]"
+      >
         {/* Google Analytics 4 — only loads when GA_ID is set AND we're on the prod domain.
             Uses Google Consent Mode v2 defaults (denied) so it's DPDP-compliant until a consent banner flips it. */}
         {GA_ID && IS_PRODUCTION_DOMAIN && (

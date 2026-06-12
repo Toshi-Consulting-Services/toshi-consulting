@@ -1,5 +1,10 @@
-import type { LucideIcon } from 'lucide-react';
-import { Brain, Code2, ShieldCheck, GitBranch, Bug, Megaphone, Link2, Cloud } from 'lucide-react';
+// Phosphor "duotone" icons via the SSR-safe entry — these render inside React
+// Server Components (no client context), unlike the default @phosphor-icons/react
+// build. Duotone weight is applied at each render site (weight="duotone").
+import type { Icon } from '@phosphor-icons/react';
+import {
+  Brain, Browsers, ShieldCheck, GitBranch, Bug, Megaphone, Cube, CloudArrowUp,
+} from '@phosphor-icons/react/dist/ssr';
 
 export type Service = {
   slug: string;          // MUST match the live site's old /services/<slug> URLs for SEO continuity
@@ -9,8 +14,8 @@ export type Service = {
   benefits: string[];    // "Key benefits"
   expectations: string[];// "What you can expect"
   meta: string;          // SEO meta description
-  icon: LucideIcon;
-  tone: string;          // gradient classes
+  icon: Icon;
+  tone: string;          // gradient classes — cohesive cool ramp (teal→indigo) + muted warms; no alarm hues
   soft: string;          // soft background tint
   featured?: boolean;    // also surfaced on the homepage services section
 };
@@ -44,8 +49,8 @@ export const services: Service[] = [
     meta:
       'Integrate production-grade AI — LLMs, NLP, and automation — into your existing applications with governance, testing, and measurable results.',
     icon: Brain,
-    tone: 'from-violet-500 to-fuchsia-500',
-    soft: 'bg-teal-50',
+    tone: 'from-[#7C6FF0] to-[#5D4FE0]',
+    soft: 'bg-[#ECEAFB]',
     featured: true,
   },
   {
@@ -68,9 +73,9 @@ export const services: Service[] = [
     ],
     meta:
       'Web and app development — fast, SEO-friendly web applications and cross-platform mobile apps built with React, Next.js, and modern stacks, from design to launch.',
-    icon: Code2,
-    tone: 'from-sky-500 to-blue-600',
-    soft: 'bg-sky-50',
+    icon: Browsers,
+    tone: 'from-[#4F7DF0] to-[#3C63D9]',
+    soft: 'bg-[#E7EEFC]',
     featured: true,
   },
   {
@@ -94,8 +99,8 @@ export const services: Service[] = [
     meta:
       'Cybersecurity Lab — enterprise-grade security audits, vulnerability management, hardening, and threat-monitoring readiness with prioritised remediation.',
     icon: ShieldCheck,
-    tone: 'from-emerald-500 to-green-600',
-    soft: 'bg-teal-50',
+    tone: 'from-[#12B0A6] to-[#0E8F86]',
+    soft: 'bg-[#DEF4F1]',
     featured: true,
   },
   {
@@ -119,8 +124,8 @@ export const services: Service[] = [
     meta:
       'DevOps and CI/CD — automated build, test, and deployment pipelines with monitoring and repeatable infrastructure so you release faster and safer.',
     icon: GitBranch,
-    tone: 'from-cyan-500 to-teal-600',
-    soft: 'bg-sky-50',
+    tone: 'from-[#13B0C8] to-[#0E93AC]',
+    soft: 'bg-[#DEF1F6]',
     featured: true,
   },
   {
@@ -144,8 +149,8 @@ export const services: Service[] = [
     meta:
       'QA testing and automation — functional, regression, performance, and security testing wired into CI/CD with Playwright, Selenium, Cypress, and JMeter.',
     icon: Bug,
-    tone: 'from-amber-500 to-orange-500',
-    soft: 'bg-emerald-50',
+    tone: 'from-[#5F938E] to-[#487670]',
+    soft: 'bg-[#E4EEEC]',
   },
   {
     slug: 'digital-media-marketing-and-branding',
@@ -168,8 +173,8 @@ export const services: Service[] = [
     meta:
       'Digital media marketing and branding — SEO, AEO/GEO, paid media, content, and brand identity that make your business visible, valuable, and memorable.',
     icon: Megaphone,
-    tone: 'from-rose-500 to-pink-500',
-    soft: 'bg-emerald-50',
+    tone: 'from-[#E0915C] to-[#CE7642]',
+    soft: 'bg-[#FBEDE2]',
   },
   {
     slug: 'blockchain-consulting',
@@ -191,9 +196,9 @@ export const services: Service[] = [
     ],
     meta:
       'Tailored blockchain consulting — secure architecture, smart-contract development, and integration that brings transparency and automation to your operations.',
-    icon: Link2,
-    tone: 'from-indigo-500 to-blue-600',
-    soft: 'bg-cyan-50',
+    icon: Cube,
+    tone: 'from-[#5566E0] to-[#3F4ECF]',
+    soft: 'bg-[#E7EAFB]',
   },
   {
     slug: 'cloud-deployment-support',
@@ -215,9 +220,9 @@ export const services: Service[] = [
     ],
     meta:
       'Cloud deployment and support — scalable architecture, migration, performance tuning, monitoring, and ongoing managed support for your applications.',
-    icon: Cloud,
-    tone: 'from-sky-400 to-cyan-500',
-    soft: 'bg-cyan-50',
+    icon: CloudArrowUp,
+    tone: 'from-[#38AED0] to-[#2E93B8]',
+    soft: 'bg-[#E0F1F7]',
   },
 ];
 

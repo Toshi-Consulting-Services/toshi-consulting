@@ -1,38 +1,39 @@
 import Reveal from '@/app/components/common/Reveal';
-import { Search, PenTool, Cpu, LifeBuoy } from 'lucide-react';
+import { MagnifyingGlass, PenNib, Cpu, Lifebuoy } from '@phosphor-icons/react/dist/ssr';
 
+// Cohesive cool ramp; `num` is a pale tint of each step's accent.
 const steps = [
   {
     n: '01',
-    icon: Search,
+    icon: MagnifyingGlass,
     title: 'Discover',
     desc: 'A grounded conversation about your business, your team, and the outcomes that matter — not the tech stack.',
-    tone: 'from-sky-500 to-blue-600',
-    num: 'text-sky-200',
+    tone: 'from-[#4F7DF0] to-[#3C63D9]',
+    num: 'text-[#cdd9f8]',
   },
   {
     n: '02',
-    icon: PenTool,
+    icon: PenNib,
     title: 'Design',
     desc: 'Architecture, journeys, and a delivery roadmap that fits your timeline and risk appetite.',
-    tone: 'from-violet-500 to-fuchsia-500',
-    num: 'text-violet-200',
+    tone: 'from-[#7C6FF0] to-[#5D4FE0]',
+    num: 'text-[#d8d2f8]',
   },
   {
     n: '03',
     icon: Cpu,
     title: 'Build',
     desc: 'Weekly demos, code you own, automated tests, and secure-by-default infrastructure from day one.',
-    tone: 'from-amber-500 to-orange-500',
-    num: 'text-amber-200',
+    tone: 'from-[#13B0C8] to-[#0E93AC]',
+    num: 'text-[#c7e9f1]',
   },
   {
     n: '04',
-    icon: LifeBuoy,
+    icon: Lifebuoy,
     title: 'Support',
     desc: '24/7 monitoring, on-call rotation, and quarterly health reviews — long after launch.',
-    tone: 'from-emerald-500 to-green-600',
-    num: 'text-emerald-200',
+    tone: 'from-[#12B0A6] to-[#0E8F86]',
+    num: 'text-[#c4ebe6]',
   },
 ];
 
@@ -65,7 +66,7 @@ export default function ProcessSection() {
                 <div className="relative h-full flex flex-col bg-white rounded-2xl border border-teal-100 p-7 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
                   <div className="flex items-start justify-between">
                     <span className={`relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br ${s.tone} text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]`}>
-                      <Icon size={22} />
+                      <Icon size={22} weight="duotone" />
                     </span>
                     <span className={`font-display text-4xl ${s.num}`}>{s.n}</span>
                   </div>

@@ -77,7 +77,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
             </nav>
 
             <div className={`mt-6 inline-grid place-items-center w-16 h-16 rounded-2xl bg-gradient-to-br ${service.tone} text-white shadow-[0_18px_35px_-12px_rgba(20,184,166,0.65)]`}>
-              <Icon size={30} />
+              <Icon size={30} weight="duotone" />
             </div>
             <h1 className="mt-5 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
               {service.title}

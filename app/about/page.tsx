@@ -1,10 +1,11 @@
+import Image from 'next/image';
 import Navbar from '@/app/components/common/Navbar';
 import Footer from '@/app/components/common/Footer';
 import CTABand from '@/app/components/sections/CTABand';
 import MetricsSection from '@/app/components/sections/MetricsSection';
 import WhyChooseUsSection from '@/app/components/sections/WhyChooseUsSection';
 import TestimonialsSection from '@/app/components/sections/TestimonialsSection';
-import { Target, Compass, ShieldCheck, Users, Sparkles, Heart } from 'lucide-react';
+import { Target, Compass, ShieldCheck, UsersThree, Sparkle, Heart } from '@phosphor-icons/react/dist/ssr';
 
 export const metadata = {
   title: 'About Toshi Consulting — Our Mission, Vision & Story',
@@ -14,9 +15,9 @@ export const metadata = {
 
 const values = [
   { icon: ShieldCheck, title: 'Integrity',     desc: 'We say what we will do — and then do it.' },
-  { icon: Sparkles,    title: 'Craftsmanship', desc: 'Quality is the default; speed comes from discipline.' },
+  { icon: Sparkle,     title: 'Craftsmanship', desc: 'Quality is the default; speed comes from discipline.' },
   { icon: Heart,       title: 'Partnership',   desc: 'Your KPIs are our KPIs — no transactional handoffs.' },
-  { icon: Users,       title: 'Empowerment',   desc: 'We train your team to own what we build together.' },
+  { icon: UsersThree,  title: 'Empowerment',   desc: 'We train your team to own what we build together.' },
 ];
 
 export default function AboutPage() {
@@ -46,6 +47,78 @@ export default function AboutPage() {
 
         <MetricsSection />
 
+        {/* Our Story — photo collage + narrative */}
+        <section className="py-24 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+            {/* Image collage */}
+            <div className="relative">
+              <div className="relative rounded-3xl overflow-hidden shadow-[0_30px_70px_-30px_rgba(15,118,110,0.5)] ring-1 ring-teal-100">
+                <Image
+                  src="/images/about-team.jpg"
+                  alt="The Toshi Consulting team collaborating on client projects"
+                  width={1400}
+                  height={934}
+                  className="w-full h-auto object-cover"
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                />
+              </div>
+              {/* Overlapping secondary photo */}
+              <div className="hidden sm:block absolute -bottom-8 -right-4 w-44 lg:w-52 rounded-2xl overflow-hidden shadow-[0_25px_55px_-22px_rgba(15,118,110,0.55)] ring-4 ring-white">
+                <Image
+                  src="/images/about-collab.jpg"
+                  alt="Toshi Consulting team in a planning discussion"
+                  width={520}
+                  height={347}
+                  className="w-full h-auto object-cover"
+                  sizes="220px"
+                />
+              </div>
+              {/* Floating stat chip */}
+              <div className="absolute -top-5 -left-3 sm:-left-5 bg-white rounded-2xl px-5 py-3.5 shadow-[0_18px_40px_-18px_rgba(15,118,110,0.5)] ring-1 ring-teal-100">
+                <div className="text-2xl font-black brand-gradient-text leading-none">15+</div>
+                <div className="text-[11px] font-bold uppercase tracking-wider text-slate-500 mt-1">Years delivering</div>
+              </div>
+            </div>
+
+            {/* Narrative */}
+            <div>
+              <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
+                <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> Our Story
+              </div>
+              <h2 className="mt-4 text-3xl md:text-4xl font-black tracking-tight text-slate-900 leading-tight">
+                A decade of building{' '}
+                <span className="brand-gradient-text">alongside our clients</span>
+              </h2>
+              <p className="mt-5 text-slate-600 leading-relaxed text-lg">
+                Toshi Consulting began with a simple conviction: technology should
+                quietly do the heavy lifting so people can focus on the work that
+                matters. Since then we&apos;ve partnered with growing businesses
+                across India and beyond — shipping AI integrations, secure platforms,
+                and automation that holds up in production.
+              </p>
+              <p className="mt-4 text-slate-600 leading-relaxed">
+                We&apos;re a small, senior team that measures success in your KPIs,
+                not ticket counts — and we train your people to own what we build
+                together.
+              </p>
+              <div className="mt-7 flex flex-wrap gap-3">
+                {[
+                  ['Across India & beyond', '◍'],
+                  ['Senior, hands-on team', '✦'],
+                  ['Production-grade delivery', '✓'],
+                ].map(([label, glyph]) => (
+                  <span
+                    key={label}
+                    className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-800 rounded-full px-4 py-2 text-sm font-semibold shadow-sm"
+                  >
+                    <span className="text-teal-500">{glyph}</span> {label}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Mission / Vision */}
         <section className="py-24 section-mint">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-2 gap-8">
@@ -53,7 +126,7 @@ export default function AboutPage() {
               <div className="absolute -top-16 -right-16 w-56 h-56 rounded-full bg-teal-100/60 blur-2xl" />
               <div className="relative">
                 <div className="inline-grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]">
-                  <Target size={26} />
+                  <Target size={26} weight="duotone" />
                 </div>
                 <h2 className="mt-5 text-3xl font-black text-slate-900">Our Mission</h2>
                 <p className="mt-3 text-slate-600 leading-relaxed text-lg">
@@ -70,7 +143,7 @@ export default function AboutPage() {
               <div className="absolute -bottom-12 -left-12 w-44 h-44 rounded-full border border-white/15" />
               <div className="relative">
                 <div className="inline-grid place-items-center w-14 h-14 rounded-2xl bg-white/15 backdrop-blur border border-white/25 text-white">
-                  <Compass size={26} />
+                  <Compass size={26} weight="duotone" />
                 </div>
                 <h2 className="mt-5 text-3xl font-black">Our Vision</h2>
                 <p className="mt-3 text-teal-50 leading-relaxed text-lg">
@@ -85,8 +158,17 @@ export default function AboutPage() {
         </section>
 
         {/* Values */}
-        <section className="py-24 bg-white">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <section className="relative py-24 bg-white overflow-hidden">
+          {/* In-repo brand mesh backdrop (hand-authored SVG, licensing-free) */}
+          <Image
+            src="/images/mesh-teal.svg"
+            alt=""
+            aria-hidden
+            fill
+            className="object-cover opacity-50 pointer-events-none"
+            sizes="100vw"
+          />
+          <div className="relative max-w-7xl mx-auto px-4 sm:px-6">
             <div className="text-center max-w-2xl mx-auto mb-14">
               <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
                 <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> What we stand for
@@ -101,7 +183,7 @@ export default function AboutPage() {
                 return (
                   <div key={v.title} className="group bg-white rounded-2xl p-7 border border-teal-100 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
                     <div className="inline-grid place-items-center w-12 h-12 rounded-xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_12px_25px_-10px_rgba(20,184,166,0.6)] group-hover:scale-110 transition">
-                      <Icon size={22} />
+                      <Icon size={22} weight="duotone" />
                     </div>
                     <h3 className="mt-4 text-lg font-bold text-slate-900">{v.title}</h3>
                     <p className="mt-2 text-sm text-slate-600 leading-relaxed">{v.desc}</p>

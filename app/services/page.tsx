@@ -88,7 +88,7 @@ export default function ServicesPage() {
                     <div className={`absolute -top-12 -right-12 w-32 h-32 ${s.soft} rounded-full blur-2xl opacity-70 group-hover:opacity-100 transition`} />
                     <div className="relative flex-1">
                       <div className={`inline-grid place-items-center w-14 h-14 rounded-2xl bg-gradient-to-br ${s.tone} text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)] group-hover:scale-110 transition`}>
-                        <Icon size={24} />
+                        <Icon size={24} weight="duotone" />
                       </div>
                       <h2 className="mt-5 text-xl font-black text-slate-900 leading-tight">
                         {s.title}

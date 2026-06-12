@@ -1,11 +1,12 @@
-import { CheckCircle2, TrendingUp, Headphones, Award } from 'lucide-react';
+import { CheckCircle, TrendUp, Headset, Medal } from '@phosphor-icons/react/dist/ssr';
 import AnimatedCounter from '@/app/components/common/AnimatedCounter';
 
+// Cohesive cool ramp + muted-warm gold for "excellence" (award, not alarm).
 const metrics = [
-  { number: 100, suffix: '%',     label: 'Delivery Commitment',     icon: CheckCircle2, tone: 'from-emerald-500 to-green-600' },
-  { number: 99,  suffix: '%',     label: 'Project Success Rate',    icon: TrendingUp,   tone: 'from-sky-500 to-blue-600' },
-  { number: 24,  suffix: '/7',    label: 'Round-the-Clock Support', icon: Headphones,   tone: 'from-violet-500 to-fuchsia-500' },
-  { number: 15,  suffix: '+',     label: 'Years of Excellence',     icon: Award,        tone: 'from-amber-500 to-orange-500' },
+  { number: 100, suffix: '%',     label: 'Delivery Commitment',     icon: CheckCircle, tone: 'from-[#12B0A6] to-[#0E8F86]' },
+  { number: 99,  suffix: '%',     label: 'Project Success Rate',    icon: TrendUp,     tone: 'from-[#4F7DF0] to-[#3C63D9]' },
+  { number: 24,  suffix: '/7',    label: 'Round-the-Clock Support', icon: Headset,     tone: 'from-[#13B0C8] to-[#0E93AC]' },
+  { number: 15,  suffix: '+',     label: 'Years of Excellence',     icon: Medal,       tone: 'from-[#E0915C] to-[#CE7642]' },
 ];
 
 export default function MetricsSection() {
@@ -18,7 +19,7 @@ export default function MetricsSection() {
             return (
               <div key={m.label} className="group flex items-center gap-4 p-3 sm:p-4 rounded-2xl hover:bg-teal-50/60 transition">
                 <div className={`grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br ${m.tone} text-white shadow-[0_10px_24px_-10px_rgba(20,184,166,0.7)] group-hover:scale-110 transition`}>
-                  <Icon size={22} />
+                  <Icon size={22} weight="duotone" />
                 </div>
                 <div className="leading-tight">
                   <div className={`text-3xl font-black tracking-tight bg-gradient-to-br ${m.tone} bg-clip-text text-transparent`}>
