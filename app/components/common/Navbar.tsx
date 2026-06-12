@@ -105,34 +105,36 @@ export default function Navbar() {
                       )}
                     </Link>
 
-                    {/* Dropdown panel — pt-3 bridges the hover gap */}
+                    {/* Dropdown mega-menu (2×4 grid) — pt-3 bridges the hover gap */}
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-3 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200">
-                      <div className="w-80 bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(15,118,110,0.35)] p-2">
-                        {services.map((s) => {
-                          const Icon = s.icon;
-                          return (
-                            <Link
-                              key={s.slug}
-                              href={`/services/${s.slug}`}
-                              className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item"
-                            >
-                              <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}>
-                                <Icon size={16} />
-                              </span>
-                              <span className="min-w-0">
-                                <span className="block text-sm font-bold text-slate-800 group-hover/item:text-teal-700 transition">
-                                  {s.title}
+                      <div className="w-[680px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(15,118,110,0.35)] p-3">
+                        <div className="grid grid-cols-2 gap-1">
+                          {services.map((s) => {
+                            const Icon = s.icon;
+                            return (
+                              <Link
+                                key={s.slug}
+                                href={`/services/${s.slug}`}
+                                className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item"
+                              >
+                                <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}>
+                                  <Icon size={16} />
                                 </span>
-                                <span className="block text-xs text-slate-500 leading-snug">
-                                  {s.short}
+                                <span className="min-w-0">
+                                  <span className="block text-sm font-bold text-slate-800 group-hover/item:text-teal-700 transition">
+                                    {s.title}
+                                  </span>
+                                  <span className="block text-xs text-slate-500 leading-snug line-clamp-2">
+                                    {s.short}
+                                  </span>
                                 </span>
-                              </span>
-                            </Link>
-                          );
-                        })}
+                              </Link>
+                            );
+                          })}
+                        </div>
                         <Link
                           href="/services"
-                          className="mt-1 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-teal-700 bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50"
+                          className="mt-2 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-teal-700 bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50"
                         >
                           View all services <ArrowRight size={14} />
                         </Link>

@@ -158,8 +158,8 @@ export default function HeroSection() {
           </div>
         </div>
 
-        {/* ── Nav (glass pill) ── */}
-        <div className="px-4 sm:px-7 py-3.5">
+        {/* ── Nav (glass pill) ── z-50 lifts the whole nav (and its dropdown) above the floating hero cards (z-[2..4]); the pill's backdrop-blur creates a stacking context, so the dropdown's own z-index can't escape on its own */}
+        <div className="relative z-50 px-4 sm:px-7 py-3.5">
           <div className="flex items-center justify-between gap-3 px-4 sm:px-6 py-3 rounded-[18px] bg-white/[0.78] backdrop-blur-xl border border-white/90 shadow-[0_12px_34px_rgba(10,61,55,0.08)]">
             {/* logo */}
             <Link href="/" className="flex items-center shrink-0" aria-label="Toshi Consulting — Home">
@@ -173,19 +173,24 @@ export default function HeroSection() {
                   <div key={item.name} className="relative group">
                     <Link href={item.href} className="relative text-[#3a5a55] hover:text-[#0D9488] transition">{item.name}</Link>
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200 z-50">
-                      <div className="w-80 bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(10,61,55,0.3)] p-2">
-                        {services.map((s) => {
-                          const Icon = s.icon;
-                          return (
-                            <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item">
-                              <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}><Icon size={16} /></span>
-                              <span className="min-w-0">
-                                <span className="block text-sm font-bold text-[#0A3D37] group-hover/item:text-[#0D9488] transition">{s.title}</span>
-                                <span className="block text-xs text-slate-500 leading-snug">{s.short}</span>
-                              </span>
-                            </Link>
-                          );
-                        })}
+                      <div className="w-[680px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(10,61,55,0.3)] p-3">
+                        <div className="grid grid-cols-2 gap-1">
+                          {services.map((s) => {
+                            const Icon = s.icon;
+                            return (
+                              <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item">
+                                <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}><Icon size={16} /></span>
+                                <span className="min-w-0">
+                                  <span className="block text-sm font-bold text-[#0A3D37] group-hover/item:text-[#0D9488] transition">{s.title}</span>
+                                  <span className="block text-xs text-slate-500 leading-snug line-clamp-2">{s.short}</span>
+                                </span>
+                              </Link>
+                            );
+                          })}
+                        </div>
+                        <Link href="/services" className="mt-2 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-[#0D9488] bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50">
+                          View all services <span>→</span>
+                        </Link>
                       </div>
                     </div>
                   </div>
