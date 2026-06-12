@@ -6,6 +6,7 @@ import { usePathname } from 'next/navigation';
 import { Menu, X, Phone, Mail, MapPin, Clock, ArrowRight, ChevronDown } from 'lucide-react';
 import { useState, useEffect } from 'react';
 import { services } from '@/app/data/services';
+import { openQuoteBot } from '@/app/components/chat/quoteBus';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -161,15 +162,16 @@ export default function Navbar() {
             })}
           </div>
 
-          {/* CTA */}
+          {/* CTA — opens the Quote Bot (Toshi Assistant) instead of navigating */}
           <div className="hidden lg:flex items-center gap-3">
-            <Link
-              href="/contact"
-              className="group inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(20,184,166,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(6,182,212,0.9)] hover:-translate-y-0.5 transition"
+            <button
+              type="button"
+              onClick={() => openQuoteBot()}
+              className="group inline-flex items-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-2.5 rounded-full text-sm font-bold shadow-[0_10px_25px_-12px_rgba(20,184,166,0.9)] hover:shadow-[0_14px_30px_-10px_rgba(6,182,212,0.9)] hover:-translate-y-0.5 transition cursor-pointer"
             >
               Get Quote
               <ArrowRight size={16} className="group-hover:translate-x-0.5 transition" />
-            </Link>
+            </button>
           </div>
 
           {/* Mobile toggle */}
@@ -215,13 +217,13 @@ export default function Navbar() {
                   )}
                 </div>
               ))}
-              <Link
-                href="/contact"
-                onClick={() => setOpen(false)}
-                className="mt-2 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-3 rounded-full text-sm font-bold"
+              <button
+                type="button"
+                onClick={() => { setOpen(false); openQuoteBot(); }}
+                className="mt-2 inline-flex items-center justify-center gap-2 bg-gradient-to-r from-teal-600 to-cyan-600 text-white px-5 py-3 rounded-full text-sm font-bold cursor-pointer"
               >
                 Get Quote <ArrowRight size={16} />
-              </Link>
+              </button>
             </div>
           </div>
         )}

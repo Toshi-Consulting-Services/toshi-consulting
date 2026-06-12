@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono, Instrument_Serif, Sora, Plus_Jakarta_Sans, JetBrains_Mono } from "next/font/google";
 import "./globals.css";
+import QuoteBot from "./components/chat/QuoteBot";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -172,6 +173,8 @@ export default function RootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
         {children}
+        {/* Global Quote Bot — opened only by the navbar "Get Quote" button (no floating FAB) */}
+        <QuoteBot />
       </body>
     </html>
   );

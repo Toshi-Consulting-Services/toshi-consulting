@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { services } from '@/app/data/services';
+import { openQuoteBot } from '@/app/components/chat/quoteBus';
 
 const navItems = [
   { name: 'Home', href: '/' },
@@ -207,9 +208,9 @@ export default function HeroSection() {
 
             {/* CTA + mobile toggle */}
             <div className="flex items-center gap-2 shrink-0">
-              <Link href="/contact" className="hidden sm:inline-flex items-center gap-2 text-[14px] font-bold text-white px-[22px] py-3 rounded-full shadow-[0_10px_24px_rgba(13,148,136,0.34)] hover:brightness-[1.06] transition" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>
+              <button type="button" onClick={() => openQuoteBot()} className="hidden sm:inline-flex items-center gap-2 text-[14px] font-bold text-white px-[22px] py-3 rounded-full shadow-[0_10px_24px_rgba(13,148,136,0.34)] hover:brightness-[1.06] transition cursor-pointer" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>
                 Get Quote <span className="text-[13px]">→</span>
-              </Link>
+              </button>
               <button onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" className="lg:hidden grid place-items-center w-10 h-10 rounded-xl text-[#0D9488] hover:bg-teal-50 transition">
                 {open ? <X size={22} /> : <Menu size={22} />}
               </button>
@@ -231,7 +232,7 @@ export default function HeroSection() {
                   )}
                 </div>
               ))}
-              <Link href="/contact" onClick={() => setOpen(false)} className="mt-1 inline-flex items-center justify-center gap-2 text-sm font-bold text-white px-5 py-3 rounded-full" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>Get Quote →</Link>
+              <button type="button" onClick={() => { setOpen(false); openQuoteBot(); }} className="mt-1 inline-flex items-center justify-center gap-2 text-sm font-bold text-white px-5 py-3 rounded-full cursor-pointer" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>Get Quote →</button>
             </div>
           )}
         </div>
