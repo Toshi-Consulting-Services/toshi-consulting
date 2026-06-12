@@ -1,19 +1,6 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
-import { useState } from 'react';
-import { Menu, X } from 'lucide-react';
-import { services } from '@/app/data/services';
-import { openQuoteBot } from '@/app/components/chat/quoteBus';
-
-const navItems = [
-  { name: 'Home', href: '/' },
-  { name: 'About', href: '/about' },
-  { name: 'Services', href: '/services', dropdown: true },
-  { name: 'Blog', href: '/blog' },
-  { name: 'Contact', href: '/contact' },
-];
 
 /* ── AI CORE — hexagon chip (exact Verdant SVG) ── */
 function AICore() {
@@ -134,10 +121,8 @@ function HeroVisual() {
 }
 
 export default function HeroSection() {
-  const [open, setOpen] = useState(false);
-
   return (
-    <section className="relative overflow-hidden font-jakarta text-[#0A3D37] flex flex-col min-h-[min(100svh,800px)]" style={{ background: '#E9F8F2' }}>
+    <section className="relative overflow-hidden font-jakarta text-[#0A3D37] flex flex-col min-h-screen" style={{ background: '#E9F8F2' }}>
       {/* layered light sources */}
       <div aria-hidden className="pointer-events-none absolute" style={{ top: -140, right: -120, width: 760, height: 620, background: 'radial-gradient(ellipse at center, rgba(45,212,191,0.38), rgba(45,212,191,0) 62%)' }} />
       <div aria-hidden className="pointer-events-none absolute" style={{ top: 280, left: 80, width: 560, height: 520, background: 'radial-gradient(ellipse at center, rgba(13,148,136,0.22), rgba(13,148,136,0) 60%)' }} />
@@ -146,99 +131,8 @@ export default function HeroSection() {
       <div aria-hidden className="pointer-events-none absolute inset-0 opacity-70" style={{ backgroundImage: 'radial-gradient(rgba(10,61,55,0.06) 1px, transparent 1px)', backgroundSize: '24px 24px' }} />
 
       <div className="relative z-10 w-full max-w-[1500px] mx-auto flex flex-col flex-1">
-        {/* ── Utility bar ── */}
-        <div className="hidden md:flex items-center justify-between px-10 py-[9px] text-[13px] font-medium text-[#15433D] bg-[rgba(13,79,71,0.06)] border-b border-[rgba(13,79,71,0.08)]">
-          <div className="flex items-center gap-[26px]">
-            <a href="tel:+919915718004" className="flex items-center gap-[7px]"><span className="text-[#0D9488]">✆</span> +91-9915718004</a>
-            <a href="mailto:info@toshiconsulting.com" className="flex items-center gap-[7px]"><span className="text-[#0D9488]">✉</span> info@toshiconsulting.com</a>
-          </div>
-          <div className="flex items-center gap-[22px] text-[#1d534c]">
-            <span>Mon–Fri · 10:00–18:00</span>
-            <span className="opacity-45">·</span>
-            <span className="flex items-center gap-1.5"><span className="text-[#0D9488]">◍</span> Panchkula, Haryana</span>
-          </div>
-        </div>
-
-        {/* ── Nav (glass pill) ── z-50 lifts the whole nav (and its dropdown) above the floating hero cards (z-[2..4]); the pill's backdrop-blur creates a stacking context, so the dropdown's own z-index can't escape on its own */}
-        <div className="relative z-50 px-4 sm:px-7 py-3.5">
-          <div className="flex items-center justify-between gap-3 px-4 sm:px-6 py-3 rounded-[18px] bg-white/[0.78] backdrop-blur-xl border border-white/90 shadow-[0_12px_34px_rgba(10,61,55,0.08)]">
-            {/* logo */}
-            <Link href="/" className="flex items-center shrink-0" aria-label="Toshi Consulting — Home">
-              <Image src="/logo.png" alt="Toshi Consulting" width={596} height={246} priority className="h-9 sm:h-10 w-auto" />
-            </Link>
-
-            {/* desktop links */}
-            <div className="hidden lg:flex items-center gap-[30px] text-[14.5px] font-semibold text-[#3a5a55]">
-              {navItems.map((item) =>
-                item.dropdown ? (
-                  <div key={item.name} className="relative group">
-                    <Link href={item.href} className="relative text-[#3a5a55] hover:text-[#0D9488] transition">{item.name}</Link>
-                    <div className="absolute left-1/2 -translate-x-1/2 top-full pt-4 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition duration-200 z-50">
-                      <div className="w-[680px] max-w-[calc(100vw-2rem)] bg-white rounded-2xl border border-teal-100 shadow-[0_25px_60px_-20px_rgba(10,61,55,0.3)] p-3">
-                        <div className="grid grid-cols-2 gap-1">
-                          {services.map((s) => {
-                            const Icon = s.icon;
-                            return (
-                              <Link key={s.slug} href={`/services/${s.slug}`} className="flex items-start gap-3 px-3 py-2.5 rounded-xl hover:bg-teal-50 transition group/item">
-                                <span className={`grid place-items-center w-9 h-9 rounded-lg bg-gradient-to-br ${s.tone} text-white shrink-0`}><Icon size={16} /></span>
-                                <span className="min-w-0">
-                                  <span className="block text-sm font-bold text-[#0A3D37] group-hover/item:text-[#0D9488] transition">{s.title}</span>
-                                  <span className="block text-xs text-slate-500 leading-snug line-clamp-2">{s.short}</span>
-                                </span>
-                              </Link>
-                            );
-                          })}
-                        </div>
-                        <Link href="/services" className="mt-2 flex items-center justify-center gap-1.5 px-3 py-2.5 rounded-xl text-sm font-bold text-[#0D9488] bg-teal-50/60 hover:bg-teal-100 transition border-t border-teal-50">
-                          View all services <span>→</span>
-                        </Link>
-                      </div>
-                    </div>
-                  </div>
-                ) : item.name === 'Home' ? (
-                  <Link key={item.name} href={item.href} className="relative text-[#0A3D37]">
-                    {item.name}
-                    <span className="absolute left-0 right-0 -bottom-[7px] h-[2.5px] rounded-[2px]" style={{ background: 'linear-gradient(90deg,#0D9488,#2DD4BF)' }} />
-                  </Link>
-                ) : (
-                  <Link key={item.name} href={item.href} className="text-[#3a5a55] hover:text-[#0D9488] transition">{item.name}</Link>
-                )
-              )}
-            </div>
-
-            {/* CTA + mobile toggle */}
-            <div className="flex items-center gap-2 shrink-0">
-              <button type="button" onClick={() => openQuoteBot()} className="hidden sm:inline-flex items-center gap-2 text-[14px] font-bold text-white px-[22px] py-3 rounded-full shadow-[0_10px_24px_rgba(13,148,136,0.34)] hover:brightness-[1.06] transition cursor-pointer" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>
-                Get Quote <span className="text-[13px]">→</span>
-              </button>
-              <button onClick={() => setOpen((v) => !v)} aria-label="Toggle menu" className="lg:hidden grid place-items-center w-10 h-10 rounded-xl text-[#0D9488] hover:bg-teal-50 transition">
-                {open ? <X size={22} /> : <Menu size={22} />}
-              </button>
-            </div>
-          </div>
-
-          {/* mobile sheet */}
-          {open && (
-            <div className="lg:hidden mt-2 rounded-2xl border border-teal-100 bg-white shadow-[0_25px_60px_-25px_rgba(10,61,55,0.35)] p-3 flex flex-col gap-1">
-              {navItems.map((item) => (
-                <div key={item.name}>
-                  <Link href={item.href} onClick={() => setOpen(false)} className="block px-4 py-3 rounded-xl text-sm font-semibold text-[#3a5a55] hover:bg-teal-50 hover:text-[#0D9488] transition">{item.name}</Link>
-                  {item.dropdown && (
-                    <div className="ml-3 mt-1 flex flex-col gap-0.5 border-l border-teal-100 pl-3">
-                      {services.map((s) => (
-                        <Link key={s.slug} href={`/services/${s.slug}`} onClick={() => setOpen(false)} className="block px-3 py-2 rounded-lg text-sm text-slate-600 hover:bg-teal-50 hover:text-[#0D9488] transition">{s.title}</Link>
-                      ))}
-                    </div>
-                  )}
-                </div>
-              ))}
-              <button type="button" onClick={() => { setOpen(false); openQuoteBot(); }} className="mt-1 inline-flex items-center justify-center gap-2 text-sm font-bold text-white px-5 py-3 rounded-full cursor-pointer" style={{ background: 'linear-gradient(135deg,#0D9488,#0c7a70)' }}>Get Quote →</button>
-            </div>
-          )}
-        </div>
-
         {/* ── Hero ── */}
-        <div className="flex-1 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center px-5 sm:px-8 lg:px-10 pt-4 pb-24 lg:pb-28">
+        <div className="flex-1 grid lg:grid-cols-2 gap-8 lg:gap-10 items-center px-5 sm:px-8 lg:px-10 pt-28 lg:pt-24 pb-24 lg:pb-28">
           {/* visual */}
           <div className="order-2 lg:order-1 w-full flex justify-center lg:justify-end">
             <HeroVisual />
