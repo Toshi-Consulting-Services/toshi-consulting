@@ -1,7 +1,6 @@
 import Footer from '@/app/components/common/Footer';
 import HeroSection from '@/app/components/sections/HeroSection';
 import MetricsSection from '@/app/components/sections/MetricsSection';
-import TrustedBySection from '@/app/components/sections/TrustedBySection';
 import ServicesSection from '@/app/components/sections/ServicesSection';
 import ProcessSection from '@/app/components/sections/ProcessSection';
 import AboutSection from '@/app/components/sections/AboutSection';
@@ -21,7 +20,6 @@ export default function HomePage() {
       <main className="flex-1">
         <HeroSection />
         <MetricsSection />
-        <TrustedBySection />
         <ServicesSection />
         <ProcessSection />
         <AboutSection />

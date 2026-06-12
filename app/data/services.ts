@@ -25,7 +25,7 @@ export type Service = {
 export const services: Service[] = [
   {
     slug: 'ai-integration',
-    title: 'AI Integration',
+    title: 'AI Integrations and Automation',
     short: 'Production-grade AI inside your existing products.',
     description:
       'Seamlessly integrate AI capabilities into your existing applications to enhance functionality, improve efficiency, and drive innovation across your workflows.',

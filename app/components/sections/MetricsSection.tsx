@@ -5,7 +5,7 @@ const metrics = [
   { number: 100, suffix: '%',     label: 'Delivery Commitment',     icon: CheckCircle2, tone: 'from-teal-500 to-emerald-500' },
   { number: 99,  suffix: '%',     label: 'Project Success Rate',    icon: TrendingUp,   tone: 'from-cyan-500 to-teal-500' },
   { number: 24,  suffix: '/7',    label: 'Round-the-Clock Support', icon: Headphones,   tone: 'from-teal-600 to-cyan-600' },
-  { number: 10,  suffix: '+',     label: 'Years of Excellence',     icon: Award,        tone: 'from-emerald-500 to-teal-600' },
+  { number: 15,  suffix: '+',     label: 'Years of Excellence',     icon: Award,        tone: 'from-emerald-500 to-teal-600' },
 ];
 
 export default function MetricsSection() {

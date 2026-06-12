@@ -19,7 +19,7 @@ export default function AboutSection() {
           <div className="grid grid-cols-2 gap-4">
             <div className="space-y-4">
               <div className="aspect-[4/5] rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 shadow-[0_20px_50px_-20px_rgba(20,184,166,0.6)] p-6 text-white flex flex-col justify-end">
-                <div className="text-4xl font-black leading-none">10+</div>
+                <div className="text-4xl font-black leading-none">15+</div>
                 <div className="text-xs font-semibold mt-1 uppercase tracking-wider text-teal-50">
                   Years of Delivery
                 </div>
@@ -64,11 +64,11 @@ export default function AboutSection() {
           <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> About Us
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900 leading-tight">
+          <h2 className="mt-4 fluid-h2 font-black tracking-tight text-slate-900">
             A technology partner you can{' '}
             <span className="font-display brand-gradient-text">actually trust</span>.
           </h2>
-          <p className="mt-5 text-slate-600 text-lg leading-relaxed">
+          <p className="mt-5 text-slate-600 fluid-lead leading-relaxed">
             For over a decade, Toshi Consulting has helped businesses turn
             ambition into reliable digital delivery. We blend engineering
             craftsmanship with practical advice — so technology stops being

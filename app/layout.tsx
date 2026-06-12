@@ -57,7 +57,7 @@ const GA_ID = process.env.NEXT_PUBLIC_GA_ID || "";
 export const metadata: Metadata = {
   title: "Toshi Consulting — Reliable IT, AI, Blockchain & DevOps Partner",
   description:
-    "Toshi Consulting helps growing businesses secure and scale with AI integration, blockchain consulting, QA automation, and digital media — backed by 10+ years of delivery excellence.",
+    "Toshi Consulting helps growing businesses secure and scale with AI integration, blockchain consulting, QA automation, and digital media — backed by 15+ years of delivery excellence.",
   metadataBase: new URL(SITE_URL),
   // Auto-noindex staging environments; only the canonical prod domain is indexable.
   robots: IS_PRODUCTION_DOMAIN

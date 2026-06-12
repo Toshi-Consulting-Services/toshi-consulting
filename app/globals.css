@@ -78,6 +78,10 @@ html, body {
   .v-floaty, .v-floaty-slow, .v-floaty2, .v-floaty2-slow, .v-nodepulse, .v-dash { animation: none; }
 }
 
+/* ── Fluid section type — clamp() scales smoothly across breakpoints (no zoom/scale hack) ── */
+.fluid-h2   { font-size: clamp(1.875rem, 1.15rem + 2.8vw, 2.75rem); line-height: 1.1; }
+.fluid-lead { font-size: clamp(1rem, 0.96rem + 0.3vw, 1.0625rem); line-height: 1.6; }
+
 @keyframes radar-pulse {
   0%   { transform: scale(0.6); opacity: 0.55; }
   80%  { opacity: 0; }

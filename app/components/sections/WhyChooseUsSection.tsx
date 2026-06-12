@@ -48,11 +48,11 @@ export default function WhyChooseUsSection() {
           <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
             <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> Why Choose Us
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-4 fluid-h2 font-black tracking-tight text-slate-900">
             We don't just build —{' '}
             <span className="font-display brand-gradient-text">we partner.</span>
           </h2>
-          <p className="mt-4 text-slate-600 text-lg">
+          <p className="mt-4 text-slate-600 fluid-lead">
             Six reasons companies stay with Toshi for years, not months.
           </p>
         </div>

@@ -1,6 +1,7 @@
 'use client';
 
 import Link from 'next/link';
+import Image from 'next/image';
 import { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { services } from '@/app/data/services';
@@ -161,14 +162,8 @@ export default function HeroSection() {
         <div className="px-4 sm:px-7 py-3.5">
           <div className="flex items-center justify-between gap-3 px-4 sm:px-6 py-3 rounded-[18px] bg-white/[0.78] backdrop-blur-xl border border-white/90 shadow-[0_12px_34px_rgba(10,61,55,0.08)]">
             {/* logo */}
-            <Link href="/" className="flex items-center gap-[11px] shrink-0">
-              <span className="grid place-items-center w-[38px] h-[38px] rounded-[11px] shadow-[0_8px_20px_rgba(13,148,136,0.4)]" style={{ background: 'linear-gradient(135deg,#0D9488,#2DD4BF)' }}>
-                <span className="font-sora font-extrabold text-[18px] text-white">T</span>
-              </span>
-              <span className="leading-[1.05]">
-                <span className="block font-sora font-extrabold text-[19px] text-[#0A3D37] tracking-[-0.4px]">Toshi</span>
-                <span className="block font-jetbrains text-[8.5px] tracking-[2.5px] text-[#0D9488]">CONSULTING SERVICES</span>
-              </span>
+            <Link href="/" className="flex items-center shrink-0" aria-label="Toshi Consulting — Home">
+              <Image src="/logo.png" alt="Toshi Consulting" width={596} height={246} priority className="h-9 sm:h-10 w-auto" />
             </Link>
 
             {/* desktop links */}

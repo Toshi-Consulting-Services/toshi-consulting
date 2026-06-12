@@ -5,28 +5,28 @@ const testimonials = [
   {
     quote:
       "Toshi rebuilt our compliance reporting stack in six weeks — what our previous vendor couldn't ship in a year. Their team genuinely owned the outcome.",
-    name: 'Priya Sharma',
-    role: 'CTO',
-    company: 'Stellar Bank',
-    initials: 'PS',
+    name: 'Mayank Mishra',
+    role: 'Founder & CEO',
+    company: 'Omynx Labs',
+    initials: 'MM',
     tone: 'from-teal-500 to-cyan-500',
   },
   {
     quote:
       "We came to Toshi for a blockchain audit and stayed for everything else. They speak the language of the business, not just the codebase.",
-    name: 'Rohan Mehta',
-    role: 'Head of Engineering',
-    company: 'Orbit Labs',
-    initials: 'RM',
+    name: 'John Doe',
+    role: 'Title',
+    company: 'Company',
+    initials: 'JD',
     tone: 'from-cyan-500 to-sky-500',
   },
   {
     quote:
       "Honest, fast, and unusually pragmatic. They told us which features NOT to build — and that's the advice that paid for the engagement twice over.",
-    name: 'Ananya Reddy',
-    role: 'Founder',
-    company: 'Vega Health',
-    initials: 'AR',
+    name: 'John Doe',
+    role: 'Title',
+    company: 'Company',
+    initials: 'JD',
     tone: 'from-emerald-500 to-teal-500',
   },
 ];
@@ -42,7 +42,7 @@ export default function TestimonialsSection() {
           <div className="inline-flex items-center gap-2 bg-white border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase shadow-sm">
             <Star size={13} className="text-teal-600 fill-teal-500" /> Client Stories
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-4 fluid-h2 font-black tracking-tight text-slate-900">
             What teams say about{' '}
             <span className="font-display brand-gradient-text">working with us</span>
           </h2>
@@ -50,7 +50,7 @@ export default function TestimonialsSection() {
 
         <div className="grid md:grid-cols-3 gap-6">
           {testimonials.map((t, i) => (
-            <Reveal key={t.name} delay={i * 120}>
+            <Reveal key={i} delay={i * 120}>
               <article className="group h-full flex flex-col bg-white rounded-3xl p-8 border border-teal-100 shadow-[0_15px_45px_-25px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_25px_55px_-25px_rgba(15,118,110,0.55)] transition">
                 {/* Quote glyph */}
                 <svg

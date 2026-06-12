@@ -37,11 +37,11 @@ export default function ProcessSection() {
           <div className="inline-flex items-center gap-2 bg-teal-50 border border-teal-200 text-teal-700 rounded-full px-4 py-1.5 text-xs font-bold tracking-wide uppercase">
             <span className="w-1.5 h-1.5 rounded-full bg-teal-500" /> How we work
           </div>
-          <h2 className="mt-4 text-4xl md:text-5xl font-black tracking-tight text-slate-900">
+          <h2 className="mt-4 fluid-h2 font-black tracking-tight text-slate-900">
             A simple, repeatable{' '}
             <span className="font-display brand-gradient-text">process</span>
           </h2>
-          <p className="mt-4 text-slate-600 text-lg">
+          <p className="mt-4 text-slate-600 fluid-lead">
             Four phases. Every engagement, every team. No surprises.
           </p>
         </Reveal>
@@ -53,8 +53,8 @@ export default function ProcessSection() {
           {steps.map((s, i) => {
             const Icon = s.icon;
             return (
-              <Reveal key={s.n} delay={i * 100}>
-                <div className="relative bg-white rounded-2xl border border-teal-100 p-7 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
+              <Reveal key={s.n} delay={i * 100} className="h-full">
+                <div className="relative h-full flex flex-col bg-white rounded-2xl border border-teal-100 p-7 shadow-[0_10px_30px_-20px_rgba(15,118,110,0.4)] hover:-translate-y-1 hover:shadow-[0_22px_44px_-22px_rgba(15,118,110,0.5)] transition">
                   <div className="flex items-start justify-between">
                     <span className="relative grid place-items-center w-12 h-12 rounded-2xl bg-gradient-to-br from-teal-500 to-cyan-500 text-white shadow-[0_15px_30px_-12px_rgba(20,184,166,0.6)]">
                       <Icon size={22} />
